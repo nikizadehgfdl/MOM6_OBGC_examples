@@ -1,3 +1,6 @@
+#Here's how to compile the model (on gaea)
+(cd build;  ./linux-build-mom6sis2.bash -m gaea -p intel16 -t prod )
+
 #Here's how to get the INPUT datasets needed for the experiments in this repo:
 
 cd exps/.datasets
@@ -23,4 +26,10 @@ wget https://data1.gfdl.noaa.gov/~nnz/mom4/COREv2/data_IAF/CORRECTED/combined_ye
 wget https://data1.gfdl.noaa.gov/~nnz/mom4/COREv2/data_IAF/CORRECTED/combined_years/v_10.1948-2009.23OCT2012.nc        ; ln -s v_10.1948-2009.23OCT2012.nc        core2_v_10.nc
 popd
 
+#Test, the following command returns the list of broken data links, hence should not return anything
+find exps/OM4p5_CORE2_IAF_COBALT/INPUT/ -xtype l
+
+#Here's how to run a test for 1/2 degree model using 180 cores on gaea
+cd exps/OM4p5_CORE2_IAF_COBALT
+srun -n 180 ../../builds/build/gaea-intel16/ocean_ice/prod/MOM6 |& tee stdout.n180.1
 
