@@ -25,3 +25,6 @@
 [submodule "src/ice_param"]
 	path = src/ice_param
 	url = https://github.com/NOAA-GFDL/ice_param.git
+[submodule "src/ocean_BGC"]
+	path = src/ocean_BGC
+	url = https://github.com/NOAA-GFDL/ocean_BGC.git

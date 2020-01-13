@@ -1,4 +1,4 @@
-Here's how to get the INPUT datasets needed for the experiments in this repo:
+#Here's how to get the INPUT datasets needed for the experiments in this repo:
 
 cd exps/.datasets
 #
@@ -14,13 +14,13 @@ cd exps/.datasets
 #
 mkdir CORE2_IAF_1948-2009_dataset
 pushd CORE2_IAF_1948-2009_dataset
-wget https://data1.gfdl.noaa.gov/~nnz/mom4/COREv2/data_IAF/CORRECTED/combined_years/ncar_precip.1948-2009.23OCT2012.nc ; mv ncar_precip.1948-2009.23OCT2012.nc core2_precip.nc
-wget https://data1.gfdl.noaa.gov/~nnz/mom4/COREv2/data_IAF/CORRECTED/combined_years/ncar_rad.1948-2009.23OCT2012.nc    ; mv ncar_rad.1948-2009.23OCT2012.nc    core2_rad.nc
-wget https://data1.gfdl.noaa.gov/~nnz/mom4/COREv2/data_IAF/CORRECTED/combined_years/slp.1948-2009.23OCT2012.nc         ; mv slp.1948-2009.23OCT2012.nc         core2_slp.nc
-wget https://data1.gfdl.noaa.gov/~nnz/mom4/COREv2/data_IAF/CORRECTED/combined_years/q_10.1948-2009.23OCT2012.nc        ; mv q_10.1948-2009.23OCT2012.nc        core2_q_10.nc
-wget https://data1.gfdl.noaa.gov/~nnz/mom4/COREv2/data_IAF/CORRECTED/combined_years/t_10.1948-2009.23OCT2012.nc        ; mv t_10.1948-2009.23OCT2012.nc        core2_t_10.nc
-wget https://data1.gfdl.noaa.gov/~nnz/mom4/COREv2/data_IAF/CORRECTED/combined_years/u_10.1948-2009.23OCT2012.nc        ; mv u_10.1948-2009.23OCT2012.nc        core2_u_10.nc
-wget https://data1.gfdl.noaa.gov/~nnz/mom4/COREv2/data_IAF/CORRECTED/combined_years/v_10.1948-2009.23OCT2012.nc        ; mv v_10.1948-2009.23OCT2012.nc        core2_v_10.nc
+wget https://data1.gfdl.noaa.gov/~nnz/mom4/COREv2/data_IAF/CORRECTED/combined_years/ncar_precip.1948-2009.23OCT2012.nc ; ln -s ncar_precip.1948-2009.23OCT2012.nc core2_precip.nc
+wget https://data1.gfdl.noaa.gov/~nnz/mom4/COREv2/data_IAF/CORRECTED/combined_years/ncar_rad.1948-2009.23OCT2012.nc    ; ln -s ncar_rad.1948-2009.23OCT2012.nc    core2_rad.nc
+wget https://data1.gfdl.noaa.gov/~nnz/mom4/COREv2/data_IAF/CORRECTED/combined_years/slp.1948-2009.23OCT2012.nc         ; ln -s slp.1948-2009.23OCT2012.nc         core2_slp.nc
+wget https://data1.gfdl.noaa.gov/~nnz/mom4/COREv2/data_IAF/CORRECTED/combined_years/q_10.1948-2009.23OCT2012.nc        ; ln -s q_10.1948-2009.23OCT2012.nc        core2_q_10.nc
+wget https://data1.gfdl.noaa.gov/~nnz/mom4/COREv2/data_IAF/CORRECTED/combined_years/t_10.1948-2009.23OCT2012.nc        ; ln -s t_10.1948-2009.23OCT2012.nc        core2_t_10.nc
+wget https://data1.gfdl.noaa.gov/~nnz/mom4/COREv2/data_IAF/CORRECTED/combined_years/u_10.1948-2009.23OCT2012.nc        ; ln -s u_10.1948-2009.23OCT2012.nc        core2_u_10.nc
+wget https://data1.gfdl.noaa.gov/~nnz/mom4/COREv2/data_IAF/CORRECTED/combined_years/v_10.1948-2009.23OCT2012.nc        ; ln -s v_10.1948-2009.23OCT2012.nc        core2_v_10.nc
 popd
 
 

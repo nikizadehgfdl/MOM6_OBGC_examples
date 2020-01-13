@@ -97,7 +97,7 @@ if [[ $build =~ "ocean_ice" ]] ; then
    mkdir -p build/$machine_name-$platform/ocean_ice/$target
    pushd build/$machine_name-$platform/ocean_ice/$target
    rm -f path_names
-   $srcdir/mkmf/bin/list_paths $srcdir/MOM6/config_src/{dynamic,coupled_driver}/ $srcdir/MOM6/src/{*,*/*}/ $srcdir/{atmos_null,coupler,land_null,ice_param,icebergs,SIS2,FMS/coupler,FMS/include,ocean_shared/generic_tracers,ocean_shared/mocsy/src}/
+   $srcdir/mkmf/bin/list_paths $srcdir/MOM6/config_src/{dynamic,coupled_driver}/ $srcdir/MOM6/src/{*,*/*}/ $srcdir/{atmos_null,coupler,land_null,ice_param,icebergs,SIS2,FMS/coupler,FMS/include,ocean_BGC/generic_tracers,ocean_BGC/mocsy/src}/
    $srcdir/mkmf/bin/mkmf -t $abs_rootdir/$machine_name/$platform.mk -o "-I../../shared/$target" -p MOM6 -l "-L../../shared/$target -lfms" -c '-Duse_AM3_physics -D_USE_LEGACY_LAND_ -DMAX_FIELDS_=100 -DNOT_SET_AFFINITY -D_USE_MOM6_DIAG -D_USE_GENERIC_TRACER  -DUSE_PRECISION=2' path_names
 
   make $makeflags MOM6
