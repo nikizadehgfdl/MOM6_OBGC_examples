@@ -4,7 +4,7 @@ Presently included is an experimental setup for running a global 1/2 degree MOM6
 
 ## How to compile the model (on gaea)
 
-(cd build;  ./linux-build-mom6sis2.bash -m gaea -p intel16 -t prod )
+(cd builds;  ./linux-build-mom6sis2.bash -m gaea -p intel16 -t prod )
 
 ## How to get the INPUT datasets needed for the experiments in this repo
 
