@@ -1,3 +1,8 @@
 The physical model was originally made by  Brandon Reichl and cloned from
 https://github.com/breichl/MOM6-examples/tree/OM4_025.JRA.single_column/ice_ocean_SIS2/OM4_025.JRA.single_column
 
+To get the input data needed for this experiment:
+mkdir ../datasets; cd ../datasets
+wget ftp://ftp.gfdl.noaa.gov/pub/Niki.Zadeh/OM4_datasets/OM4_025.JRA.single_column.tar.gz
+gunzip OM4_025.JRA.single_column.tar.gz
+tar xvf OM4_025.JRA.single_column.tar
