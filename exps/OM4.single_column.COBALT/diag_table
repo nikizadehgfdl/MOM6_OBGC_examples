@@ -1,0 +1,45 @@
+OM4_SIS2_cgrid_05
+1958 1 1 0 0 0
+
+"ocean_hourly", 2, "hours",   1, "days", "time"
+
+ "ocean_model",   "thkcello",    "thkcello",         "ocean_hourly",        "all", "mean", "none",2
+ "ocean_model",   "uo",          "uo",         "ocean_hourly",        "all", "mean", "none",2
+ "ocean_model",   "vo",          "vo",         "ocean_hourly",        "all", "mean", "none",2
+ "ocean_model",   "umo",         "umo",         "ocean_hourly",        "all", "mean", "none",2
+ "ocean_model",   "vmo",         "vmo",         "ocean_hourly",        "all", "mean", "none",2
+ "ocean_model",   "thetao",      "thetao",         "ocean_hourly",        "all", "mean", "none",2
+ "ocean_model",   "so",          "so",         "ocean_hourly",        "all", "mean", "none",2
+ "ocean_model",   "Kd_interface","Kd_interface", "ocean_hourly", "all", "mean", "none", 2
+ "ocean_model",   "Kv_shear","Kv_shear", "ocean_hourly", "all", "mean", "none", 2
+ "ocean_model","GOTM_L","GOTM_L","ocean_hourly","all", "mean", "none",2
+ "ocean_model","GOTM_TKE","GOTM_TKE","ocean_hourly","all", "mean", "none",2
+ "ocean_model","GOTM_KM","GOTM_KM","ocean_hourly","all", "mean", "none",2
+ "ocean_model","GOTM_KH","GOTM_KH","ocean_hourly","all", "mean", "none",2
+
+ "ocean_model",   "T_tendency_vert_remap", "T_tendency_vert_remap", "ocean_hourly", "all", "mean", "none", 2
+ "ocean_model",   "T_tendency", "T_tendency", "ocean_hourly", "all", "mean", "none", 2
+ "ocean_model",   "T_adx", "T_adx", "ocean_hourly", "all", "mean", "none", 2
+ "ocean_model",   "T_ady", "T_ady", "ocean_hourly", "all", "mean", "none", 2
+ "ocean_model",   "T_diffx", "T_diffx", "ocean_hourly", "all", "mean", "none", 2
+ "ocean_model",   "T_diffy", "T_diffy", "ocean_hourly", "all", "mean", "none", 2
+ "ocean_model",   "Tflx_dia_diff", "Tflx_dia_diff", "ocean_hourly", "all", "mean", "none", 2
+
+ "ocean_model",   "CAu", "CAu", "ocean_hourly", "all", "mean", "none", 2
+ "ocean_model",   "CAv", "CAv", "ocean_hourly", "all", "mean", "none", 2
+ "ocean_model",   "PFu", "PFu", "ocean_hourly", "all", "mean", "none", 2
+ "ocean_model",   "PFv", "PFv", "ocean_hourly", "all", "mean", "none", 2
+ "ocean_model",   "diffu", "diffu", "ocean_hourly", "all", "mean", "none", 2
+ "ocean_model",   "diffv", "diffv", "ocean_hourly", "all", "mean", "none", 2
+ "ocean_model",   "du_dt_visc", "du_dt_visc", "ocean_hourly", "all", "mean", "none", 2
+ "ocean_model",   "dv_dt_visc", "dv_dt_visc", "ocean_hourly", "all", "mean", "none", 2
+
+ "ocean_model",   "taux", "taux", "ocean_hourly", "all", "mean", "none", 2
+ "ocean_model",   "tauy", "tauy", "ocean_hourly", "all", "mean", "none", 2
+ "ocean_model",   "net_heat_coupler", "net_heat_coupler", "ocean_hourly", "all", "mean", "none", 2
+ "ocean_model",   "MSTAR", "MSTAR", "ocean_hourly", "all", "mean", "none", 2
+ "ocean_model",   "MSTAR_LT", "MSTAR_LT", "ocean_hourly", "all", "mean", "none", 2
+ "ocean_model",   "ePBL_h_ML", "ePBL_h_ML", "ocean_hourly","all","mean","none",2
+
+ "generic_cfc",   "cfc11","cfc11", "ocean_hourly","all","mean","none",2
+ "generic_cfc",   "cfc12","cfc12", "ocean_hourly","all","mean","none",2
