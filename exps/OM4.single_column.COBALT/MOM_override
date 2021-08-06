@@ -64,3 +64,8 @@ GENERIC_TRACER_IC_FILE = "MOM_GENERICS.res.nc"
 !#override CHL_FROM_FILE = False
 #override Z_INIT_REMAP_OLD_ALG = True
 #override TRACERS_MAY_REINIT = True
+#override DO_GEOTHERMAL = True 
+#override GEOTHERMAL_SCALE = 0.0 
+! GEOTHERMAL_FILE = "geothermal_davies2013_v1.nc"
+! GEOTHERMAL_VARNAME = "geothermal_hf" ! default = "geo_heat"
+

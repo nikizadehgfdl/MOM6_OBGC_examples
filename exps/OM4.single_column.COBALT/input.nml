@@ -133,6 +133,7 @@
  &generic_COBALT_nml
        co2_calc = 'mocsy'
        debug = .false.
+       imbalance_tolerance=1.0e-9
 !       do_nh3_atm_ocean_exchange = .true.  !turn on exchange of NH3
 !       scheme_no3_nh4_lim        = 2       !update nh4/no3 uptake scheme
 !       scheme_nitrif             = 3       !new nitrification scheme
