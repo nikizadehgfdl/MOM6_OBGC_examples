@@ -1,45 +1,73 @@
-OM4_SIS2_cgrid_05
+OM4_single_column
 1958 1 1 0 0 0
 
-"ocean_hourly", 2, "hours",   1, "days", "time"
+"ocean_daily", 1, "days",   1, "days", "time"
 
- "ocean_model",   "thkcello",    "thkcello",         "ocean_hourly",        "all", "mean", "none",2
- "ocean_model",   "uo",          "uo",         "ocean_hourly",        "all", "mean", "none",2
- "ocean_model",   "vo",          "vo",         "ocean_hourly",        "all", "mean", "none",2
- "ocean_model",   "umo",         "umo",         "ocean_hourly",        "all", "mean", "none",2
- "ocean_model",   "vmo",         "vmo",         "ocean_hourly",        "all", "mean", "none",2
- "ocean_model",   "thetao",      "thetao",         "ocean_hourly",        "all", "mean", "none",2
- "ocean_model",   "so",          "so",         "ocean_hourly",        "all", "mean", "none",2
- "ocean_model",   "Kd_interface","Kd_interface", "ocean_hourly", "all", "mean", "none", 2
- "ocean_model",   "Kv_shear","Kv_shear", "ocean_hourly", "all", "mean", "none", 2
- "ocean_model","GOTM_L","GOTM_L","ocean_hourly","all", "mean", "none",2
- "ocean_model","GOTM_TKE","GOTM_TKE","ocean_hourly","all", "mean", "none",2
- "ocean_model","GOTM_KM","GOTM_KM","ocean_hourly","all", "mean", "none",2
- "ocean_model","GOTM_KH","GOTM_KH","ocean_hourly","all", "mean", "none",2
+ "ocean_model",   "thkcello",    "thkcello",         "ocean_daily",        "all", "mean", "none",2
+ "ocean_model",   "uo",          "uo",         "ocean_daily",        "all", "mean", "none",2
+ "ocean_model",   "vo",          "vo",         "ocean_daily",        "all", "mean", "none",2
+ "ocean_model",   "umo",         "umo",         "ocean_daily",        "all", "mean", "none",2
+ "ocean_model",   "vmo",         "vmo",         "ocean_daily",        "all", "mean", "none",2
+ "ocean_model",   "thetao",      "thetao",         "ocean_daily",        "all", "mean", "none",2
+ "ocean_model",   "so",          "so",         "ocean_daily",        "all", "mean", "none",2
+ "ocean_model",   "Kd_interface","Kd_interface", "ocean_daily", "all", "mean", "none", 2
+ "ocean_model",   "Kv_shear","Kv_shear", "ocean_daily", "all", "mean", "none", 2
+ "ocean_model","GOTM_L","GOTM_L","ocean_daily","all", "mean", "none",2
+ "ocean_model","GOTM_TKE","GOTM_TKE","ocean_daily","all", "mean", "none",2
+ "ocean_model","GOTM_KM","GOTM_KM","ocean_daily","all", "mean", "none",2
+ "ocean_model","GOTM_KH","GOTM_KH","ocean_daily","all", "mean", "none",2
 
- "ocean_model",   "T_tendency_vert_remap", "T_tendency_vert_remap", "ocean_hourly", "all", "mean", "none", 2
- "ocean_model",   "T_tendency", "T_tendency", "ocean_hourly", "all", "mean", "none", 2
- "ocean_model",   "T_adx", "T_adx", "ocean_hourly", "all", "mean", "none", 2
- "ocean_model",   "T_ady", "T_ady", "ocean_hourly", "all", "mean", "none", 2
- "ocean_model",   "T_diffx", "T_diffx", "ocean_hourly", "all", "mean", "none", 2
- "ocean_model",   "T_diffy", "T_diffy", "ocean_hourly", "all", "mean", "none", 2
- "ocean_model",   "Tflx_dia_diff", "Tflx_dia_diff", "ocean_hourly", "all", "mean", "none", 2
+ "ocean_model",   "T_tendency_vert_remap", "T_tendency_vert_remap", "ocean_daily", "all", "mean", "none", 2
+ "ocean_model",   "T_tendency", "T_tendency", "ocean_daily", "all", "mean", "none", 2
+ "ocean_model",   "T_adx", "T_adx", "ocean_daily", "all", "mean", "none", 2
+ "ocean_model",   "T_ady", "T_ady", "ocean_daily", "all", "mean", "none", 2
+ "ocean_model",   "T_diffx", "T_diffx", "ocean_daily", "all", "mean", "none", 2
+ "ocean_model",   "T_diffy", "T_diffy", "ocean_daily", "all", "mean", "none", 2
+ "ocean_model",   "Tflx_dia_diff", "Tflx_dia_diff", "ocean_daily", "all", "mean", "none", 2
 
- "ocean_model",   "CAu", "CAu", "ocean_hourly", "all", "mean", "none", 2
- "ocean_model",   "CAv", "CAv", "ocean_hourly", "all", "mean", "none", 2
- "ocean_model",   "PFu", "PFu", "ocean_hourly", "all", "mean", "none", 2
- "ocean_model",   "PFv", "PFv", "ocean_hourly", "all", "mean", "none", 2
- "ocean_model",   "diffu", "diffu", "ocean_hourly", "all", "mean", "none", 2
- "ocean_model",   "diffv", "diffv", "ocean_hourly", "all", "mean", "none", 2
- "ocean_model",   "du_dt_visc", "du_dt_visc", "ocean_hourly", "all", "mean", "none", 2
- "ocean_model",   "dv_dt_visc", "dv_dt_visc", "ocean_hourly", "all", "mean", "none", 2
+ "ocean_model",   "CAu", "CAu", "ocean_daily", "all", "mean", "none", 2
+ "ocean_model",   "CAv", "CAv", "ocean_daily", "all", "mean", "none", 2
+ "ocean_model",   "PFu", "PFu", "ocean_daily", "all", "mean", "none", 2
+ "ocean_model",   "PFv", "PFv", "ocean_daily", "all", "mean", "none", 2
+ "ocean_model",   "diffu", "diffu", "ocean_daily", "all", "mean", "none", 2
+ "ocean_model",   "diffv", "diffv", "ocean_daily", "all", "mean", "none", 2
+ "ocean_model",   "du_dt_visc", "du_dt_visc", "ocean_daily", "all", "mean", "none", 2
+ "ocean_model",   "dv_dt_visc", "dv_dt_visc", "ocean_daily", "all", "mean", "none", 2
 
- "ocean_model",   "taux", "taux", "ocean_hourly", "all", "mean", "none", 2
- "ocean_model",   "tauy", "tauy", "ocean_hourly", "all", "mean", "none", 2
+ "ocean_model",   "taux", "taux", "ocean_daily", "all", "mean", "none", 2
+ "ocean_model",   "tauy", "tauy", "ocean_daily", "all", "mean", "none", 2
+ "ocean_model",   "net_heat_coupler", "net_heat_coupler", "ocean_daily", "all", "mean", "none", 2
+ "ocean_model",   "MSTAR", "MSTAR", "ocean_daily", "all", "mean", "none", 2
+ "ocean_model",   "MSTAR_LT", "MSTAR_LT", "ocean_daily", "all", "mean", "none", 2
+ "ocean_model",   "ePBL_h_ML", "ePBL_h_ML", "ocean_daily","all","mean","none",2
+
+ "generic_cfc",   "cfc11","cfc11", "ocean_daily","all","mean","none",2
+ "generic_cfc",   "cfc12","cfc12", "ocean_daily","all","mean","none",2
+
+"ocean_scalar_day",        1, "days", 1, "days", "time"
+# Monthly time series
+ "ocean_model", "ave_wfo",             "ave_wfo",            "ocean_scalar_day",  "all", "mean",  "none",1  # global mean prcme
+ "ocean_model", "ave_evs",             "ave_evs",            "ocean_scalar_day",  "all", "mean",  "none",1  # global mean evaporation
+ "ocean_model", "ave_hfsso",           "ave_hfsso",          "ocean_scalar_day",  "all", "mean",  "none",1  # global mean sensible heat
+ "ocean_model", "ave_rsntds",          "ave_rsntds",         "ocean_scalar_day",  "all", "mean",  "none",1  # global mean SW
+ "ocean_model", "ave_rlntds",          "ave_rlntds",         "ocean_scalar_day",  "all", "mean",  "none",1  # global mean LW
+ "ocean_model", "ave_hflso",           "ave_hflso",          "ocean_scalar_day",  "all", "mean",  "none",1  # global mean latent
+ "ocean_model", "ave_hfds",            "ave_hfds",           "ocean_scalar_day",  "all", "mean",  "none",1  # global mean net heat surf
+ "ocean_model", "net_heat_coupler_ga", "net_heat_coupler_ga","ocean_scalar_day",  "all", "mean",  "none",1  # global mean net heat coupl
+ "ocean_model", "LwLatSens_ga",        "LwLatSens_ga",       "ocean_scalar_day",  "all", "mean",  "none",1  # global mean LW+lat+sens
+ "ocean_model", "ssh_ga",              "ssh_ga",             "ocean_scalar_day",  "all", "mean",  "none",1  # global mean ssh
+ "ocean_model", "precip_ga",           "precip_ga",          "ocean_scalar_day",  "all", "mean",  "none",1  # global mean precip
+
+"ocean_hourly", 1, "hours",   1, "hours", "time"
+ "ocean_model",   "nonpenSW", "nonpenSW", "ocean_hourly", "all", "mean", "none", 2
  "ocean_model",   "net_heat_coupler", "net_heat_coupler", "ocean_hourly", "all", "mean", "none", 2
- "ocean_model",   "MSTAR", "MSTAR", "ocean_hourly", "all", "mean", "none", 2
- "ocean_model",   "MSTAR_LT", "MSTAR_LT", "ocean_hourly", "all", "mean", "none", 2
- "ocean_model",   "ePBL_h_ML", "ePBL_h_ML", "ocean_hourly","all","mean","none",2
+ "ocean_model",   "LwLatSens", "LwLatSens", "ocean_hourly", "all", "mean", "none", 2
+ "ocean_model",   "Heat_PmE", "Heat_PmE", "ocean_hourly", "all", "mean", "none", 2
 
- "generic_cfc",   "cfc11","cfc11", "ocean_hourly","all","mean","none",2
- "generic_cfc",   "cfc12","cfc12", "ocean_hourly","all","mean","none",2
+"ice_hourly", 1, "hours",   1, "hours", "time"
+ "ice_model",   "SW", "SW", "ice_hourly", "all", "mean", "none", 2
+ "ice_model",   "LW", "LW", "ice_hourly", "all", "mean", "none", 2
+ "ice_model",   "LH", "LH", "ice_hourly", "all", "mean", "none", 2
+ "ice_model",   "ALB", "ALB", "ice_hourly", "all", "mean", "none", 2
+ "ice_model",   "sithick", "sithick", "ice_hourly", "all", "mean", "none", 2
+

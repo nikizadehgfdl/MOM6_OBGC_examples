@@ -24,7 +24,7 @@
             months = 0,
             days   = 2,
             hours  = 0,
-            current_date = 2004,12,1,0,0,0,
+            current_date = 2004,1,1,0,0,0,
             calendar = 'julian',
             dt_cpld = 1200,
             dt_atmos = 1200,
