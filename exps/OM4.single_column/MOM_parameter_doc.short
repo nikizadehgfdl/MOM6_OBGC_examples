@@ -4,8 +4,6 @@
 USE_REGRIDDING = True           !   [Boolean] default = False
                                 ! If True, use the ALE algorithm (regridding/remapping). If False, use the
                                 ! layered isopycnal algorithm.
-THICKNESSDIFFUSE = True         !   [Boolean] default = False
-                                ! If true, interface heights are diffused with a coefficient of KHTH.
 THICKNESSDIFFUSE_FIRST = True   !   [Boolean] default = False
                                 ! If true, do thickness diffusion before dynamics. This is only used if
                                 ! THICKNESSDIFFUSE is true.
@@ -109,10 +107,16 @@ MASKING_DEPTH = 0.0             !   [m] default = -9999.0
                                 ! zeroed out. MASKING_DEPTH needs to be smaller than MINIMUM_DEPTH
 MAXIMUM_DEPTH = 6500.0          !   [m]
                                 ! The maximum depth of the ocean.
+ROTATION = "betaplane"          ! default = "2omegasinlat"
+                                ! This specifies how the Coriolis parameter is specified:
+                                !     2omegasinlat - Use twice the planetary rotation rate
+                                !       times the sine of latitude.
+                                !     betaplane - Use a beta-plane or f-plane.
+                                !     USER - call a user modified routine.
 
 ! === module MOM_verticalGrid ===
 ! Parameters providing information about the vertical grid.
-NK = 225                        !   [nondim]
+NK = 75                         !   [nondim]
                                 ! The number of model layers.
 
 ! === module MOM_EOS ===
@@ -155,7 +159,7 @@ ALE_COORDINATE_CONFIG = "FNC1:2,6500,6,.01" ! default = "UNIFORM"
                                 !                the filename and two variable names, separated
                                 !                by a comma or space, for sigma-2 and dz. e.g.
                                 !                HYBRID:vgrid.nc,sigma2,dz
-!ALE_RESOLUTION = 39*2.0, 8*2.01, 4*2.02, 3*2.03, 2*2.04, 2*2.05, 2*2.06, 2.07, 2*2.08, 2.09, 2.1, 2.11, 2.12, 2.13, 2.15, 2.16, 2.17, 2.19, 2.21, 2.22, 2.24, 2.26, 2.2800000000000002, 2.31, 2.33, 2.36, 2.39, 2.42, 2.45, 2.48, 2.52, 2.56, 2.6, 2.64, 2.68, 2.73, 2.7800000000000002, 2.84, 2.89, 2.95, 3.02, 3.08, 3.1500000000000004, 3.23, 3.31, 3.39, 3.4699999999999998, 3.56, 3.66, 3.76, 3.8600000000000003, 3.9699999999999998, 4.09, 4.21, 4.34, 4.470000000000001, 4.609999999999999, 4.76, 4.91, 5.07, 5.23, 5.41, 5.59, 5.78, 5.98, 6.18, 6.4, 6.62, 6.86, 7.1000000000000005, 7.36, 7.62, 7.9, 8.18, 8.48, 8.79, 9.11, 9.45, 9.79, 10.16, 10.53, 10.92, 11.32, 11.74, 12.18, 12.63, 13.09, 13.58, 14.08, 14.6, 15.14, 15.700000000000001, 16.27, 16.87, 17.490000000000002, 18.12, 18.78, 19.47, 20.17, 20.900000000000002, 21.66, 22.43, 23.240000000000002, 24.07, 24.92, 25.81, 26.72, 27.66, 28.63, 29.64, 30.67, 31.73, 32.83, 33.96, 35.13, 36.33, 37.57, 38.84, 40.15, 41.5, 42.89, 44.32, 45.800000000000004, 47.31, 48.87, 50.47, 52.120000000000005, 53.81, 55.550000000000004, 57.34, 59.18, 61.07, 63.01, 65.00999999999999, 67.06, 69.16, 71.32000000000001, 73.54, 75.82000000000001, 78.15, 80.55, 83.01, 85.54, 88.13, 90.79, 93.51, 96.3, 99.17, 102.1
+!ALE_RESOLUTION = 11*2.0, 2*2.01, 2.02, 2.03, 2.04, 2.06, 2.08, 2.12, 2.16, 2.22, 2.3, 2.4, 2.52, 2.67, 2.85, 3.08, 3.35, 3.6799999999999997, 4.08, 4.54, 5.1, 5.75, 6.51, 7.39, 8.42, 9.600000000000001, 10.96, 12.51, 14.280000000000001, 16.3, 18.580000000000002, 21.16, 24.07, 27.330000000000002, 30.990000000000002, 35.07, 39.63, 44.69, 50.32, 56.54, 63.42, 71.01, 79.37, 88.55, 98.63, 109.66, 121.72, 134.89000000000001, 149.24, 164.86, 181.84, 200.27, 220.25, 241.88, 265.27, 290.52, 317.76, 347.12, 378.71, 412.68, 449.16, 488.31, 530.27, 575.19 !   [m]
                                 ! The distribution of vertical resolution for the target
                                 ! grid used for Eulerian-like coordinates. For example,
                                 ! in z-coordinate mode, the parameter is a list of level
@@ -189,8 +193,8 @@ Z_INIT_FILE_PTEMP_VAR = "ptemp_an" ! default = "ptemp"
                                 ! The name of the potential temperature variable in TEMP_Z_INIT_FILE.
 Z_INIT_FILE_SALT_VAR = "s_an"   ! default = "salt"
                                 ! The name of the salinity variable in SALT_Z_INIT_FILE.
-Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
-                                ! If True, then remap straight to model coordinate from file.
+Z_INIT_HOMOGENIZE = True        !   [Boolean] default = False
+                                ! If True, then horizontally homogenize the interpolated initial conditions.
 
 ! === module MOM_diag_mediator ===
 NUM_DIAG_COORDS = 2             ! default = 1
@@ -254,7 +258,7 @@ KHTH_MAX_CFL = 0.1              !   [nondimensional] default = 0.8
 ! === module MOM_continuity ===
 
 ! === module MOM_continuity_PPM ===
-ETA_TOLERANCE = 1.0E-06         !   [m] default = 1.125E-08
+ETA_TOLERANCE = 1.0E-06         !   [m] default = 3.75E-09
                                 ! The tolerance for the differences between the barotropic and baroclinic
                                 ! estimates of the sea surface height due to the fluxes through each face.  The
                                 ! total tolerance for SSH is 4 times this value.  The default is
@@ -290,16 +294,10 @@ MASS_WEIGHT_IN_PRESSURE_GRADIENT = True !   [Boolean] default = False
                                 ! bathymetry in FV pressure gradient calculations.
 
 ! === module MOM_hor_visc ===
-LAPLACIAN = True                !   [Boolean] default = False
-                                ! If true, use a Laplacian horizontal viscosity.
 AH_VEL_SCALE = 0.01             !   [m s-1] default = 0.0
                                 ! The velocity scale which is multiplied by the cube of the grid spacing to
                                 ! calculate the biharmonic viscosity. The final viscosity is the largest of this
                                 ! scaled viscosity, the Smagorinsky and Leith viscosities, and AH.
-SMAGORINSKY_AH = True           !   [Boolean] default = False
-                                ! If true, use a biharmonic Smagorinsky nonlinear eddy viscosity.
-SMAG_BI_CONST = 0.06            !   [nondim] default = 0.0
-                                ! The nondimensional biharmonic Smagorinsky constant, typically 0.015 - 0.06.
 
 ! === module MOM_vert_friction ===
 HMIX_FIXED = 0.5                !   [m]
@@ -362,14 +360,11 @@ SIMPLE_TKE_TO_KD = True         !   [Boolean] default = False
 
 ! === module MOM_bkgnd_mixing ===
 ! Adding static vertical background mixing coefficients
-KD = 1.5E-05                    !   [m2 s-1] default = 0.0
+KD = 5.0E-04                    !   [m2 s-1] default = 0.0
                                 ! The background diapycnal diffusivity of density in the interior. Zero or the
                                 ! molecular value, ~1e-7 m2 s-1, may be used.
-KD_MIN = 2.0E-06                !   [m2 s-1] default = 1.5E-07
+KD_MIN = 2.0E-06                !   [m2 s-1] default = 5.0E-06
                                 ! The minimum diapycnal diffusivity.
-HENYEY_IGW_BACKGROUND = True    !   [Boolean] default = False
-                                ! If true, use a latitude-dependent scaling for the near surface background
-                                ! diffusivity, as described in Harrison & Hallberg, JPO 2008.
 KD_MAX = 0.1                    !   [m2 s-1] default = -1.0
                                 ! The maximum permitted increment for the diapycnal diffusivity from TKE-based
                                 ! parameterizations, or a negative value for no limit.
@@ -382,6 +377,9 @@ USE_JACKSON_PARAM = True        !   [Boolean] default = False
 MAX_RINO_IT = 25                !   [nondim] default = 50
                                 ! The maximum number of iterations that may be used to estimate the Richardson
                                 ! number driven mixing.
+KAPPA_BUOY_SCALE_COEF = 100.0   !   [nondim] default = 0.82
+                                ! The coefficient for the buoyancy length scale in the kappa equation.  The
+                                ! values found by Jackson et al. are in the range of 0.81-0.86.
 
 ! === module MOM_diabatic_aux ===
 ! The following parameters are used for auxiliary diabatic processes.
@@ -395,26 +393,17 @@ ML_OMEGA_FRAC = 0.001           !   [nondim] default = 0.0
                                 ! When setting the decay scale for turbulence, use this fraction of the absolute
                                 ! rotation rate blended with the local value of f, as sqrt((1-of)*f^2 +
                                 ! of*4*omega^2).
-TKE_DECAY = 0.001               !   [nondim] default = 2.5
+TKE_DECAY = 0.01                !   [nondim] default = 2.5
                                 ! TKE_DECAY relates the vertical rate of decay of the TKE available for
                                 ! mechanical entrainment to the natural Ekman depth.
-EPBL_MSTAR_SCHEME = "REICHL_H18" ! default = "CONSTANT"
-                                ! EPBL_MSTAR_SCHEME selects the method for setting mstar.  Valid values are:
-                                !    CONSTANT   - Use a fixed mstar given by MSTAR
-                                !    OM4        - Use L_Ekman/L_Obukhov in the sabilizing limit, as in OM4
-                                !    REICHL_H18 - Use the scheme documented in Reichl & Hallberg, 2018.
-MSTAR_CAP = 10.0                !   [nondim] default = -1.0
-                                ! If this value is positive, it sets the maximum value of mstar allowed in ePBL.
-                                ! (This is not used if EPBL_MSTAR_SCHEME = CONSTANT).
-RH18_MSTAR_CN3 = -6.0           !   [nondim] default = -5.0
-                                ! MSTAR_N coefficient 3 (exponential decay coefficient). The value of -5.0 is
-                                ! given in RH18.  Increasing this increases how quickly the value of MSTAR
-                                ! decreases as Hf/ust increases.
+MSTAR = 0.0                     !   [nondim] default = 1.2
+                                ! The ratio of the friction velocity cubed to the TKE input to the mixed layer.
+                                ! This option is used if EPBL_MSTAR_SCHEME = CONSTANT.
 NSTAR = 0.06                    !   [nondim] default = 0.2
                                 ! The portion of the buoyant potential energy imparted by surface fluxes that is
                                 ! available to drive entrainment at the base of mixed layer when that energy is
                                 ! positive.
-MSTAR_CONV_ADJ = 0.66           !   [nondim] default = 0.0
+MSTAR_CONV_ADJ = 0.667          !   [nondim] default = 0.0
                                 ! Coefficient used for reducing mstar during convection due to reduction of
                                 ! stable density gradient.
 EPBL_TRANSITION_SCALE = 0.01    !   [nondim] default = 0.1
@@ -424,21 +413,6 @@ MIX_LEN_EXPONENT = 1.0          !   [nondim] default = 2.0
                                 ! The exponent applied to the ratio of the distance to the MLD and the MLD depth
                                 ! which determines the shape of the mixing length. This is only used if
                                 ! USE_MLD_ITERATION is True.
-EPBL_VEL_SCALE_SCHEME = "REICHL_H18" ! default = "CUBE_ROOT_TKE"
-                                ! Selects the method for translating TKE into turbulent velocities. Valid values
-                                ! are:
-                                !    CUBE_ROOT_TKE  - A constant times the cube root of remaining TKE.
-                                !    REICHL_H18 - Use the scheme based on a combination of w* and v* as
-                                !                 documented in Reichl & Hallberg, 2018.
-WSTAR_USTAR_COEF = 15.0         !   [nondim] default = 1.0
-                                ! A ratio relating the efficiency with which convectively released energy is
-                                ! converted to a turbulent velocity, relative to mechanically forced TKE. Making
-                                ! this larger increases the BL diffusivity
-EPBL_VEL_SCALE_FACTOR = 0.5477  !   [nondim] default = 1.0
-                                ! An overall nondimensional scaling factor for wT. Making this larger increases
-                                ! the PBL diffusivity.
-VSTAR_SURF_FAC = 1.8258         !   [nondim] default = 1.2
-                                ! The proportionality times ustar to set vstar at the surface.
 USE_LA_LI2016 = True            !   [nondim] default = False
                                 ! A logical to use the Li et al. 2016 (submitted) formula to determine the
                                 ! Langmuir number.
@@ -450,17 +424,17 @@ EPBL_LANGMUIR_SCHEME = "ADDITIVE" ! default = "NONE"
                                 !      turbulence
                                 !    ADDITIVE - Add a Langmuir turblence contribution to mstar to other
                                 !      contributions
-LT_ENHANCE_COEF = 0.1056        !   [nondim] default = 0.447
+LT_ENHANCE_COEF = 0.044         !   [nondim] default = 0.447
                                 ! Coefficient for Langmuir enhancement of mstar
-LT_ENHANCE_EXP = -1.0           !   [nondim] default = -1.33
+LT_ENHANCE_EXP = -1.5           !   [nondim] default = -1.33
                                 ! Exponent for Langmuir enhancementt of mstar
 LT_MOD_LAC1 = 0.0               !   [nondim] default = -0.87
                                 ! Coefficient for modification of Langmuir number due to MLD approaching Ekman
                                 ! depth.
-LT_MOD_LAC4 = 0.8               !   [nondim] default = 0.95
+LT_MOD_LAC4 = 0.0               !   [nondim] default = 0.95
                                 ! Coefficient for modification of Langmuir number due to ratio of Ekman to
                                 ! stable Obukhov depth.
-LT_MOD_LAC5 = 0.8               !   [nondim] default = 0.95
+LT_MOD_LAC5 = 0.22              !   [nondim] default = 0.95
                                 ! Coefficient for modification of Langmuir number due to ratio of Ekman to
                                 ! unstable Obukhov depth.
 
@@ -507,6 +481,9 @@ ENERGYSAVEDAYS = 0.25           !   [days] default = 1.0
                                 ! other globally summed diagnostics.
 
 ! === module ocean_model_init ===
+HOMOGENIZE_IOB_FORCINGS = True  !   [Boolean] default = False
+                                ! If true, creates a copy of all IOB fluxes and averages them horizontally
+                                ! across the entire domain.
 
 ! === module MOM_surface_forcing ===
 MAX_P_SURF = 0.0                !   [Pa] default = -1.0
@@ -526,6 +503,3 @@ USE_RIGID_SEA_ICE = True        !   [Boolean] default = False
 SEA_ICE_RIGID_MASS = 100.0      !   [kg m-2] default = 1000.0
                                 ! The mass of sea-ice per unit area at which the sea-ice starts to exhibit
                                 ! rigidity
-LA_DEPTH_RATIO = 0.2            !   [nondim] default = 0.04
-                                ! The depth (normalized by BLD) to average Stokes drift over in Langmuir number
-                                ! calculation, where La = sqrt(ust/Stokes).

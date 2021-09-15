@@ -24,7 +24,7 @@
             months = 0,
             days   = 2,
             hours  = 0,
-            current_date = 2004,12,1,0,0,0,
+            current_date = 2004,1,1,0,0,0,
             calendar = 'julian',
             dt_cpld = 1200,
             dt_atmos = 1200,
@@ -125,7 +125,7 @@
  &generic_tracer_nml
        do_generic_tracer=.true.
        do_generic_abiotic=.false.
-       do_generic_CFC=.false.
+       do_generic_CFC=.true.
        do_generic_COBALT=.true.
        do_generic_SF6=.false.
        force_update_fluxes=.true.

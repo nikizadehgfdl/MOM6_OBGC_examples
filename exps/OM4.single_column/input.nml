@@ -125,10 +125,10 @@
  &generic_tracer_nml
        do_generic_tracer=.true.
        do_generic_abiotic=.false.
-       do_generic_CFC=.ture.
+       do_generic_CFC=.true.
        do_generic_COBALT=.false.
        do_generic_SF6=.false.
-       force_update_fluxes=.true.
+       force_update_fluxes=.false.
 /
 
 

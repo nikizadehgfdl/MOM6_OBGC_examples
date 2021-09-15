@@ -1,5 +1,5 @@
 OM4_single_column
-1958 1 1 0 0 0
+2004 1 1 0 0 0
 
 "ocean_daily", 1, "days",   1, "days", "time"
 
@@ -58,16 +58,9 @@ OM4_single_column
  "ocean_model", "ssh_ga",              "ssh_ga",             "ocean_scalar_day",  "all", "mean",  "none",1  # global mean ssh
  "ocean_model", "precip_ga",           "precip_ga",          "ocean_scalar_day",  "all", "mean",  "none",1  # global mean precip
 
-"ocean_hourly", 1, "hours",   1, "hours", "time"
- "ocean_model",   "nonpenSW", "nonpenSW", "ocean_hourly", "all", "mean", "none", 2
- "ocean_model",   "net_heat_coupler", "net_heat_coupler", "ocean_hourly", "all", "mean", "none", 2
- "ocean_model",   "LwLatSens", "LwLatSens", "ocean_hourly", "all", "mean", "none", 2
- "ocean_model",   "Heat_PmE", "Heat_PmE", "ocean_hourly", "all", "mean", "none", 2
-
-"ice_hourly", 1, "hours",   1, "hours", "time"
- "ice_model",   "SW", "SW", "ice_hourly", "all", "mean", "none", 2
- "ice_model",   "LW", "LW", "ice_hourly", "all", "mean", "none", 2
- "ice_model",   "LH", "LH", "ice_hourly", "all", "mean", "none", 2
- "ice_model",   "ALB", "ALB", "ice_hourly", "all", "mean", "none", 2
- "ice_model",   "sithick", "sithick", "ice_hourly", "all", "mean", "none", 2
-
+"ice_daily", 1, "days",   1, "days", "time"
+ "ice_model",   "SW", "SW", "ice_daily", "all", "mean", "none", 2
+ "ice_model",   "LW", "LW", "ice_daily", "all", "mean", "none", 2
+ "ice_model",   "LH", "LH", "ice_daily", "all", "mean", "none", 2
+ "ice_model",   "ALB", "ALB", "ice_daily", "all", "mean", "none", 2
+ "ice_model",   "sithick", "sithick", "ice_daily", "all", "mean", "none", 2
