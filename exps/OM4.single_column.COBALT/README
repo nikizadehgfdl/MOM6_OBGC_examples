@@ -12,3 +12,5 @@ tar zxvf OceanBGC_dataset.tar.gz
 #Archive backup: /archive/Niki.Zadeh/input/ftp_pub_backup/OM4_datasets/
 #Clean-up *.nc RESTART/* logfile.000000.out ocean.stats* seaice.stats MOM_parameter_doc.* SIS_parameter* stocks.out time_stamp.out available_diags* SIS.available_diags SIS_fast.available_diags
 
+#runit
+source ../../builds/lscgpu50/pgi20.env ; mpirun -n 1 ../../builds/build/lscgpu50-pgi20/ocean_ice/repro-managedACC/MOM6SIS2 | & tee stdout.lscgpu50.pgi20.repro-managedACC.n1
