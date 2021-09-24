@@ -7,3 +7,7 @@ This assumes that the files build/gaea/intel21.env and build/gaea/intel21.mk exi
 -  build/gaea/intel21.env contains all the necessary environment variables and modules
 that must be loaded before a build / run on that machine
 -  build/gaea/intel21.mk  contains the compile instructions for the particular compiler and machine
+
+To build COBALT only with openACC
+./linux-build.bash -m lscgpu50 -p pgi20 -t repro-managedACC -f mom6sis2
+
