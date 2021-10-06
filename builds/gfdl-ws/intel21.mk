@@ -32,6 +32,7 @@ FFLAGS_VERBOSE = -v -V -what
 
 
 CFLAGS := -D__IFC -sox -traceback
+OTHER_CXXFLAGS := -I/net/aja/miniconda3/envs/py38/include/python3.8 -I/net/aja/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/core/include
 CFLAGS_OPT = -O2
 CFLAGS_OPENMP = -qopenmp
 CFLAGS_DEBUG = -O0 -g -ftrapuv 
@@ -83,6 +84,7 @@ LIBS := $(shell nc-config --flibs) $(shell pkg-config --libs mpich2-f90)
 LDFLAGS += $(LIBS)
 #LDFLAGS += -L/app/spack/linux-rhel7-x86_64/intel-19.0.5/mpich/3.2.1-wf5xw2s3lm45sr4j373szc4lm5yjkzg4/lib -lmpi -lmpifort -lrt -lpthread
 LDFLAGS += -lmpi -lmpifort
+LDFLAGS += -L/net/aja/miniconda3/envs/py38/lib -lpython3.8 -lstdc++
 
 #---------------------------------------------------------------------------
 # you should never need to change any lines below.
@@ -107,8 +109,10 @@ RM = rm -f
 SHELL = /bin/csh -f
 TMPFILES = .*.m *.B *.L *.i *.i90 *.l *.s *.mod *.opt
 
-.SUFFIXES: .F .F90 .H .L .T .f .f90 .h .i .i90 .l .o .s .opt .x
+.SUFFIXES: .F .F90 .H .L .T .f .f90 .h .i .i90 .l .o .s .opt .x .C
 
+.C.o:
+	$(CXX) $(CCLAGS) -c $*.C
 .f.L:
 	$(FC) $(FFLAGS) -c -listing $*.f
 .f.opt:

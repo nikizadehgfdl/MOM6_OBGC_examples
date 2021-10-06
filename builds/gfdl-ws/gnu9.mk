@@ -39,6 +39,7 @@ CFLAGS += $(shell pkg-config --cflags-only-I mpich)
 CFLAGS_OPT = -O2
 CFLAGS_OPENMP = -fopenmp
 CFLAGS_DEBUG = -O0 -g 
+OTHER_CXXFLAGS := -I/net/aja/miniconda3/envs/py38/include/python3.8 -I/net/aja/miniconda3/envs/py38/lib/python3.8/site-packages/numpy/core/include
 
 # Optional Testing compile flags.  Mutually exclusive from DEBUG, REPRO, and OPT
 # *_TEST will match the production if no new option(s) is(are) to be tested.
@@ -83,8 +84,10 @@ ifeq ($(NETCDF),3)
 endif
 
 LIBS := $(shell pkg-config --libs-only-L netcdf) $(shell pkg-config --libs-only-L mpich)
-LIBS += -lnetcdff -lnetcdf -lhdf5_hl -lhdf5 -lz -lmpich -lfmpich
+LIBS += -lnetcdff -lnetcdf -lmpich -lfmpich
+#-lhdf5_hl -lhdf5 -lz -lmpich -lfmpich
 LDFLAGS += $(LIBS)
+LDFLAGS += -L/net/aja/miniconda3/envs/py38/lib -lpython3.8 -lstdc++
 
 #---------------------------------------------------------------------------
 # you should never need to change any lines below.

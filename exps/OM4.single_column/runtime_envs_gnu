@@ -1,0 +1,2 @@
+setenv LD_LIBRARY_PATH /net2/nnz/opt/gcc-9.2.0/additions/mpich-3.2/lib:/net2/nnz/opt/gcc-9.2.0/additions/netcdf-4.4.1.1/lib:/net/aja/miniconda3/envs/py38/lib:/net2/nnz/opt/gcc-9.2.0/lib64
+setenv PYTHONPATH /net2/nnz/MOM6_OBGC_examples/exps/OM4.single_column   
