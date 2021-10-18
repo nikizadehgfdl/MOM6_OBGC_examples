@@ -51,7 +51,6 @@ REENTRANT_X = True
 #override LAPLACIAN = False
 #override SMAGORINSKY_AH = False
 !Extra flags needed
-#override Z_INIT_ALE_REMAPPING = False
 Z_INIT_HOMOGENIZE = True
 ROTATION = "betaplane"
 F_0 = 0
