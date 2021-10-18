@@ -195,6 +195,8 @@ Z_INIT_FILE_SALT_VAR = "s_an"   ! default = "salt"
                                 ! The name of the salinity variable in SALT_Z_INIT_FILE.
 Z_INIT_HOMOGENIZE = True        !   [Boolean] default = False
                                 ! If True, then horizontally homogenize the interpolated initial conditions.
+Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
+                                ! If True, then remap straight to model coordinate from file.
 
 ! === module MOM_diag_mediator ===
 NUM_DIAG_COORDS = 2             ! default = 1

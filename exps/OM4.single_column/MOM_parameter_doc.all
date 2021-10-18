@@ -496,7 +496,7 @@ Z_INIT_FILE_SALT_VAR = "s_an"   ! default = "salt"
                                 ! The name of the salinity variable in SALT_Z_INIT_FILE.
 Z_INIT_HOMOGENIZE = True        !   [Boolean] default = False
                                 ! If True, then horizontally homogenize the interpolated initial conditions.
-Z_INIT_ALE_REMAPPING = False    !   [Boolean] default = False
+Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
                                 ! If True, then remap straight to model coordinate from file.
 Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
                                 ! The remapping scheme to use if using Z_INIT_ALE_REMAPPING is True.
@@ -517,17 +517,6 @@ HOR_REGRID_2018_ANSWERS = False !   [Boolean] default = False
                                 ! If true, use the order of arithmetic for horizonal regridding that recovers
                                 ! the answers from the end of 2018.  Otherwise, use rotationally symmetric forms
                                 ! of the same expressions.
-ADJUST_THICKNESS = False        !   [Boolean] default = False
-                                ! If true, all mass below the bottom removed if the topography is shallower than
-                                ! the thickness input file would indicate.
-FIT_TO_TARGET_DENSITY_IC = True !   [Boolean] default = True
-                                ! If true, all the interior layers are adjusted to their target densities using
-                                ! mostly temperature This approach can be problematic, particularly in the high
-                                ! latitudes.
-LAYER_Z_INIT_IC_EXTRAP_BUG = True !   [Boolean] default = True
-                                ! If true use an expression with a vertical indexing bug for extrapolating the
-                                ! densities at the bottom of unstable profiles from data when finding the
-                                ! initial interface locations in layered mode from a dataset of T and S.
 VELOCITY_CONFIG = "zero"        ! default = "zero"
                                 ! A string that determines how the initial velocities are specified for a new
                                 ! run:
