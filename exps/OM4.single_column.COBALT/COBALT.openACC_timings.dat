@@ -1,0 +1,9 @@
+#Timings for COBALT update_from_source (bigeochemistry network) routine vs. grid box resolution with and without openACC directives 
+#This shows that GPU outperforms CPU when the model resolution (matrices involved) becomes large enough.
+#resolution	tmax_noGPU(sec)	tmax_GPU(sec)
+16		   4.49		  11.17
+64		  15.35		  22.84
+256		  60.84		  63.49
+1024		 241.15		 214.48
+4096		 975.18		 802.89
+6400		1558.46		1221.26

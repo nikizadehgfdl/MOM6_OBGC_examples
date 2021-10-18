@@ -39,6 +39,7 @@ VERBOSE =            # If non-blank, add additional verbosity compiler
 OPENMP =             # If non-blank, compile with openmp enabled
 
 OPENACC =            # If non-blank, compile with openacc enabled
+OPENACC_managed =    # If non-blank, compile with openacc enabled and managed memory mode
 
 NO_OVERRIDE_LIMITS = # If non-blank, do not use the -qoverride-limits
                      # compiler option.  Default behavior is to compile
@@ -107,6 +108,7 @@ FFLAGS_OPENMP = -mp
 FFLAGS_VERBOSE = -v -Minform=inform
 FFLAGS_COVERAGE =
 FFLAGS_OPENACC = -acc -ta=nvidia -Minfo=accel
+FFLAGS_OPENACC_managed = -acc -ta=nvidia:managed -Minfo=accel
 
 # Macro for C preprocessor
 CPPFLAGS = $(INCLUDES)
@@ -169,6 +171,12 @@ endif
 ifdef OPENACC
 #CFLAGS += $(CFLAGS_OPENMP)
 FFLAGS += $(FFLAGS_OPENACC)
+LDFLAGS += $(LDFLAGS_OPENACC)
+endif
+
+ifdef OPENACC_managed
+#CFLAGS += $(CFLAGS_OPENMP)
+FFLAGS += $(FFLAGS_OPENACC_managed)
 LDFLAGS += $(LDFLAGS_OPENACC)
 endif
 
