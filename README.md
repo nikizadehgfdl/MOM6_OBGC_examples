@@ -1,5 +1,5 @@
 ## Here's how to compile the ocean-ice model (MOM6-SIS2 on gaea)
-(cd builds;  ./linux-build.bash -m gaea -p ncrc5.intel23 -t repro -f mom6_sis2 )
+(cd builds;  ./linux-build.bash -m gaea -p ncrc5.intel23 -t repro -f mom6sis2 )
 
 ## MOM6SIS2COBALT Single-column model
 
@@ -19,8 +19,10 @@ Needed only for COBALT experiments
 
 ### Check all data is available for the single_column experiment
 cd exps/MOM6SIS2COBALT.single_column
+
 find INPUT/ -xtype l
-#If data_table points to data_table.CORE2 then INPUT/JRA_* links need not be present
+
+Note: If data_table points to data_table.CORE2 then INPUT/JRA_* links need not be present
 
 ### Run the single_column experiment (1 core on gaea)
 cd exps/MOM6SIS2COBALT.single_column
