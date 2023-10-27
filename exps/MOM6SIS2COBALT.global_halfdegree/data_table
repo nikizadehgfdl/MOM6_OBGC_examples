@@ -1,0 +1,87 @@
+ "ATM", "p_surf",             "SLP",      "./INPUT/slp.clim.nc",          "bilinear",   1.0
+ "ATM", "p_bot",              "SLP",      "./INPUT/slp.clim.nc",          "bilinear",   1.0
+ "ATM", "t_bot",              "T_10_MOD", "./INPUT/t_10_mod.clim.nc",     "bilinear",   1.0
+ "ATM", "sphum_bot",          "Q_10_MOD", "./INPUT/q_10_mod.clim.nc",     "bilinear",   1.0
+ "ATM", "u_bot",              "U_10_MOD", "./INPUT/u_10_mod.clim.nc",     "bicubic",    1.0
+ "ATM", "v_bot",              "V_10_MOD", "./INPUT/v_10_mod.clim.nc",     "bicubic",    1.0
+ "ATM", "z_bot",              "",         "",                             "bilinear",  10.0
+ "ATM", "gust",               "",         "",                             "bilinear",   1.0e-4
+ "ICE", "lw_flux_dn",         "LWDN_MOD", "./INPUT/ncar_rad.clim.nc",     "bilinear",   1.0
+ "ICE", "sw_flux_vis_dir_dn", "SWDN_MOD", "./INPUT/ncar_rad.clim.nc",     "bilinear",   0.285
+ "ICE", "sw_flux_vis_dif_dn", "SWDN_MOD", "./INPUT/ncar_rad.clim.nc",     "bilinear",   0.285
+ "ICE", "sw_flux_nir_dir_dn", "SWDN_MOD", "./INPUT/ncar_rad.clim.nc",     "bilinear",   0.215
+ "ICE", "sw_flux_nir_dif_dn", "SWDN_MOD", "./INPUT/ncar_rad.clim.nc",     "bilinear",   0.215
+ "ICE", "lprec",              "RAIN",     "./INPUT/ncar_precip.clim.nc",  "bilinear",   0.9933
+ "ICE", "fprec",              "SNOW",     "./INPUT/ncar_precip.clim.nc",  "bilinear",   0.9933
+"ICE" , "runoff"        , "runoff"      , "./INPUT/runoff.daitren.clim.720x576.v20180328.nc", "none" ,  1.0
+"ICE" , "calving"       , ""            , ""                             , "none"  ,  0.0
+"ICE" , "dhdt"          , ""            , ""                             , "none"  , 80.0
+"ICE" , "dedt"          , ""            , ""                             , "none"  ,  2.0e-6
+"ICE" , "drdt"          , ""            , ""                             , "none"  ,  10.0
+"LND" , "t_surf"        , ""            , ""                             , "none"  ,  273.0
+"LND" , "t_ca"          , ""            , ""                             , "none"  ,  273.0
+"LND" , "q_ca"          , ""            , ""                             , "none"  ,  0.0
+"LND" , "rough_mom"     , ""            , ""                             , "none"  ,  0.01
+"LND" , "rough_heat"    , ""            , ""                             , "none"  ,  0.1
+"LND" , "albedo"        , ""            , ""                             , "none"  ,  0.1
+#"LND" , "t_ca"         , ""            , ""                             , "none"  ,  273.0
+#"LND" , "t_surf"       , ""            , ""                             , "none"  ,  273.0
+"LND" , "sphum_surf"    , ""            , ""                             , "none"  ,  0.0
+"LND" , "sphum_ca"      , ""            , ""                             , "none"  ,  0.0
+"LND" , "t_flux"        , ""            , ""                             , "none"  ,  0.0
+"LND" , "sphum_flux"    , ""            , ""                             , "none"  ,  0.0
+"LND" , "lw_flux"       , ""            , ""                             , "none"  ,  0.0
+"LND" , "sw_flux"       , ""            , ""                             , "none"  ,  0.0
+"LND" , "lprec"         , ""            , ""                             , "none"  ,  0.0
+"LND" , "fprec"         , ""            , ""                             , "none"  ,  0.0
+"LND" , "dhdt"          , ""            , ""                             , "none"  ,  5.0
+"LND" , "dedt"          , ""            , ""                             , "none"  ,  2e-6
+"LND" , "dedq"          , ""            , ""                             , "none"  ,  0.0
+"LND" , "drdt"          , ""            , ""                             , "none"  ,  5.0
+"LND" , "drag_q"        , ""            , ""                             , "none"  ,  0.0
+"LND" , "p_surf"        , ""            , ""                             , "none"  ,  1.e5
+# jgj 2016/07/08 COBALT 1860 data table with TOPAZ Fe datasets
+############Copied from ESM4 starts
+"OCN", "runoff_no3_flux_ice_ocn",   "NO3_CONC",   "./INPUT/news_nutrients.nc","none",1.0e-3
+"OCN", "runoff_ldon_flux_ice_ocn",  "LDON_CONC",  "./INPUT/news_nutrients.nc","none",1.0e-3
+"OCN", "runoff_sldon_flux_ice_ocn", "SLDON_CONC", "./INPUT/news_nutrients.nc","none",1.0e-3
+"OCN", "runoff_srdon_flux_ice_ocn", "SRDON_CONC", "./INPUT/news_nutrients.nc","none",1.0e-3
+"OCN", "runoff_ndet_flux_ice_ocn",  "NDET_CONC",  "./INPUT/news_nutrients.nc","none",1.0e-3
+"OCN", "runoff_po4_flux_ice_ocn",   "PO4_CONC",   "./INPUT/news_nutrients.nc","none",1.65e-3
+"OCN", "runoff_ldop_flux_ice_ocn",  "LDOP_CONC",  "./INPUT/news_nutrients.nc","none",1.65e-3
+"OCN", "runoff_sldop_flux_ice_ocn", "SLDOP_CONC", "./INPUT/news_nutrients.nc","none",1.65e-3
+"OCN", "runoff_srdop_flux_ice_ocn", "SRDOP_CONC", "./INPUT/news_nutrients.nc","none",1.65e-3
+"OCN", "runoff_fed_flux_ice_ocn",   "FED_CONC",   "./INPUT/river_iron.nc",    "none",1.0e-3
+"OCN", "runoff_alk_flux_ice_ocn",  "",    "",                             "none",  0.42e-3
+"OCN", "runoff_dic_flux_ice_ocn",  "",    "",                             "none",  0.32e-3
+"OCN", "runoff_lith_flux_ice_ocn", ""  , ""                             , "none" , 13.0e-3
+#
+# jgj data table for o2 gas exchange
+#
+"ATM", "o2_flux_pcair_atm", ""         , ""                             , "none" , 0.214
+#
+# jgj 2016/11/29 co2 data table (Jan 1 1850 from CMIP6 co2 gbl file: /lustre/f1/unswept/Huan.Guo/awg/input/cmip6/co2_gblannualdata_2016)
+#
+## restoring co2 data override set to CMIP6 Jan 1 1850 value 284.262e-6
+"ATM" , "co2_dvmr_restore", "",     "", "none",  284.262e-06
+############Copied from ESM4 ends
+#ocean-ice specific
+"OCN", "dry_dep_fed_flux_ice_ocn",  "FLUX",        "./INPUT/Soluble_Fe_Flux_PI.nc", "bilinear", -1.0
+"OCN", "dry_dep_lith_flux_ice_ocn", "FLUX_MINERAL","./INPUT/Mineral_Fe_Flux_PI.nc", "bilinear", -1.0
+"OCN", "dry_dep_po4_flux_ice_ocn",  "FLUX",        "./INPUT/Mineral_Fe_Flux_PI.nc", "bilinear", -0.0084
+"OCN", "wet_dep_no3_flux_ice_ocn",  "NO3_WET_DEP", "./INPUT/depflux_total.mean.1860.nc", "bilinear" , -1.0
+"OCN", "dry_dep_no3_flux_ice_ocn",  "NO3_DRY_DEP", "./INPUT/depflux_total.mean.1860.nc", "bilinear" , -1.0
+"OCN", "wet_dep_nh4_flux_ice_ocn",  "NH4_WET_DEP", "./INPUT/depflux_total.mean.1860.nc", "bilinear" , -1.0
+"OCN", "dry_dep_nh4_flux_ice_ocn",  "NH4_DRY_DEP", "./INPUT/depflux_total.mean.1860.nc", "bilinear" , -1.0
+# jgj 2016/07/18 co2 gas exchange: set to Jan 1 1850 value 284.65e-6
+"ATM", "co2_flux_pcair_atm", ""        , ""                             , "none" ,284.65e-6
+# jgj 2016/07/18 co2_bot : set to Jan 1 1850 value 284.65e-6 
+"ATM", "co2_bot"       , ""        , ""                    , "none"     , 284.65e-6 
+#CFCs
+"ATM", "cfc11_flux_pcair_atm","CFC11",   "INPUT/cfc.bc.nc", "bilinear", 1.0e-12
+"ATM", "cfc12_flux_pcair_atm","CFC12",   "INPUT/cfc.bc.nc", "bilinear", 1.0e-12
+"ATM", "sf6_flux_pcair_atm",   "SF6",    "INPUT/cfc.bc.nc", "bilinear", 1.0e-12
+#Abiotic
+"OCN", "delta_14catm", "D14C", "./INPUT/atm_delta_13C_14C.nc",  "bilinear", 1.0
+"ATM", "abco2_flux_pcair_atm", "" , "", "none" ,284.262e-6
+"ATM", "ab14co2_flux_pcair_atm", "", "", "none" ,284.262e-6

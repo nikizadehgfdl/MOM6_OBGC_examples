@@ -1,0 +1,1 @@
+ADD_DIURNAL_SW = True ! This must ONLY be used in the ice-ocean mode if forcing is not diurnal (e.g. CORE), NOT fully coupled mode.

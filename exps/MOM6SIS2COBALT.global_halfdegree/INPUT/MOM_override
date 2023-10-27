@@ -1,0 +1,5 @@
+# Turn on generic tracers
+USE_generic_tracer = True
+#override CHL_FROM_FILE = False
+GENERIC_TRACER_IC_FILE = "MOM_GENERICS.res.nc"
+#override DIAG_COORD_DEF_RHO2 = "FILE:diag_rho2.nc,interfaces=rho2"

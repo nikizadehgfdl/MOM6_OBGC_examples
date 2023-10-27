@@ -1,0 +1,4 @@
+#override IO_LAYOUT = 1,4
+#override LAYOUT    = 16,8
+#override MASKTABLE = MOM_mask_table
+#override OCEAN_OMP_THREADS = 1
