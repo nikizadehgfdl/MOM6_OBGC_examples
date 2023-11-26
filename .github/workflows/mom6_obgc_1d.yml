@@ -1,0 +1,42 @@
+name: Continuous Delivery of mom6_obgc_1d Container
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    name: mom6_obgc 1d CI/CD Workflow 
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:        
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        submodules: recursive
+        
+#    - uses: jitterbit/get-changed-files@v1
+#      id: abc
+#      with:
+#        format: space-delimited
+#        token: ${{ secrets.GITHUB_TOKEN }}        
+          
+#    - name: Login to DockerHub Registry
+#      run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+
+    - name: Build Docker Image
+      run: |
+        echo "maximize disk space on git-runner ..."
+        df -h 
+        sudo rm -rf /usr/share/dotnet
+        sudo rm -rf /opt/ghc
+        sudo rm -rf "/usr/local/share/boost"
+        sudo rm -rf "$AGENT_TOOLSDIRECTORY"
+        df -h
+        pwd
+        ls -l -h 
+        echo "docker image build ..."
+#        docker build --file "./tests/Dockerfile.ci" -t mom6_obgc_1d:develop .
