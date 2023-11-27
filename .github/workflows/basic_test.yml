@@ -10,4 +10,5 @@ jobs:
         with: 
           submodules: 'recursive'
       - run: pwd
-      - run: ls src/FMS; ls build
+      - run: ls src/FMS
+      - run: cd builds; ./linux-build.bash -m lscgpu50 -p gnu11 -t repro -f mom6sis2
