@@ -5,6 +5,6 @@ jobs:
   check-bats-version:
     runs-on: lscgpu50
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v2
       - run: pwd
       - run: ls
