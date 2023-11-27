@@ -5,7 +5,7 @@ jobs:
   check-bats-version:
     runs-on: lscgpu50
     steps:
-      - run: module load git; which git
+      - run: whoami; module load git; which git; echo $PATH
       - uses: actions/checkout@v2
         with: 
           submodules: 'recursive'
