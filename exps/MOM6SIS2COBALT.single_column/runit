@@ -1,0 +1,7 @@
+mkdir RESTART
+#AMDbox
+(cd builds; ./linux-build.bash -m lscamd50 -p gnu13 -t repro -f mom6sis2)
+(cd exps/MOM6SIS2COBALT.single_column; source ../../builds/lscamd50/gnu13.env ; mpirun -n 1 ../../builds/build/lscamd50-gnu13//ocean_ice/repro/MOM6SIS2 |& tee stdout.lscamd50.gnu13.repro.n1)
+#AWS cloud
+(cd builds; ./linux-build.bash -m awscloud -p intel22 -t repro -f mom6sis2)
+(cd exps/MOM6SIS2COBALT.single_column; source ../../builds/awscloud/intel22.env ; mpirun -n 1 ../../builds/build/awscloud-intel22/ocean_ice/repro/MOM6SIS2 |& tee stdout.awscloud-intel22.repro.n1.CORE ; mv ocean.stats ocean.stats.awscloud-intel22.repro.n1.CORE)
