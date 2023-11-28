@@ -1,0 +1,15 @@
+### This script can get all the required input data for running the experiment MOM6SIS2COBALT.single_column 
+(mkdir -p datasets/grids; cd datasets/grids; wget ftp://ftp.gfdl.noaa.gov/pub/Niki.Zadeh/OM4_datasets/OM4_single_column_grid.tar.gz; tar zxvf OM4_single_column_grid.tar.gz)
+
+#### IC
+(mkdir -p datasets/; cd datasets/; wget ftp://ftp.gfdl.noaa.gov/perm/Alistair.Adcroft/MOM6-testing/obs.tgz; tar zxvf obs.tgz)
+
+#### CORE2 NYF Forcing files(854MB)
+(mkdir -p datasets/forcings; cd datasets/forcings; wget ftp://ftp.gfdl.noaa.gov/perm/Alistair.Adcroft/MOM6-testing/CORE.tgz; tar xvf CORE.tgz)
+
+#### Oceanbiogeochemistry initialization/flux dataset (963MB)
+Needed only for COBALT experiments
+(mkdir -p datasets/OceanBGC_dataset;   cd datasets/OceanBGC_dataset;   wget ftp://ftp.gfdl.noaa.gov/pub/Niki.Zadeh/OM4_datasets/OceanBGC_dataset.tar.gz;     tar zxvf OceanBGC_dataset.tar.gz)
+
+#### Check the required input data
+(cd MOM6SIS2COBALT.single_column; find INPUT/ -xtype l)
