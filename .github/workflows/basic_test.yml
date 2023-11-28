@@ -12,7 +12,10 @@ jobs:
       - run: pwd
       - run: ls src/FMS
 #build
-#      - run: cd builds; ./linux-build.bash -m lscgpu50 -p gnu11 -t repro -f mom6sis2
+      - run: (cd builds; ./linux-build.bash -m lscgpu50 -p gnu11 -t repro -f mom6sis2)
       - run: ls -lh builds/build/lscgpu50-gnu11/ocean_ice/repro/MOM6SIS2
+#get input data
+      - run: (cd exps; ./get_single_column_dataset)
+#run the experiment
       - run: (cd exps/MOM6SIS2COBALT.single_column/; source ../../builds/lscgpu50/gnu11.env; mkdir RESTART; mpirun -n 1 ../../builds/build/lscgpu50-gnu11/ocean_ice/repro/MOM6SIS2 |& tee stdout.lscgpu50.gnu11.repro.n1)
 
