@@ -9,19 +9,19 @@ NOTE: MPP_DOMAINS_SET_STACK_SIZE: stack size set to    32768.
  /
 NOTE: MPP_IO_SET_STACK_SIZE: stack size set to     131072.
 NOTE: MPP_DOMAINS_SET_STACK_SIZE: stack size set to  5000000.
- Entering coupler_init at 20231027 104115.018
- Starting initializing ensemble_manager at 20231027 104115.019
- Finished initializing ensemble_manager at 20231027 104115.019
+ Entering coupler_init at 20231128 112846.198
+ Starting initializing ensemble_manager at 20231128 112846.199
+ Finished initializing ensemble_manager at 20231128 112846.202
 NOTE: coupler_init: Atmos PE range:      0     0 ens_01
 NOTE: coupler_init: Ocean PE range:      0     0 ens_01
 NOTE: coupler_init: Land PE range:      0     0 ens_01
 NOTE: coupler_init: Ice PE range:      0     0 ens_01
 NOTE: coupler_init: Running with SERIAL coupling.
 NOTE: coupler_init: Sending most recent fluxes to ocean.
- Starting to initialize diag_manager at 20231027 104115.019
+ Starting to initialize diag_manager at 20231128 112846.202
 NOTE: diag_manager_mod::diag_manager_init: diag_manager is using fms2_io
- Finished initializing diag_manager at 20231027 104115.033
- Starting to initialize tracer_manager at 20231027 104115.033
+ Finished initializing diag_manager at 20231128 112846.217
+ Starting to initialize tracer_manager at 20231128 112846.217
  
  Dumping coupler_mod/types tree
 types/
@@ -206,7 +206,7 @@ NOTE: close_param_file: MOM_override has been closed successfully.
  IRR_INHIBIT     =   10.0000000000000     ,
  K_NH3_NITRIF    =  3.100000000000000E-009,
  GAMMA_NITRIF    =   3500000.00000000     ,
- IMBALANCE_TOLERANCE     =  1.000000000000000E-010
+ IMBALANCE_TOLERANCE     =  1.000000000000000E-009
  /
  ==>Note from generic_COBALT(generic_COBALT_register):Using Mocsy CO2 routine
  setting up nh3 tracer (ocean - no exchange)
@@ -1152,24 +1152,24 @@ fluxes/
             csurf-long_name = 'Ocean concentration'
             sc_no-units = 'dimensionless'
             sc_no-long_name = 'Schmidt number'
- Finished initializing tracer_manager at 20231027 104115.053
- Beginning to initialize component models at 20231027 104115.053
- Starting to initialize atmospheric model at 20231027 104115.053
+ Finished initializing tracer_manager at 20231128 112846.243
+ Beginning to initialize component models at 20231128 112846.243
+ Starting to initialize atmospheric model at 20231128 112846.243
  atmos model domain decomposition
 whalo =    1, ehalo =    1, shalo =    1, nhalo =    1
   X-AXIS =    4
   Y-AXIS =    4
 NOTE: grid2_mod/get_grid_cell_vertices domain is not present, global data will be read
 NOTE: grid2_mod/get_grid_cell_centers domain is not present, global data will be read
- Finished initializing atmospheric model at 20231027 104115.059
- Starting to initialize land model at 20231027 104115.063
+ Finished initializing atmospheric model at 20231128 112846.248
+ Starting to initialize land model at 20231128 112846.252
  land model domain decomposition
 whalo =    1, ehalo =    1, shalo =    1, nhalo =    1
   X-AXIS =    4
   Y-AXIS =    4
 NOTE: grid2_mod/get_grid_cell_centers domain is not present, global data will be read
- Finished initializing land model at 20231027 104115.068
- Starting to initialize ice model at 20231027 104115.070
+ Finished initializing land model at 20231128 112846.258
+ Starting to initialize ice model at 20231128 112846.260
 NOTE: open_param_file: SIS_input has been opened successfully.
 NOTE: open_param_file: SIS_override has been opened successfully.
 NOTE: callTree: ---> ice_model_init(), ice_model.F90
@@ -1255,8 +1255,8 @@ NOTE: callTree:       <--- SIS_fast_thermo_init()
 NOTE: close_param_file: SIS_input has been closed successfully.
 NOTE: close_param_file: SIS_override has been closed successfully.
 NOTE: callTree:    <--- ice_model_init()
- Finished initializing ice model at 20231027 104115.098
- Starting to initialize ocean model at 20231027 104115.100
+ Finished initializing ice model at 20231128 112846.288
+ Starting to initialize ocean model at 20231128 112846.290
 NOTE: callTree:    ---> ocean_model_init(), ocean_model_MOM.F90
 NOTE: open_param_file: MOM_input has been opened successfully.
 NOTE: open_param_file: MOM_saltrestore has been opened successfully.
@@ -1388,6 +1388,7 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
+
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
@@ -1397,7 +1398,6 @@ WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_RE
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
-
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
@@ -1405,13 +1405,13 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
+
+
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
-
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
@@ -1500,30 +1500,30 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
+
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
+
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
-WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
+WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
@@ -1624,18 +1624,18 @@ WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_RE
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
+
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
-WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
+WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
@@ -1722,11 +1722,11 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
 
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
+
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
@@ -1735,6 +1735,7 @@ WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_RE
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
+
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
@@ -1747,7 +1748,6 @@ WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
@@ -1837,12 +1837,12 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
-
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
+
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
+
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
@@ -1855,13 +1855,13 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
-
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 NOTE: init_from_Z: min=  0.0000E+00 max=  0.0000E+00 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  0.0000E+00 max=  0.0000E+00 Level=  2 Tracer from ALE()
@@ -1949,10 +1949,10 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
+
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
@@ -1964,7 +1964,6 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
-
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
@@ -1974,6 +1973,7 @@ WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 NOTE: init_from_Z: min=  7.4423E-09 max=  7.4423E-09 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  7.4423E-09 max=  7.4423E-09 Level=  2 Tracer from ALE()
@@ -2061,29 +2061,29 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
-
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
+
+
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
+
+
+WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
+
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
-
-WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
-
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
@@ -2172,16 +2172,16 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
+
+
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
-
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
@@ -2190,14 +2190,14 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
+
+
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
 
 NOTE: init_from_Z: min=  0.0000E+00 max=  0.0000E+00 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  0.0000E+00 max=  0.0000E+00 Level=  2 Tracer from ALE()
@@ -2282,7 +2282,6 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
 
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
@@ -2292,6 +2291,7 @@ WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Tr
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
+
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
@@ -2394,11 +2394,11 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
 
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
+
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
@@ -2414,12 +2414,12 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
+
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
+
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
-
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
@@ -2514,23 +2514,23 @@ WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Tr
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
-WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
-
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
+
+WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
+
+
+WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
-
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
@@ -2620,12 +2620,12 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
+
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
@@ -2638,14 +2638,14 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
+
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 NOTE: init_from_Z: min=  0.0000E+00 max=  0.0000E+00 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  0.0000E+00 max=  0.0000E+00 Level=  2 Tracer from ALE()
@@ -2738,11 +2738,12 @@ WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Tr
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
+
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
+
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
@@ -2750,14 +2751,13 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
-
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 NOTE: init_from_Z: min=  0.0000E+00 max=  0.0000E+00 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  0.0000E+00 max=  0.0000E+00 Level=  2 Tracer from ALE()
@@ -2848,13 +2848,14 @@ WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Tr
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
+
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
@@ -2862,14 +2863,13 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
-
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 NOTE: init_from_Z: min=  2.3232E-04 max=  2.3232E-04 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  2.3232E-04 max=  2.3232E-04 Level=  2 Tracer from ALE()
@@ -2954,11 +2954,11 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
 
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
+
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
@@ -3062,20 +3062,20 @@ NOTE: initialize_MOM_generic_tracer: initializing generic tracer cased using MOM
 
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
+
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
+
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
@@ -3085,12 +3085,12 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
+
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
@@ -3174,18 +3174,18 @@ NOTE: initialize_MOM_generic_tracer: initializing generic tracer nlgz using MOM_
 
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
-
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
 
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
+
 
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
+
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
@@ -3204,8 +3204,8 @@ WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 NOTE: init_from_Z: min=  2.0144E-07 max=  2.0144E-07 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  2.0144E-07 max=  2.0144E-07 Level=  2 Tracer from ALE()
@@ -3290,14 +3290,14 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
 
+WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
+
+
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
-
-WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
-
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
@@ -3306,7 +3306,6 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
-
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
@@ -3318,6 +3317,7 @@ WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 NOTE: init_from_Z: min=  2.7912E-07 max=  2.7912E-07 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  2.7912E-07 max=  2.7912E-07 Level=  2 Tracer from ALE()
@@ -3405,20 +3405,19 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
-
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
+
+
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
-
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
@@ -3430,6 +3429,7 @@ WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 NOTE: init_from_Z: min=  2.5287E-07 max=  2.5287E-07 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  2.5287E-07 max=  2.5287E-07 Level=  2 Tracer from ALE()
@@ -3514,11 +3514,11 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
 
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
+
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
@@ -3632,8 +3632,8 @@ WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Tr
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
@@ -3652,8 +3652,8 @@ WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 NOTE: init_from_Z: min=  2.7571E-07 max=  2.7571E-07 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  2.7571E-07 max=  2.7571E-07 Level=  2 Tracer from ALE()
@@ -3741,15 +3741,15 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
-
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
+
+
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
@@ -3759,13 +3759,13 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
-
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 NOTE: init_from_Z: min=  2.1052E-09 max=  2.1052E-09 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  2.1052E-09 max=  2.1052E-09 Level=  2 Tracer from ALE()
@@ -3853,14 +3853,14 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
-
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
+
+
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
@@ -3869,12 +3869,12 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
+
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
@@ -3968,8 +3968,8 @@ WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Tr
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
@@ -3978,7 +3978,6 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
-
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
@@ -3990,6 +3989,7 @@ WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 NOTE: init_from_Z: min=  1.2901E-06 max=  1.2901E-06 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  1.2901E-06 max=  1.2901E-06 Level=  2 Tracer from ALE()
@@ -4080,8 +4080,8 @@ WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Tr
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
@@ -4090,7 +4090,6 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
-
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
@@ -4102,6 +4101,7 @@ WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 NOTE: init_from_Z: min=  1.7403E-07 max=  1.7403E-07 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  1.7403E-07 max=  1.7403E-07 Level=  2 Tracer from ALE()
@@ -4192,8 +4192,8 @@ WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Tr
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
@@ -4205,12 +4205,12 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
+
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
@@ -4300,12 +4300,12 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
+
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
@@ -4318,14 +4318,14 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
+
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 NOTE: init_from_Z: min=  5.1454E-07 max=  5.1454E-07 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  5.2555E-07 max=  5.2555E-07 Level=  2 Tracer from ALE()
@@ -4418,15 +4418,14 @@ WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Tr
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
-WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
-
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
+
+WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
@@ -4438,6 +4437,7 @@ WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 NOTE: init_from_Z: min=  3.8055E-10 max=  3.8055E-10 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  3.8055E-10 max=  3.8055E-10 Level=  2 Tracer from ALE()
@@ -4522,7 +4522,6 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
 
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
@@ -4532,6 +4531,7 @@ WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Tr
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
+
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
@@ -4544,10 +4544,10 @@ WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
+
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
@@ -4636,12 +4636,12 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
+
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
@@ -4654,11 +4654,11 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
+
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
@@ -4749,12 +4749,12 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
-
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
+
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
+
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
@@ -4762,7 +4762,6 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
-
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
@@ -4772,6 +4771,7 @@ WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
@@ -4858,11 +4858,11 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
 
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
+
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
@@ -4878,14 +4878,14 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
+
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 NOTE: init_from_Z: min=  2.7346E-07 max=  2.7346E-07 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  2.7346E-07 max=  2.7346E-07 Level=  2 Tracer from ALE()
@@ -4973,12 +4973,12 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
-
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
+
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
+
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
@@ -4991,13 +4991,13 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
-
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 NOTE: init_from_Z: min=  2.6889E-07 max=  2.6889E-07 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  2.6889E-07 max=  2.6889E-07 Level=  2 Tracer from ALE()
@@ -5085,12 +5085,12 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
-
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
+
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
+
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
@@ -5103,13 +5103,13 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
-
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 NOTE: init_from_Z: min=  2.5385E-08 max=  2.5385E-08 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  2.5385E-08 max=  2.5385E-08 Level=  2 Tracer from ALE()
@@ -5196,14 +5196,14 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
+
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
-
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
@@ -5214,14 +5214,14 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
+
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 NOTE: init_from_Z: min=  5.8181E-09 max=  5.8181E-09 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  5.8181E-09 max=  5.8181E-09 Level=  2 Tracer from ALE()
@@ -5314,15 +5314,14 @@ WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Tr
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
+
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
-
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
-
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
@@ -5332,6 +5331,7 @@ WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
@@ -5420,14 +5420,14 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
+
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
-
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
@@ -5436,11 +5436,11 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
-
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
+
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
@@ -5536,8 +5536,8 @@ WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Tr
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
@@ -5549,12 +5549,12 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
+
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
@@ -5645,14 +5645,14 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
-
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
+
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
@@ -5663,13 +5663,13 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 NOTE: init_from_Z: min=  2.4101E-09 max=  2.4101E-09 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  2.4101E-09 max=  2.4101E-09 Level=  2 Tracer from ALE()
@@ -5754,11 +5754,11 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
 
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
+
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
@@ -5772,7 +5772,6 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
-
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
@@ -5782,6 +5781,7 @@ WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 NOTE: init_from_Z: min=  4.3822E-08 max=  4.3822E-08 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  4.3822E-08 max=  4.3822E-08 Level=  2 Tracer from ALE()
@@ -5872,8 +5872,8 @@ WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Tr
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
@@ -5884,11 +5884,11 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
-
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
+
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
@@ -5996,11 +5996,11 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
-
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
+
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
@@ -6090,7 +6090,6 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
 
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
@@ -6100,6 +6099,7 @@ WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Tr
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
+
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
@@ -6116,8 +6116,8 @@ WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 NOTE: init_from_Z: min=  3.3579E-12 max=  3.3579E-12 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  3.3579E-12 max=  3.3579E-12 Level=  2 Tracer from ALE()
@@ -6198,20 +6198,20 @@ NOTE: initialize_MOM_generic_tracer: initializing generic tracer fedet using MOM
 
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
+
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
+
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
@@ -6226,10 +6226,10 @@ WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 NOTE: init_from_Z: min=  1.7940E-13 max=  1.7940E-13 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  1.7940E-13 max=  1.7940E-13 Level=  2 Tracer from ALE()
@@ -6314,7 +6314,6 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
 
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
@@ -6326,6 +6325,7 @@ WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_RE
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
+
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
@@ -6334,6 +6334,7 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
+
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
@@ -6341,7 +6342,6 @@ WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPP
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
 
 NOTE: init_from_Z: min=  1.0451E-10 max=  1.0451E-10 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  1.0451E-10 max=  1.0451E-10 Level=  2 Tracer from ALE()
@@ -6426,11 +6426,11 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
 
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
+
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
@@ -6452,8 +6452,8 @@ WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 NOTE: init_from_Z: min=  1.9178E-03 max=  1.9178E-03 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  1.9178E-03 max=  1.9178E-03 Level=  2 Tracer from ALE()
@@ -6541,12 +6541,12 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
-
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
+
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
+
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
@@ -6559,13 +6559,13 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
-
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 NOTE: init_from_Z: min=  2.0336E-09 max=  2.0336E-09 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  2.0336E-09 max=  2.0336E-09 Level=  2 Tracer from ALE()
@@ -6650,8 +6650,8 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
 
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
+
 
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
@@ -6666,16 +6666,16 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
-
-
-
-WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
+
+WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
+
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
@@ -6768,8 +6768,8 @@ WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Tr
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
@@ -6778,7 +6778,6 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
-
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
@@ -6790,6 +6789,7 @@ WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 NOTE: init_from_Z: min=  2.2570E-03 max=  2.2570E-03 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  2.2570E-03 max=  2.2570E-03 Level=  2 Tracer from ALE()
@@ -6891,17 +6891,19 @@ WARNING: Unused line in MOM_input : COORD_FILE = "layer_coord.nc"
 WARNING: Unused line in MOM_input : COORD_FILE = "layer_coord.nc"
 
 
+WARNING: Unused line in MOM_input : BOUNDARY_EXTRAPOLATION = True
+
 
 WARNING: Unused line in MOM_input : BOUNDARY_EXTRAPOLATION = True
 
 
 WARNING: Unused line in MOM_input : REGRID_COMPRESSIBILITY_FRACTION = 0.01
-WARNING: Unused line in MOM_input : BOUNDARY_EXTRAPOLATION = True
 
 
 WARNING: Unused line in MOM_input : REGRID_COMPRESSIBILITY_FRACTION = 0.01
 
 
+WARNING: Unused line in MOM_input : MAXIMUM_INT_DEPTH_CONFIG = "FNC1:5,8000.0,1.0,.01"
 
 WARNING: Unused line in MOM_input : MAXIMUM_INT_DEPTH_CONFIG = "FNC1:5,8000.0,1.0,.01"
 
@@ -6909,10 +6911,8 @@ WARNING: Unused line in MOM_input : MAXIMUM_INT_DEPTH_CONFIG = "FNC1:5,8000.0,1.
 WARNING: Unused line in MOM_input : MAX_LAYER_THICKNESS_CONFIG = "FNC1:400,31000.0,0.1,.01"
 
 
-WARNING: Unused line in MOM_input : MAXIMUM_INT_DEPTH_CONFIG = "FNC1:5,8000.0,1.0,.01"
-
-
 WARNING: Unused line in MOM_input : MAX_LAYER_THICKNESS_CONFIG = "FNC1:400,31000.0,0.1,.01"
+
 
 
 WARNING: Unused line in MOM_input : SMAG_BI_CONST = 0.06
@@ -6933,6 +6933,7 @@ WARNING: Unused line in MOM_input : EPBL_USTAR_MIN = 1.45842E-18
 WARNING: Unused line in MOM_input : EPBL_USTAR_MIN = 1.45842E-18
 
 
+
 WARNING: Unused line in MOM_input : CHL_FILE = "seawifs-clim-1997-2010.1440x1080.v20180328.nc"
 
 
@@ -6940,7 +6941,6 @@ WARNING: Unused line in MOM_input : CHL_FILE = "seawifs-clim-1997-2010.1440x1080
 
 
 WARNING: Unused line in MOM_input : CHL_VARNAME = "chlor_a"
-
 
 WARNING: Unused line in MOM_input : CHL_VARNAME = "chlor_a"
 
@@ -6955,6 +6955,7 @@ WARNING: Unused line in MOM_saltrestore : SALT_RESTORE_FILE = "salt_restore_PHC2
 
 
 WARNING: Unused line in MOM_saltrestore : SALT_RESTORE_FILE = "salt_restore_PHC2.720x576.v20180405.nc"
+
 
 
 WARNING: Unused line in MOM_saltrestore : SRESTORE_AS_SFLUX = True
@@ -6964,16 +6965,15 @@ WARNING: Unused line in MOM_saltrestore : SRESTORE_AS_SFLUX = True
 
 
 WARNING: Unused line in MOM_saltrestore : MAX_DELTA_SRESTORE = 5.0
-
 
 WARNING: Unused line in MOM_saltrestore : MAX_DELTA_SRESTORE = 5.0
 
 NOTE: ==== Completed MOM6 Coupled Initialization ====
- Finished initializing ocean model at 20231027 104116.712
- Starting to initialize data_override at 20231027 104116.712
- Finished initializing data_override at 20231027 104116.713
- Finished initializing component models at 20231027 104116.713
- Starting to initialize flux_exchange at 20231027 104116.713
+ Finished initializing ocean model at 20231128 112847.853
+ Starting to initialize data_override at 20231128 112847.853
+ Finished initializing data_override at 20231128 112847.854
+ Finished initializing component models at 20231128 112847.854
+ Starting to initialize flux_exchange at 20231128 112847.854
  ==>Note from flux_exchange_mod(flux_exchange_init):
   Number of exchanged tracers =            1
  Tracer field name :sphum
@@ -7002,7 +7002,7 @@ NOTE: xgrid_mod: reading exchange grid information from mosaic grid file
   1.939250786235286E-006
  OCN(LNDOCN)=  1.939250786235286E-006  1.939250786235286E-006
   1.939250786235286E-006
- Finsihed initializing flux_exchange at 20231027 104116.740
+ Finsihed initializing flux_exchange at 20231128 112847.881
  BEGIN CHECKSUM(Atmos_data_type):: coupler_init+           0
 CHECKSUM::     atm%lon_bnd                 =     BF54518B3AA86758
 CHECKSUM::     atm%lat_bnd                 =     F3DBE8D44A53A72E
@@ -7292,13 +7292,7 @@ CHECKSUM::      ocn_ice_bnd_type%sea_level =                    0
    CHECKSUM::           iobt%cfc12_flux_deltap_ice_ocn =                    0
    CHECKSUM::               iobt%cfc12_flux_kw_ice_ocn =                    0
    CHECKSUM::            iobt%cfc12_flux_flux0_ice_ocn =                    0
- Exiting coupler_init at 20231027 104116.740
-
-WARNING: MPP_OPEN: File ./ocean.stats opened WRONLY already exists!
-
-
-WARNING: MPP_OPEN: File ./ocean.stats opened WRONLY already exists!
-
+ Exiting coupler_init at 20231128 112847.881
 MOM Date   2004/01/01 00:00:00      0: En 1.723779E-26, MaxCFL  0.00000, Mass 4.095051722672E+15, Salt  34.65602533658, Temp   4.29761377254
     Total Energy: 3DD3674DBDB47F56  7.0589630864782529E-11
     Total Mass:   4.0950517226724150E+15, Change:   0.0000000000000000E+00 Error:  0.00000E+00 ( 0.0E+00)
@@ -8102,24 +8096,24 @@ WARNING: diag_util_mod::opening_file: module/field_name (ocean_model/Kv_shear) N
 
 WARNING: diag_util_mod::opening_file: module/field_name (ocean_model/GOTM_L) NOT registered
 
-
 WARNING: diag_util_mod::opening_file: module/field_name (ocean_model/GOTM_L) NOT registered
 
 
-WARNING: diag_util_mod::opening_file: module/field_name (ocean_model/GOTM_TKE) NOT registered
-
 
 WARNING: diag_util_mod::opening_file: module/field_name (ocean_model/GOTM_TKE) NOT registered
+
+WARNING: diag_util_mod::opening_file: module/field_name (ocean_model/GOTM_TKE) NOT registered
+
 
 
 
 WARNING: diag_util_mod::opening_file: module/field_name (ocean_model/GOTM_KM) NOT registered
 
 WARNING: diag_util_mod::opening_file: module/field_name (ocean_model/GOTM_KM) NOT registered
+
 
 
 WARNING: diag_util_mod::opening_file: module/field_name (ocean_model/GOTM_KH) NOT registered
-
 
 WARNING: diag_util_mod::opening_file: module/field_name (ocean_model/GOTM_KH) NOT registered
 
@@ -9243,132 +9237,132 @@ NOTE: Potential error in diag_manager_end: flithdet_100 NOT available, check if 
 Tabulating mpp_clock statistics across      1 PEs...
 
                                       hits          tmin          tmax          tavg          tstd  tfrac grain pemin pemax
-Total runtime                            1     16.348483     16.348483     16.348483      0.000000  1.000     0     0     0
-Initialization                           1      1.731971      1.731971      1.731971      0.000000  0.106     0     0     0
-  Init: atmos_model_init                 1      0.005445      0.005445      0.005445      0.000000  0.000     0     0     0
-  Init: land_model_init                  1      0.005375      0.005375      0.005375      0.000000  0.000     0     0     0
-  Init: ice_model_init                   1      0.027198      0.027198      0.027198      0.000000  0.002     0     0     0
-  Init: ocean_model_init                 1      1.612250      1.612250      1.612250      0.000000  0.099     0     0     0
-  Init: flux_exchange_init               1      0.026717      0.026717      0.026717      0.000000  0.002     0     0     0
-Main loop                                1     14.555122     14.555122     14.555122      0.000000  0.890     0     0     0
-Termination                              1      0.060046      0.060046      0.060046      0.000000  0.004     0     0     0
-(Ocean continuity update)             3460      0.161803      0.161803      0.161803      0.000000  0.010    41     0     0
-(Ocean continuity correction)         1730      0.386310      0.386310      0.386310      0.000000  0.024    41     0     0
-(Ocean advect tracer)                  576      2.303128      2.303128      2.303128      0.000000  0.141    31     0     0
-(Ocean tracer halo updates)            576      0.258635      0.258635      0.258635      0.000000  0.016    41     0     0
-(Ocean tracer global synch)            288      0.000204      0.000204      0.000204      0.000000  0.000    41     0     0
-  Ice: slow: dynamics                  288      0.465353      0.465353      0.465353      0.000000  0.028    41     0     0
-  Ice: slow: transport                 144      0.005415      0.005415      0.005415      0.000000  0.000    41     0     0
-  Ice: slow: thermodyn diags           144      0.001614      0.001614      0.001614      0.000000  0.000    41     0     0
-Ice                                    864      0.501855      0.501855      0.501855      0.000000  0.031     1     0     0
-Ice Fast                               288      0.013472      0.013472      0.013472      0.000000  0.001    11     0     0
-Ice Slow                               432      0.488215      0.488215      0.488215      0.000000  0.030    11     0     0
-Ice Fast/Slow Exchange                 144      0.000063      0.000063      0.000063      0.000000  0.000    11     0     0
-Ocean Initialization                     2      1.595686      1.595686      1.595686      0.000000  0.098    11     0     0
-Ocean                                  144     13.627044     13.627044     13.627044      0.000000  0.834     1     0     0
-Ocean dynamics                         576      1.967708      1.967708      1.967708      0.000000  0.120    11     0     0
-Ocean thermodynamics and tracers       864     11.502561     11.502561     11.502561      0.000000  0.704    11     0     0
-Ocean Other                           1152      0.150177      0.150177      0.150177      0.000000  0.009    11     0     0
-(Ocean tracer advection)               576      2.308085      2.308085      2.308085      0.000000  0.141    21     0     0
-(Ocean diabatic driver)                288      9.194321      9.194321      9.194321      0.000000  0.562    21     0     0
+Total runtime                            1     16.411843     16.411843     16.411843      0.000000  1.000     0     0     0
+Initialization                           1      1.696367      1.696367      1.696367      0.000000  0.103     0     0     0
+  Init: atmos_model_init                 1      0.005532      0.005532      0.005532      0.000000  0.000     0     0     0
+  Init: land_model_init                  1      0.005275      0.005275      0.005275      0.000000  0.000     0     0     0
+  Init: ice_model_init                   1      0.028352      0.028352      0.028352      0.000000  0.002     0     0     0
+  Init: ocean_model_init                 1      1.562504      1.562504      1.562504      0.000000  0.095     0     0     0
+  Init: flux_exchange_init               1      0.027031      0.027031      0.027031      0.000000  0.002     0     0     0
+Main loop                                1     14.656414     14.656414     14.656414      0.000000  0.893     0     0     0
+Termination                              1      0.057691      0.057691      0.057691      0.000000  0.004     0     0     0
+(Ocean continuity update)             3460      0.163246      0.163246      0.163246      0.000000  0.010    41     0     0
+(Ocean continuity correction)         1730      0.388547      0.388547      0.388547      0.000000  0.024    41     0     0
+(Ocean advect tracer)                  576      2.317658      2.317658      2.317658      0.000000  0.141    31     0     0
+(Ocean tracer halo updates)            576      0.261335      0.261335      0.261335      0.000000  0.016    41     0     0
+(Ocean tracer global synch)            288      0.000369      0.000369      0.000369      0.000000  0.000    41     0     0
+  Ice: slow: dynamics                  288      0.471917      0.471917      0.471917      0.000000  0.029    41     0     0
+  Ice: slow: transport                 144      0.006013      0.006013      0.006013      0.000000  0.000    41     0     0
+  Ice: slow: thermodyn diags           144      0.001889      0.001889      0.001889      0.000000  0.000    41     0     0
+Ice                                    864      0.513605      0.513605      0.513605      0.000000  0.031     1     0     0
+Ice Fast                               288      0.015587      0.015587      0.015587      0.000000  0.001    11     0     0
+Ice Slow                               432      0.497819      0.497819      0.497819      0.000000  0.030    11     0     0
+Ice Fast/Slow Exchange                 144      0.000097      0.000097      0.000097      0.000000  0.000    11     0     0
+Ocean Initialization                     2      1.544999      1.544999      1.544999      0.000000  0.094    11     0     0
+Ocean                                  144     13.726908     13.726908     13.726908      0.000000  0.836     1     0     0
+Ocean dynamics                         576      2.004781      2.004781      2.004781      0.000000  0.122    11     0     0
+Ocean thermodynamics and tracers       864     11.560109     11.560109     11.560109      0.000000  0.704    11     0     0
+Ocean Other                           1152      0.154492      0.154492      0.154492      0.000000  0.009    11     0     0
+(Ocean tracer advection)               576      2.322959      2.322959      2.322959      0.000000  0.142    21     0     0
+(Ocean diabatic driver)                288      9.236914      9.236914      9.236914      0.000000  0.563    21     0     0
 (Ocean continuity equation *)            0      0.000000      0.000000      0.000000      0.000000  0.000    31     0     0
-(Ocean set BBL viscosity)              288      0.020123      0.020123      0.020123      0.000000  0.001    31     0     0
-(Ocean message passing *)              720      0.037953      0.037953      0.037953      0.000000  0.002    31     0     0
-(Ocean MOM_initialize_state)             2      0.035577      0.035577      0.035577      0.000000  0.002    31     0     0
-(Ocean init message passing *)           2      0.000276      0.000276      0.000276      0.000000  0.000    41     0     0
+(Ocean set BBL viscosity)              288      0.020397      0.020397      0.020397      0.000000  0.001    31     0     0
+(Ocean message passing *)              720      0.038015      0.038015      0.038015      0.000000  0.002    31     0     0
+(Ocean MOM_initialize_state)             2      0.034996      0.034996      0.034996      0.000000  0.002    31     0     0
+(Ocean init message passing *)           2      0.000240      0.000240      0.000240      0.000000  0.000    41     0     0
 (Ocean mixed layer restrat)              0      0.000000      0.000000      0.000000      0.000000  0.000    31     0     0
-(Ocean collective diagnostics)        1008      0.096840      0.096840      0.096840      0.000000  0.006    31     0     0
+(Ocean collective diagnostics)        1008      0.096845      0.096845      0.096845      0.000000  0.006    31     0     0
 (Ocean Z-space diagnostics)              0      0.000000      0.000000      0.000000      0.000000  0.000    31     0     0
-(Ocean ALE)                            288      3.168878      3.168878      3.168878      0.000000  0.194    31     0     0
-(Cobalt: carbon calcs)                 288      1.590102      1.590102      1.590102      0.000000  0.097    31     0     0
-(Cobalt: phytoplankton growth ca       288      0.447818      0.447818      0.447818      0.000000  0.027    31     0     0
-(Cobalt: bacteria growth calcs)        288      0.033421      0.033421      0.033421      0.000000  0.002    31     0     0
-(Cobalt: zooplankton calculation       288      0.478282      0.478282      0.478282      0.000000  0.029    31     0     0
-(Cobalt: other losses)                 288      0.137676      0.137676      0.137676      0.000000  0.008    31     0     0
-(Cobalt: production loop)              288      0.346328      0.346328      0.346328      0.000000  0.021    31     0     0
-(Cobalt: ballasting loops)             288      0.153423      0.153423      0.153423      0.000000  0.009    31     0     0
-(Cobalt: source/sink loop 1)           288      0.063042      0.063042      0.063042      0.000000  0.004    31     0     0
-(Cobalt: source/sink loop 2)           288      0.024997      0.024997      0.024997      0.000000  0.002    31     0     0
-(Cobalt: source/sink loop 3)           288      0.039387      0.039387      0.039387      0.000000  0.002    31     0     0
-(Cobalt: source/sink loop 4)           288      0.011702      0.011702      0.011702      0.000000  0.001    31     0     0
-(Cobalt: source/sink loop 5)           288      0.024414      0.024414      0.024414      0.000000  0.001    31     0     0
-(Cobalt: source/sink loop 6)           288      0.197087      0.197087      0.197087      0.000000  0.012    31     0     0
-(Cobalt: send diagnostics)             288      0.094523      0.094523      0.094523      0.000000  0.006    31     0     0
-(Cobalt: calculate diagnostics)        288      0.636102      0.636102      0.636102      0.000000  0.039    31     0     0
-(Initialize from Z)                      1      0.031589      0.031589      0.031589      0.000000  0.002    41     0     0
-(Ocean diagnostics framework)        63074      0.246309      0.246309      0.246309      0.000000  0.015    31     0     0
+(Ocean ALE)                            288      3.180716      3.180716      3.180716      0.000000  0.194    31     0     0
+(Cobalt: carbon calcs)                 288      1.594661      1.594661      1.594661      0.000000  0.097    31     0     0
+(Cobalt: phytoplankton growth ca       288      0.448385      0.448385      0.448385      0.000000  0.027    31     0     0
+(Cobalt: bacteria growth calcs)        288      0.033821      0.033821      0.033821      0.000000  0.002    31     0     0
+(Cobalt: zooplankton calculation       288      0.502008      0.502008      0.502008      0.000000  0.031    31     0     0
+(Cobalt: other losses)                 288      0.137656      0.137656      0.137656      0.000000  0.008    31     0     0
+(Cobalt: production loop)              288      0.307490      0.307490      0.307490      0.000000  0.019    31     0     0
+(Cobalt: ballasting loops)             288      0.171246      0.171246      0.171246      0.000000  0.010    31     0     0
+(Cobalt: source/sink loop 1)           288      0.062362      0.062362      0.062362      0.000000  0.004    31     0     0
+(Cobalt: source/sink loop 2)           288      0.024381      0.024381      0.024381      0.000000  0.001    31     0     0
+(Cobalt: source/sink loop 3)           288      0.039150      0.039150      0.039150      0.000000  0.002    31     0     0
+(Cobalt: source/sink loop 4)           288      0.011815      0.011815      0.011815      0.000000  0.001    31     0     0
+(Cobalt: source/sink loop 5)           288      0.024978      0.024978      0.024978      0.000000  0.002    31     0     0
+(Cobalt: source/sink loop 6)           288      0.201209      0.201209      0.201209      0.000000  0.012    31     0     0
+(Cobalt: send diagnostics)             288      0.095175      0.095175      0.095175      0.000000  0.006    31     0     0
+(Cobalt: calculate diagnostics)        288      0.639103      0.639103      0.639103      0.000000  0.039    31     0     0
+(Initialize from Z)                      1      0.030893      0.030893      0.030893      0.000000  0.002    41     0     0
+(Ocean diagnostics framework)        63074      0.248380      0.248380      0.248380      0.000000  0.015    31     0     0
 (Ocean diagnostics remapping)            0      0.000000      0.000000      0.000000      0.000000  0.000    41     0     0
-(Ocean diagnostics grid updates)      2593      0.002662      0.002662      0.002662      0.000000  0.000    41     0     0
-(Ocean init message passing)             2      0.000101      0.000101      0.000101      0.000000  0.000    41     0     0
-(Ocean BT pre-calcs only)             2304      0.128701      0.128701      0.128701      0.000000  0.008    41     0     0
-(Ocean BT pre-step halo updates)      2304      0.012450      0.012450      0.012450      0.000000  0.001    41     0     0
-(Ocean BT stepping calcs only)        7488      0.150342      0.150342      0.150342      0.000000  0.009    41     0     0
-(Ocean BT stepping halo updates)      6912      0.010770      0.010770      0.010770      0.000000  0.001    41     0     0
-(Ocean BT post-calcs only)            1728      0.030126      0.030126      0.030126      0.000000  0.002    41     0     0
-(Ocean BT post-step halo updates      1152      0.002402      0.002402      0.002402      0.000000  0.000    41     0     0
-(Ocean BT global synch)                193      0.000171      0.000171      0.000171      0.000000  0.000    41     0     0
-(Ocean Coriolis & mom advection)       576      0.114705      0.114705      0.114705      0.000000  0.007    31     0     0
-(Ocean continuity equation)            864      0.583183      0.583183      0.583183      0.000000  0.036    31     0     0
-(Ocean pressure force)                 288      0.308487      0.308487      0.308487      0.000000  0.019    31     0     0
-(Ocean vertical viscosity)             864      0.241941      0.241941      0.241941      0.000000  0.015    31     0     0
-(Ocean horizontal viscosity)           288      0.208093      0.208093      0.208093      0.000000  0.013    31     0     0
-(Ocean momentum increments)            576      0.005722      0.005722      0.005722      0.000000  0.000    31     0     0
-(Ocean message passing)               2592      0.085000      0.085000      0.085000      0.000000  0.005    31     0     0
-(Ocean barotropic mode calc)           576      0.001747      0.001747      0.001747      0.000000  0.000    31     0     0
-(Ocean barotropic mode stepping)       576      0.339452      0.339452      0.339452      0.000000  0.021    31     0     0
-(Ocean barotropic forcing calc)        576      0.010116      0.010116      0.010116      0.000000  0.001    31     0     0
-(Ocean kappa_shear)                    288      0.122293      0.122293      0.122293      0.000000  0.007    31     0     0
+(Ocean diagnostics grid updates)      2593      0.002768      0.002768      0.002768      0.000000  0.000    41     0     0
+(Ocean init message passing)             2      0.000115      0.000115      0.000115      0.000000  0.000    41     0     0
+(Ocean BT pre-calcs only)             2304      0.129621      0.129621      0.129621      0.000000  0.008    41     0     0
+(Ocean BT pre-step halo updates)      2304      0.012460      0.012460      0.012460      0.000000  0.001    41     0     0
+(Ocean BT stepping calcs only)        7488      0.150602      0.150602      0.150602      0.000000  0.009    41     0     0
+(Ocean BT stepping halo updates)      6912      0.010910      0.010910      0.010910      0.000000  0.001    41     0     0
+(Ocean BT post-calcs only)            1728      0.030506      0.030506      0.030506      0.000000  0.002    41     0     0
+(Ocean BT post-step halo updates      1152      0.002415      0.002415      0.002415      0.000000  0.000    41     0     0
+(Ocean BT global synch)                193      0.000263      0.000263      0.000263      0.000000  0.000    41     0     0
+(Ocean Coriolis & mom advection)       576      0.121422      0.121422      0.121422      0.000000  0.007    31     0     0
+(Ocean continuity equation)            864      0.587857      0.587857      0.587857      0.000000  0.036    31     0     0
+(Ocean pressure force)                 288      0.311551      0.311551      0.311551      0.000000  0.019    31     0     0
+(Ocean vertical viscosity)             864      0.249249      0.249249      0.249249      0.000000  0.015    31     0     0
+(Ocean horizontal viscosity)           288      0.216871      0.216871      0.216871      0.000000  0.013    31     0     0
+(Ocean momentum increments)            576      0.006419      0.006419      0.006419      0.000000  0.000    31     0     0
+(Ocean message passing)               2592      0.085134      0.085134      0.085134      0.000000  0.005    31     0     0
+(Ocean barotropic mode calc)           576      0.001869      0.001869      0.001869      0.000000  0.000    31     0     0
+(Ocean barotropic mode stepping)       576      0.341604      0.341604      0.341604      0.000000  0.021    31     0     0
+(Ocean barotropic forcing calc)        576      0.010520      0.010520      0.010520      0.000000  0.001    31     0     0
+(Ocean kappa_shear)                    288      0.122772      0.122772      0.122772      0.000000  0.007    31     0     0
 (Ocean diabatic entrain)                 0      0.000000      0.000000      0.000000      0.000000  0.000    31     0     0
-(Ocean vert remap)                     288      0.583521      0.583521      0.583521      0.000000  0.036    31     0     0
-(Ocean geothermal)                     288      0.000147      0.000147      0.000147      0.000000  0.000    41     0     0
-(Ocean set_diffusivity)                576      0.169676      0.169676      0.169676      0.000000  0.010    31     0     0
+(Ocean vert remap)                     288      0.589758      0.589758      0.589758      0.000000  0.036    31     0     0
+(Ocean geothermal)                     288      0.000277      0.000277      0.000277      0.000000  0.000    41     0     0
+(Ocean set_diffusivity)                576      0.169069      0.169069      0.169069      0.000000  0.010    31     0     0
 (Ocean KPP)                              0      0.000000      0.000000      0.000000      0.000000  0.000    31     0     0
-(Ocean tracer_columns)                 288      5.197951      5.197951      5.197951      0.000000  0.318    26     0     0
-(Ocean diabatic tridiag)               288      0.003765      0.003765      0.003765      0.000000  0.000    41     0     0
-(Ocean diabatic message passing)       288      0.006626      0.006626      0.006626      0.000000  0.000    41     0     0
-(Ocean find_uv_at_h)                   576      0.004759      0.004759      0.004759      0.000000  0.000    41     0     0
+(Ocean tracer_columns)                 288      5.220900      5.220900      5.220900      0.000000  0.318    26     0     0
+(Ocean diabatic tridiag)               288      0.003905      0.003905      0.003905      0.000000  0.000    41     0     0
+(Ocean diabatic message passing)       288      0.007354      0.007354      0.007354      0.000000  0.000    41     0     0
+(Ocean find_uv_at_h)                   576      0.004737      0.004737      0.004737      0.000000  0.000    41     0     0
 (Ocean frazil)                           0      0.000000      0.000000      0.000000      0.000000  0.000    41     0     0
 (Ocean diffuse tracer)                   0      0.000000      0.000000      0.000000      0.000000  0.000    31     0     0
 (Ocean epipycnal diffuse tracer)         0      0.000000      0.000000      0.000000      0.000000  0.000    31     0     0
-(Initialize tracer from Z)              49      0.863086      0.863086      0.863086      0.000000  0.053    41     0     0
-Ocean surface forcing                  289      0.023883      0.023883      0.023883      0.000000  0.001    11     0     0
-(Ocean forcing diagnostics)            288      0.016990      0.016990      0.016990      0.000000  0.001    41     0     0
-Land-ice-atm coupler                   721      0.358378      0.358378      0.358378      0.000000  0.022     1     0     0
-SFC boundary layer                     144      0.278694      0.278694      0.278694      0.000000  0.017    11     0     0
-Flux DN from atm                       144      0.075362      0.075362      0.075362      0.000000  0.005    41     0     0
-XGrid generation                       144      0.001002      0.001002      0.001002      0.000000  0.000    41     0     0
-Flux UP to atm                         144      0.001563      0.001563      0.001563      0.000000  0.000    41     0     0
-Flux land to ice                       144      0.001651      0.001651      0.001651      0.000000  0.000    41     0     0
-Ice-ocean coupler                      288      0.001985      0.001985      0.001985      0.000000  0.000     1     0     0
-Flux ice to ocean                      144      0.001115      0.001115      0.001115      0.000000  0.000    41     0     0
-Flux ocean to ice                      144      0.000833      0.000833      0.000833      0.000000  0.000    41     0     0
-generate_sfc_xgrid                     144      0.001114      0.001114      0.001114      0.000000  0.000     0     0     0
-flux_ocean_to_ice                      144      0.000930      0.000930      0.000930      0.000000  0.000     0     0     0
-flux_ice_to_ocean                      144      0.001170      0.001170      0.001170      0.000000  0.000     0     0     0
-ATM                                    288      0.868956      0.868956      0.868956      0.000000  0.053     0     0     0
- ATM: atmos loop                       144      0.372847      0.372847      0.372847      0.000000  0.023     0     0     0
+(Initialize tracer from Z)              49      0.800820      0.800820      0.800820      0.000000  0.049    41     0     0
+Ocean surface forcing                  289      0.025837      0.025837      0.025837      0.000000  0.002    11     0     0
+(Ocean forcing diagnostics)            288      0.018172      0.018172      0.018172      0.000000  0.001    41     0     0
+Land-ice-atm coupler                   721      0.341594      0.341594      0.341594      0.000000  0.021     1     0     0
+SFC boundary layer                     144      0.260195      0.260195      0.260195      0.000000  0.016    11     0     0
+Flux DN from atm                       144      0.076464      0.076464      0.076464      0.000000  0.005    41     0     0
+XGrid generation                       144      0.000973      0.000973      0.000973      0.000000  0.000    41     0     0
+Flux UP to atm                         144      0.001666      0.001666      0.001666      0.000000  0.000    41     0     0
+Flux land to ice                       144      0.001747      0.001747      0.001747      0.000000  0.000    41     0     0
+Ice-ocean coupler                      288      0.002040      0.002040      0.002040      0.000000  0.000     1     0     0
+Flux ice to ocean                      144      0.001060      0.001060      0.001060      0.000000  0.000    41     0     0
+Flux ocean to ice                      144      0.000941      0.000941      0.000941      0.000000  0.000    41     0     0
+generate_sfc_xgrid                     144      0.001078      0.001078      0.001078      0.000000  0.000     0     0     0
+flux_ocean_to_ice                      144      0.001041      0.001041      0.001041      0.000000  0.000     0     0     0
+flux_ice_to_ocean                      144      0.001115      0.001115      0.001115      0.000000  0.000     0     0     0
+ATM                                    288      0.863349      0.863349      0.863349      0.000000  0.053     0     0     0
+ ATM: atmos loop                       144      0.357528      0.357528      0.357528      0.000000  0.022     0     0     0
   A-L: atmos_tracer_driver_gathe         0      0.000000      0.000000      0.000000      0.000000  0.000     0     0     0
-  A-L: sfc_boundary_layer              144      0.278838      0.278838      0.278838      0.000000  0.017     0     0     0
+  A-L: sfc_boundary_layer              144      0.260350      0.260350      0.260350      0.000000  0.016     0     0     0
   A-L: update_atmos_model_dynami         0      0.000000      0.000000      0.000000      0.000000  0.000     0     0     0
-  A-L: serial radiation                144      0.000040      0.000040      0.000040      0.000000  0.000     0     0     0
+  A-L: serial radiation                144      0.000036      0.000036      0.000036      0.000000  0.000     0     0     0
   A-L: update_atmos_model_down           0      0.000000      0.000000      0.000000      0.000000  0.000     0     0     0
-  A-L: flux_down_from_atmos            144      0.075395      0.075395      0.075395      0.000000  0.005     0     0     0
+  A-L: flux_down_from_atmos            144      0.076938      0.076938      0.076938      0.000000  0.005     0     0     0
   A-L: update_land_model_fast          144      0.000008      0.000008      0.000008      0.000000  0.000     0     0     0
-  A-L: update_ice_model_fast           144      0.009346      0.009346      0.009346      0.000000  0.001     0     0     0
-  A-L: flux_up_to_atmos                144      0.001598      0.001598      0.001598      0.000000  0.000     0     0     0
+  A-L: update_ice_model_fast           144      0.010486      0.010486      0.010486      0.000000  0.001     0     0     0
+  A-L: flux_up_to_atmos                144      0.001706      0.001706      0.001706      0.000000  0.000     0     0     0
   A-L: update_atmos_model_up           144      0.000007      0.000007      0.000007      0.000000  0.000     0     0     0
   A-L: update_atmos_model_state        144      0.000010      0.000010      0.000010      0.000000  0.000     0     0     0
  ATM: update_land_model_slow           144      0.000008      0.000008      0.000008      0.000000  0.000     0     0     0
- ATM: flux_land_to_ice                 144      0.001741      0.001741      0.001741      0.000000  0.000     0     0     0
- Ice: set_ice_surface fast             144      0.004253      0.004253      0.004253      0.000000  0.000     0     0     0
- Ice: update_ice_model_slow fast       144      0.006228      0.006228      0.006228      0.000000  0.000     0     0     0
- Ice: set_ice_surface slow             144      0.006338      0.006338      0.006338      0.000000  0.000     0     0     0
- Ice: update_ice_model_slow slow       144      0.486662      0.486662      0.486662      0.000000  0.030     0     0     0
- Ice: flux_ice_to_ocean_stocks         144      0.000234      0.000234      0.000234      0.000000  0.000     0     0     0
- Ice: set_ice_surface exchange         144      0.000103      0.000103      0.000103      0.000000  0.000     0     0     0
- Ice: update_ice_model_slow exch       144      0.000065      0.000065      0.000065      0.000000  0.000     0     0     0
-OCN                                    144     13.669497     13.669497     13.669497      0.000000  0.836     0     0     0
+ ATM: flux_land_to_ice                 144      0.001829      0.001829      0.001829      0.000000  0.000     0     0     0
+ Ice: set_ice_surface fast             144      0.005259      0.005259      0.005259      0.000000  0.000     0     0     0
+ Ice: update_ice_model_slow fast       144      0.006368      0.006368      0.006368      0.000000  0.000     0     0     0
+ Ice: set_ice_surface slow             144      0.006916      0.006916      0.006916      0.000000  0.000     0     0     0
+ Ice: update_ice_model_slow slow       144      0.496159      0.496159      0.496159      0.000000  0.030     0     0     0
+ Ice: flux_ice_to_ocean_stocks         144      0.000251      0.000251      0.000251      0.000000  0.000     0     0     0
+ Ice: set_ice_surface exchange         144      0.000164      0.000164      0.000164      0.000000  0.000     0     0     0
+ Ice: update_ice_model_slow exch       144      0.000088      0.000088      0.000088      0.000000  0.000     0     0     0
+OCN                                    144     13.773662     13.773662     13.773662      0.000000  0.839     0     0     0
 flux_check_stocks                        0      0.000000      0.000000      0.000000      0.000000  0.000     0     0     0
 intermediate restart                     0      0.000000      0.000000      0.000000      0.000000  0.000     0     0     0
-final flux_check_stocks                  1      0.001638      0.001638      0.001638      0.000000  0.000     0     0     0
+final flux_check_stocks                  1      0.001624      0.001624      0.001624      0.000000  0.000     0     0     0
  MPP_STACK high water mark=           0

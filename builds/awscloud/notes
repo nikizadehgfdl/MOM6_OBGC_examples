@@ -1,0 +1,5 @@
+(cd builds ; ./linux-build.bash -m awscloud -p intel22 -t prod -f mom6sis2)
+cd exps/MOM6SIS2COBALT.single_column
+mkdir RESTART
+source ../../builds/awscloud/intel22.env
+mpirun -n 1 ../../builds/build/awscloud-intel22/ocean_ice/prod/MOM6SIS2 |& tee stdout.awscloud.intel22.prod.n1.CORE
