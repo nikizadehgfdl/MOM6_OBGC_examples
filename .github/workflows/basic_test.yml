@@ -13,5 +13,5 @@ jobs:
       - run: ls src/FMS
       - run: cd builds; ./linux-build.bash -m lscgpu50 -p gnu11 -t repro -f mom6sis2
       - run: ls builds/build/lscgpu50-gnu11/ocean_ice/repro/MOM6SIS2
-      - run: (cd exps/MOM6SIS2COBALT.single_column/; source ../../builds/lscgpu50/gnu11.env; mkdir RESTART; mpirun -n 1 ../../builds/build/lscgpu50-gnu11/ocean_ice/repro/MOM6SIS2 | & tee stdout.lscgpu50.gnu11.repro.n1)
+      - run: (cd exps/MOM6SIS2COBALT.single_column/; source ../../builds/lscgpu50/gnu11.env; mkdir RESTART; mpirun -n 1 ../../builds/build/lscgpu50-gnu11/ocean_ice/repro/MOM6SIS2 |& tee stdout.lscgpu50.gnu11.repro.n1)
 
