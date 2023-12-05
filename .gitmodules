@@ -34,3 +34,7 @@
 	path = src/ocean_BGC
 	url = https://github.com/yichengt900/ocean_BGC.git
 	branch = feature/4P-2023-10-diags
+[submodule "src/SIS2"]
+	path = src/SIS2
+	url = https://github.com/NOAA-GFDL/SIS2.git
+	branch = dev/gfdl
