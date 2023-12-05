@@ -28,3 +28,6 @@
 [submodule "src/ocean_BGC"]
 	path = src/ocean_BGC
 	url = https://github.com/nikizadehgfdl/ocean_BGC.git
+[submodule "MOM6SIS2_experiments"]
+	path = MOM6SIS2_experiments
+	url = https://github.com/nikizadehgfdl/MOM6SIS2_experiments.git
