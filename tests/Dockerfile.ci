@@ -1,4 +1,4 @@
-From clouden90/1d_mom6_cobalt:latest
+From clouden90/1d_mom6_cobalt:v0.1
 
 SHELL ["/bin/bash","-c"]
 
@@ -8,21 +8,9 @@ COPY --chown=builder:builder . /opt/MOM6_OBGC_examples
 
 WORKDIR /opt/datasets/OceanBGC_dataset
 
-RUN tar -zxvf OceanBGC_dataset.tar.gz; rm -rf OceanBGC_dataset.tar.gz
-
-WORKDIR /opt/datasets
-
-RUN tar -zxvf OM4_025.JRA.single_column.tar.gz; rm -rf OM4_025.JRA.single_column.tar.gz
-
-RUN sed -i '52s/static //' /opt/MOM6_OBGC_examples/src/FMS/affinity/affinity.c
+RUN wget https://gfdl-med.s3.amazonaws.com/OceanBGC_dataset/COBALT_2023_10_spinup_2003_subset.nc
 
 WORKDIR /opt/MOM6_OBGC_examples/builds
-
-RUN mkdir -p /opt/MOM6_OBGC_examples/builds/docker
-
-RUN cp /opt/MOM6_OBGC_examples/src/mkmf/templates/linux-ubuntu-trusty-gnu.mk /opt/MOM6_OBGC_examples/builds/docker/linux-gnu.mk
-
-RUN cp /opt/MOM6_OBGC_examples/builds/windows11/gnu11.env /opt/MOM6_OBGC_examples/builds/docker/linux=gnu.env
 
 RUN /opt/MOM6_OBGC_examples/builds/linux-build.bash -m docker -p linux-gnu -t prod -f mom6sis2
 
@@ -30,6 +18,6 @@ WORKDIR /opt/MOM6_OBGC_examples/exps
 
 RUN ln -fs /opt/datasets ./
 
-WORKDIR /opt/MOM6_OBGC_examples/exps/OM4.single_column.COBALT
+WORKDIR /opt/MOM6_OBGC_examples/exps/OM4.single_column.COBALT.p4
 
-RUN mkdir RESTART; mpirun -np 1 /opt/MOM6_OBGC_examples/builds/build/docker-linux-gnu/ocean_ice/prod/MOM6SIS2
+RUN mpirun -np 1 /opt/MOM6_OBGC_examples/builds/build/docker-linux-gnu/ocean_ice/prod/MOM6SIS2
