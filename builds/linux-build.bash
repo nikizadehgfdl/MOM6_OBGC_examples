@@ -78,7 +78,7 @@ mkdir -p build/$machine_name-$platform/shared/$target
 pushd build/$machine_name-$platform/shared/$target   
 rm -f path_names                       
 $srcdir/mkmf/bin/list_paths $srcdir/FMS/{affinity,amip_interp,column_diagnostics,diag_integral,drifters,horiz_interp,memutils,sat_vapor_pres,topography,astronomy,constants,diag_manager,field_manager,include,monin_obukhov,platform,tracer_manager,axis_utils,coupler,fms,fms2_io,interpolator,mosaic,mosaic2,random_numbers,time_interp,tridiagonal,block_control,data_override,exchange,mpp,time_manager,string_utils,parser}/ $srcdir/FMS/libFMS.F90
-$srcdir/mkmf/bin/mkmf -t $abs_rootdir/$machine_name/$platform.mk -p libfms.a -c "-Duse_libMPI -Duse_netCDF -DMAXFIELDMETHODS_=400" path_names
+$srcdir/mkmf/bin/mkmf -t $abs_rootdir/$machine_name/$platform.mk -p libfms.a -c "-Duse_libMPI -Duse_netCDF -DMAXFIELDMETHODS_=800" path_names
 
 make $makeflags libfms.a         
 
@@ -93,10 +93,10 @@ if [[ $flavor =~ "mom6sis2" ]] ; then
     mkdir -p build/$machine_name-$platform/ocean_ice/$target
     pushd build/$machine_name-$platform/ocean_ice/$target
     rm -f path_names
-    $srcdir/mkmf/bin/list_paths $srcdir/MOM6/{config_src/infra/FMS2,config_src/memory/dynamic_symmetric,config_src/drivers/FMS_cap,config_src/external/ODA_hooks,config_src/external/database_comms,config_src/external/drifters,config_src/external/stochastic_physics,pkg/GSW-Fortran/{modules,toolbox}/,src/{*,*/*}/} $srcdir/SIS2/{config_src/dynamic,config_src/external/Icepack_interfaces,src} $srcdir/icebergs $srcdir/FMS/{coupler,include}/ $srcdir/{ocean_BGC/generic_tracers,ocean_BGC/mocsy/src}/ $srcdir/{atmos_null,ice_param,land_null,coupler/shared/,coupler/full/}/
+    $srcdir/mkmf/bin/list_paths $srcdir/MOM6/{config_src/infra/FMS2,config_src/memory/dynamic_symmetric,config_src/drivers/FMS_cap,config_src/external/ODA_hooks,config_src/external/database_comms,config_src/external/drifters,config_src/external/stochastic_physics,pkg/GSW-Fortran/{modules,toolbox}/,src/{*,*/*}/} $srcdir/SIS2/{config_src/dynamic_symmetric,config_src/external/Icepack_interfaces,src} $srcdir/icebergs/src $srcdir/FMS/{coupler,include}/ $srcdir/{ocean_BGC/generic_tracers,ocean_BGC/mocsy/src}/ $srcdir/{atmos_null,ice_param,land_null,coupler/shared/,coupler/full/}/
 
 
-compiler_options='-DUSE_FMS2_IO -DMAX_FIELDS_=100 -DNOT_SET_AFFINITY -D_USE_MOM6_DIAG -D_USE_GENERIC_TRACER  -DUSE_PRECISION=2 -D_USE_LEGACY_LAND_ -Duse_AM3_physics'
+compiler_options='-DINTERNAL_FILE_NML -g -DUSE_FMS2_IO -DMAX_FIELDS_=600 -DNOT_SET_AFFINITY -D_USE_MOM6_DIAG -D_USE_GENERIC_TRACER -DUSE_PRECISION=2 -D_USE_LEGACY_LAND_ -Duse_AM3_physics'
 linker_options=''
 if [[ "$target" =~ "stdpar" ]] ; then 
     compiler_options="$compiler_options -stdpar -Minfo=accel"
