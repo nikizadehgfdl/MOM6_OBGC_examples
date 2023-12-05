@@ -5,3 +5,4 @@
 [submodule "src/FMS"]
 	path = src/FMS
 	url = https://github.com/NOAA-GFDL/FMS.git
+        branch = 2022.04
