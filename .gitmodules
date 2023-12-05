@@ -1,30 +1,7 @@
 [submodule "src/mkmf"]
 	path = src/mkmf
 	url = https://github.com/NOAA-GFDL/mkmf.git
+	branch = master
 [submodule "src/FMS"]
 	path = src/FMS
 	url = https://github.com/NOAA-GFDL/FMS.git
-[submodule "src/SIS2"]
-	path = src/SIS2
-	url = https://github.com/NOAA-GFDL/SIS2.git
-[submodule "src/MOM6"]
-	path = src/MOM6
-	url = https://github.com/nikizadehgfdl/MOM6.git
-[submodule "src/icebergs"]
-	path = src/icebergs
-	url = https://github.com/NOAA-GFDL/icebergs.git
-[submodule "src/coupler"]
-	path = src/coupler
-	url = https://github.com/NOAA-GFDL/coupler.git
-[submodule "src/atmos_null"]
-	path = src/atmos_null
-	url = https://github.com/NOAA-GFDL/atmos_null.git
-[submodule "src/land_null"]
-	path = src/land_null
-	url = https://github.com/NOAA-GFDL/land_null.git
-[submodule "src/ice_param"]
-	path = src/ice_param
-	url = https://github.com/NOAA-GFDL/ice_param.git
-[submodule "src/ocean_BGC"]
-	path = src/ocean_BGC
-	url = https://github.com/nikizadehgfdl/ocean_BGC.git
