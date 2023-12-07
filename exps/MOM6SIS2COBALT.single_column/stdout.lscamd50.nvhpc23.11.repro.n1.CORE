@@ -9,19 +9,19 @@ NOTE: MPP_DOMAINS_SET_STACK_SIZE: stack size set to    32768.
  /
 NOTE: MPP_IO_SET_STACK_SIZE: stack size set to     131072.
 NOTE: MPP_DOMAINS_SET_STACK_SIZE: stack size set to  5000000.
- Entering coupler_init at 20231128 111332.293
- Starting initializing ensemble_manager at 20231128 111332.293
- Finished initializing ensemble_manager at 20231128 111332.294
+ Entering coupler_init at 20231128 111253.958
+ Starting initializing ensemble_manager at 20231128 111253.958
+ Finished initializing ensemble_manager at 20231128 111253.958
 NOTE: coupler_init: Atmos PE range:      0     0 ens_01
 NOTE: coupler_init: Ocean PE range:      0     0 ens_01
 NOTE: coupler_init: Land PE range:      0     0 ens_01
 NOTE: coupler_init: Ice PE range:      0     0 ens_01
 NOTE: coupler_init: Running with SERIAL coupling.
 NOTE: coupler_init: Sending most recent fluxes to ocean.
- Starting to initialize diag_manager at 20231128 111332.294
+ Starting to initialize diag_manager at 20231128 111253.958
 NOTE: diag_manager_mod::diag_manager_init: diag_manager is using fms2_io
- Finished initializing diag_manager at 20231128 111332.342
- Starting to initialize tracer_manager at 20231128 111332.343
+ Finished initializing diag_manager at 20231128 111253.989
+ Starting to initialize tracer_manager at 20231128 111253.989
  
  Dumping coupler_mod/types tree
 types/
@@ -1152,24 +1152,24 @@ fluxes/
             csurf-long_name = 'Ocean concentration'
             sc_no-units = 'dimensionless'
             sc_no-long_name = 'Schmidt number'
- Finished initializing tracer_manager at 20231128 111332.400
- Beginning to initialize component models at 20231128 111332.400
- Starting to initialize atmospheric model at 20231128 111332.400
+ Finished initializing tracer_manager at 20231128 111254.042
+ Beginning to initialize component models at 20231128 111254.042
+ Starting to initialize atmospheric model at 20231128 111254.042
  atmos model domain decomposition
 whalo =    1, ehalo =    1, shalo =    1, nhalo =    1
   X-AXIS =    4
   Y-AXIS =    4
 NOTE: grid2_mod/get_grid_cell_vertices domain is not present, global data will be read
 NOTE: grid2_mod/get_grid_cell_centers domain is not present, global data will be read
- Finished initializing atmospheric model at 20231128 111332.408
- Starting to initialize land model at 20231128 111332.412
+ Finished initializing atmospheric model at 20231128 111254.050
+ Starting to initialize land model at 20231128 111254.053
  land model domain decomposition
 whalo =    1, ehalo =    1, shalo =    1, nhalo =    1
   X-AXIS =    4
   Y-AXIS =    4
 NOTE: grid2_mod/get_grid_cell_centers domain is not present, global data will be read
- Finished initializing land model at 20231128 111332.420
- Starting to initialize ice model at 20231128 111332.423
+ Finished initializing land model at 20231128 111254.062
+ Starting to initialize ice model at 20231128 111254.065
 NOTE: open_param_file: SIS_input has been opened successfully.
 NOTE: open_param_file: SIS_override has been opened successfully.
 NOTE: callTree: ---> ice_model_init(), ice_model.F90
@@ -1255,8 +1255,8 @@ NOTE: callTree:       <--- SIS_fast_thermo_init()
 NOTE: close_param_file: SIS_input has been closed successfully.
 NOTE: close_param_file: SIS_override has been closed successfully.
 NOTE: callTree:    <--- ice_model_init()
- Finished initializing ice model at 20231128 111332.478
- Starting to initialize ocean model at 20231128 111332.482
+ Finished initializing ice model at 20231128 111254.108
+ Starting to initialize ocean model at 20231128 111254.111
 NOTE: callTree:    ---> ocean_model_init(), ocean_model_MOM.F90
 NOTE: open_param_file: MOM_input has been opened successfully.
 NOTE: open_param_file: MOM_saltrestore has been opened successfully.
@@ -1264,8 +1264,8 @@ NOTE: open_param_file: MOM_override has been opened successfully.
 
 WARNING: MOM_obsolete_params: ORIG_MLD_ITERATION is an obsolete run-time flag.
 
-WARNING: MOM_obsolete_params: ORIG_MLD_ITERATION is an obsolete run-time flag.
 
+WARNING: MOM_obsolete_params: ORIG_MLD_ITERATION is an obsolete run-time flag.
 
 
 WARNING: MOM_file_parser : THICKNESSDIFFUSE over-ridden.  Line: 'THICKNESSDIFFUSE = False' in file MOM_override.
@@ -1310,11 +1310,11 @@ NOTE: generic_cfc: using solubility coefficients for W92
 NOTE: generic_cobalt: Using Schmidt number coefficients for W14
 
 WARNING: MOM_file_parser : REGRIDDING_COORDINATE_MODE over-ridden.  Line: 'REGRIDDING_COORDINATE_MODE = "Z*"' in file MOM_override.
-
-
 WARNING: MOM_file_parser : REGRIDDING_COORDINATE_MODE over-ridden.  Line: 'REGRIDDING_COORDINATE_MODE = "Z*"' in file MOM_override.
 
 
+
+
 WARNING: MOM_file_parser : ALE_COORDINATE_CONFIG over-ridden.  Line: 'ALE_COORDINATE_CONFIG = "FNC1:2,6500,6,.01"' in file MOM_override.
 
 
@@ -1331,8 +1331,8 @@ whalo =    1, ehalo =    1, shalo =    1, nhalo =    1
 
 WARNING: MOM_file_parser : LAPLACIAN over-ridden.  Line: 'LAPLACIAN = False' in file MOM_override.
 
-
 WARNING: MOM_file_parser : LAPLACIAN over-ridden.  Line: 'LAPLACIAN = False' in file MOM_override.
+
 
 
 WARNING: MOM_file_parser : SMAGORINSKY_AH over-ridden.  Line: 'SMAGORINSKY_AH = False' in file MOM_override.
@@ -1351,8 +1351,8 @@ whalo =    1, ehalo =    1, shalo =    1, nhalo =    1
 
 WARNING: MOM_file_parser : KD over-ridden.  Line: 'KD = 5.e-4' in file MOM_override.
 
-WARNING: MOM_file_parser : KD over-ridden.  Line: 'KD = 5.e-4' in file MOM_override.
 
+WARNING: MOM_file_parser : KD over-ridden.  Line: 'KD = 5.e-4' in file MOM_override.
 
 
 WARNING: MOM_file_parser : HENYEY_IGW_BACKGROUND over-ridden.  Line: 'HENYEY_IGW_BACKGROUND = False' in file MOM_override.
@@ -1406,8 +1406,8 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
-WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
+WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
@@ -1499,11 +1499,11 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
+
+
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
@@ -1520,12 +1520,12 @@ WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
-
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 NOTE: init_from_Z: min=  0.0000E+00 max=  0.0000E+00 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  0.0000E+00 max=  0.0000E+00 Level=  2 Tracer from ALE()
@@ -1612,10 +1612,10 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
+
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
@@ -1629,15 +1629,15 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
-
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
+
 
 NOTE: init_from_Z: min=  0.0000E+00 max=  0.0000E+00 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  0.0000E+00 max=  0.0000E+00 Level=  2 Tracer from ALE()
@@ -1718,8 +1718,8 @@ NOTE: initialize_MOM_generic_tracer: initializing generic tracer mu_mem_ndi usin
 
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
-WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
+WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
@@ -1741,12 +1741,12 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
-
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
@@ -1839,11 +1839,11 @@ WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Tr
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
@@ -1853,15 +1853,15 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
+
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
-
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 NOTE: init_from_Z: min=  0.0000E+00 max=  0.0000E+00 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  0.0000E+00 max=  0.0000E+00 Level=  2 Tracer from ALE()
@@ -1948,14 +1948,14 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
+
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
-
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
@@ -1965,9 +1965,9 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
+
+
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
-
-
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
@@ -2060,10 +2060,10 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
+
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
@@ -2077,9 +2077,9 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
+
+
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
-
-
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
@@ -2166,13 +2166,11 @@ NOTE: initialize_MOM_generic_tracer: initializing generic tracer sidet_btf using
 
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
+
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
 
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
-
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
@@ -2182,6 +2180,8 @@ WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_RE
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
+
+
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
@@ -2189,12 +2189,12 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
+
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
-
-
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
@@ -2283,15 +2283,15 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
+
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
+
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
@@ -2396,10 +2396,10 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
+
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
@@ -2420,8 +2420,8 @@ WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 NOTE: init_from_Z: min=  0.0000E+00 max=  0.0000E+00 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  0.0000E+00 max=  0.0000E+00 Level=  2 Tracer from ALE()
@@ -2501,9 +2501,9 @@ NOTE: init_from_Z: min=  0.0000E+00 max=  0.0000E+00 Level= 75 Tracer from ALE()
 NOTE: initialize_MOM_generic_tracer: initializing generic tracer lithdet_btf using MOM_initialize_tracer_from_Z
 
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
+
+
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
-
-
 
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
@@ -2619,14 +2619,14 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
+
+
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
 
@@ -2638,14 +2638,14 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
+
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
-
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 NOTE: init_from_Z: min=  0.0000E+00 max=  0.0000E+00 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  0.0000E+00 max=  0.0000E+00 Level=  2 Tracer from ALE()
@@ -2731,13 +2731,13 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
-
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
+
+
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
@@ -2750,14 +2750,14 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
+
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
-
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 NOTE: init_from_Z: min=  0.0000E+00 max=  0.0000E+00 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  0.0000E+00 max=  0.0000E+00 Level=  2 Tracer from ALE()
@@ -2844,13 +2844,13 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
+
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
@@ -2862,14 +2862,14 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
+
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
-
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 NOTE: init_from_Z: min=  2.3232E-04 max=  2.3232E-04 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  2.3232E-04 max=  2.3232E-04 Level=  2 Tracer from ALE()
@@ -2962,10 +2962,10 @@ WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Tr
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
+
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
-
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
@@ -2974,14 +2974,14 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
+
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
-
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 NOTE: init_from_Z: min=  5.7460E-01 max=  5.7460E-01 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  5.7460E-01 max=  5.7460E-01 Level=  2 Tracer from ALE()
@@ -3068,14 +3068,14 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
+
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
-
-
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
@@ -3085,9 +3085,9 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
+
+
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
-
-
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
@@ -3179,11 +3179,11 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
+
+
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
@@ -3197,13 +3197,13 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
+
+
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
-
-
-
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
@@ -3292,11 +3292,11 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
+
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
@@ -3398,10 +3398,10 @@ NOTE: initialize_MOM_generic_tracer: initializing generic tracer nsmz using MOM_
 
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
+
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
 
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
@@ -3428,8 +3428,8 @@ WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 NOTE: init_from_Z: min=  2.5287E-07 max=  2.5287E-07 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  2.5287E-07 max=  2.5287E-07 Level=  2 Tracer from ALE()
@@ -3522,8 +3522,8 @@ WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Tr
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
@@ -3634,8 +3634,8 @@ WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Tr
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
@@ -3645,12 +3645,12 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
-
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
@@ -3740,10 +3740,10 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
+
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
@@ -3758,8 +3758,8 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
-WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
+WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
@@ -3846,8 +3846,8 @@ NOTE: initialize_MOM_generic_tracer: initializing generic tracer sldop using MOM
 
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
-WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
+WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
@@ -3958,14 +3958,14 @@ NOTE: initialize_MOM_generic_tracer: initializing generic tracer sldon using MOM
 
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
-
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
 
-WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
+
+WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
@@ -3982,14 +3982,14 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
+
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
-
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 NOTE: init_from_Z: min=  1.2901E-06 max=  1.2901E-06 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  1.2901E-06 max=  1.2901E-06 Level=  2 Tracer from ALE()
@@ -4075,9 +4075,9 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
+
+
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
-
-
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
@@ -4093,12 +4093,12 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
-
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
@@ -4182,12 +4182,11 @@ NOTE: initialize_MOM_generic_tracer: initializing generic tracer srdon using MOM
 
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
+
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
 
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
-
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
@@ -4196,6 +4195,7 @@ WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_RE
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
+
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
@@ -4212,8 +4212,8 @@ WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 NOTE: init_from_Z: min=  3.1975E-06 max=  3.1975E-06 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  3.1975E-06 max=  3.1975E-06 Level=  2 Tracer from ALE()
@@ -4318,8 +4318,8 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
-WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
+WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
@@ -4435,8 +4435,8 @@ WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 
 NOTE: init_from_Z: min=  3.8055E-10 max=  3.8055E-10 Level=  1 Tracer from ALE()
@@ -4524,10 +4524,10 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
+
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
@@ -4542,12 +4542,12 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
+
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
-
-
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
@@ -4634,16 +4634,16 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
 
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
+WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
@@ -4653,12 +4653,12 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
+
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
@@ -4754,10 +4754,10 @@ WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Tr
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
+
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
-
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
@@ -4769,10 +4769,10 @@ WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
-
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 
 NOTE: init_from_Z: min=  1.6656E-07 max=  1.6656E-07 Level=  1 Tracer from ALE()
@@ -4877,8 +4877,6 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
-
-
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
@@ -4886,6 +4884,8 @@ WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPP
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
+
 
 NOTE: init_from_Z: min=  2.7346E-07 max=  2.7346E-07 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  2.7346E-07 max=  2.7346E-07 Level=  2 Tracer from ALE()
@@ -5314,8 +5314,8 @@ WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Tr
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
@@ -5426,8 +5426,8 @@ WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Tr
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
@@ -5526,17 +5526,17 @@ NOTE: initialize_MOM_generic_tracer: initializing generic tracer lith using MOM_
 
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
+
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
 
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
-
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
+
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
@@ -5638,8 +5638,8 @@ NOTE: initialize_MOM_generic_tracer: initializing generic tracer ldop using MOM_
 
 WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
-WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
+WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = False
 
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
@@ -5774,11 +5774,11 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
-
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
@@ -5886,8 +5886,8 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
-WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
+WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
@@ -5998,11 +5998,11 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
-
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
@@ -6092,13 +6092,13 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
+
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
-
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
-
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
 
@@ -6204,13 +6204,13 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
+
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
@@ -6228,8 +6228,8 @@ WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
 NOTE: init_from_Z: min=  1.7940E-13 max=  1.7940E-13 Level=  1 Tracer from ALE()
 NOTE: init_from_Z: min=  1.7940E-13 max=  1.7940E-13 Level=  2 Tracer from ALE()
@@ -6319,8 +6319,8 @@ WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Tr
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
-
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
+
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
@@ -6434,10 +6434,10 @@ WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Tr
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
+
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
-
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
@@ -6445,13 +6445,13 @@ WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
 
 
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
+
+
 WARNING: New message :Z_INIT_REMAPPING_SCHEME = "PLM" ! default = "PLM"
-
-
-
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
+
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_REMAPPING_SCHEME!
 
@@ -6539,12 +6539,12 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
-
-
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
+
+
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
@@ -6651,9 +6651,9 @@ WARNING: Previous msg:Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Fa
 
 
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
+
+
 WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = True
-
-
 
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
@@ -6770,8 +6770,8 @@ WARNING: New message :Z_INIT_ALE_REMAPPING = True     !   [Boolean] default = Tr
 
 WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
-WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
+WARNING: Encountered inconsistent documentation line for parameter Z_INIT_ALE_REMAPPING!
 
 
 WARNING: Previous msg:Z_INIT_REMAPPING_SCHEME = "PPM_IH4" ! default = "PPM_IH4"
@@ -6869,8 +6869,8 @@ NOTE: init_from_Z: min=  2.4258E-03 max=  2.4258E-03 Level= 75 Tracer from ALE()
 NOTE: initialize_MOM_generic_tracer: Using Generic Tracer IC file on native grid INPUT/MOM_GENERICS.res.nc for tracer cfc11
 
 WARNING: MOM_read_data_3d:The variable cfc11 has an unlimited dimension in INPUT/MOM_GENERICS.res.nc but no time level is specified.
-WARNING: MOM_read_data_3d:The variable cfc11 has an unlimited dimension in INPUT/MOM_GENERICS.res.nc but no time level is specified.
 
+WARNING: MOM_read_data_3d:The variable cfc11 has an unlimited dimension in INPUT/MOM_GENERICS.res.nc but no time level is specified.
 
 
 NOTE: initialize_MOM_generic_tracer: Using Generic Tracer IC file on native grid INPUT/MOM_GENERICS.res.nc for tracer cfc12
@@ -6897,22 +6897,22 @@ WARNING: Unused line in MOM_input : BOUNDARY_EXTRAPOLATION = True
 WARNING: Unused line in MOM_input : BOUNDARY_EXTRAPOLATION = True
 
 
-WARNING: Unused line in MOM_input : REGRID_COMPRESSIBILITY_FRACTION = 0.01
-
 
 WARNING: Unused line in MOM_input : REGRID_COMPRESSIBILITY_FRACTION = 0.01
 
 
+WARNING: Unused line in MOM_input : MAXIMUM_INT_DEPTH_CONFIG = "FNC1:5,8000.0,1.0,.01"WARNING: Unused line in MOM_input : REGRID_COMPRESSIBILITY_FRACTION = 0.01
+
+
 WARNING: Unused line in MOM_input : MAXIMUM_INT_DEPTH_CONFIG = "FNC1:5,8000.0,1.0,.01"
 
-WARNING: Unused line in MOM_input : MAXIMUM_INT_DEPTH_CONFIG = "FNC1:5,8000.0,1.0,.01"
 
 
 
+WARNING: Unused line in MOM_input : MAX_LAYER_THICKNESS_CONFIG = "FNC1:400,31000.0,0.1,.01"
 
-WARNING: Unused line in MOM_input : MAX_LAYER_THICKNESS_CONFIG = "FNC1:400,31000.0,0.1,.01"WARNING: Unused line in MOM_input : MAX_LAYER_THICKNESS_CONFIG = "FNC1:400,31000.0,0.1,.01"
 
-
+WARNING: Unused line in MOM_input : MAX_LAYER_THICKNESS_CONFIG = "FNC1:400,31000.0,0.1,.01"
 
 
 WARNING: Unused line in MOM_input : SMAG_BI_CONST = 0.06
@@ -6922,15 +6922,15 @@ WARNING: Unused line in MOM_input : SMAG_BI_CONST = 0.06
 
 
 WARNING: Unused line in MOM_input : N2_FLOOR_IOMEGA2 = 0.0
+
 WARNING: Unused line in MOM_input : N2_FLOOR_IOMEGA2 = 0.0
 
 
-
+WARNING: Unused line in MOM_input : EPBL_USTAR_MIN = 1.45842E-18
 
 WARNING: Unused line in MOM_input : EPBL_USTAR_MIN = 1.45842E-18
 
 
-WARNING: Unused line in MOM_input : EPBL_USTAR_MIN = 1.45842E-18
 
 
 WARNING: Unused line in MOM_input : CHL_FILE = "seawifs-clim-1997-2010.1440x1080.v20180328.nc"
@@ -6946,15 +6946,15 @@ WARNING: Unused line in MOM_input : CHL_VARNAME = "chlor_a"
 
 
 WARNING: Unused line in MOM_saltrestore : FLUXCONST = 0.1667
-
-
 WARNING: Unused line in MOM_saltrestore : FLUXCONST = 0.1667
 
 
-WARNING: Unused line in MOM_saltrestore : SALT_RESTORE_FILE = "salt_restore_PHC2.720x576.v20180405.nc"
+
 
 WARNING: Unused line in MOM_saltrestore : SALT_RESTORE_FILE = "salt_restore_PHC2.720x576.v20180405.nc"
 
+
+WARNING: Unused line in MOM_saltrestore : SALT_RESTORE_FILE = "salt_restore_PHC2.720x576.v20180405.nc"
 
 
 WARNING: Unused line in MOM_saltrestore : SRESTORE_AS_SFLUX = True
@@ -6964,16 +6964,16 @@ WARNING: Unused line in MOM_saltrestore : SRESTORE_AS_SFLUX = True
 
 
 WARNING: Unused line in MOM_saltrestore : MAX_DELTA_SRESTORE = 5.0
-
-
 WARNING: Unused line in MOM_saltrestore : MAX_DELTA_SRESTORE = 5.0
+
+
 
 NOTE: ==== Completed MOM6 Coupled Initialization ====
- Finished initializing ocean model at 20231128 111335.584
- Starting to initialize data_override at 20231128 111335.584
- Finished initializing data_override at 20231128 111335.585
- Finished initializing component models at 20231128 111335.585
- Starting to initialize flux_exchange at 20231128 111335.585
+ Finished initializing ocean model at 20231128 111256.333
+ Starting to initialize data_override at 20231128 111256.333
+ Finished initializing data_override at 20231128 111256.334
+ Finished initializing component models at 20231128 111256.334
+ Starting to initialize flux_exchange at 20231128 111256.334
  ==>Note from flux_exchange_mod(flux_exchange_init):
   Number of exchanged tracers =             1
  Tracer field name :sphum
@@ -7002,7 +7002,7 @@ NOTE: xgrid_mod: reading exchange grid information from mosaic grid file
    1.9392507862352861E-006
  OCN(LNDOCN)=   1.9392507862352861E-006   1.9392507862352861E-006 
    1.9392507862352861E-006
- Finsihed initializing flux_exchange at 20231128 111335.640
+ Finsihed initializing flux_exchange at 20231128 111256.382
  BEGIN CHECKSUM(Atmos_data_type):: coupler_init+            0
 CHECKSUM::     atm%lon_bnd                 =     BF54518B3AA86758
 CHECKSUM::     atm%lat_bnd                 =     F3DBE8D44A53A72E
@@ -7292,7 +7292,13 @@ CHECKSUM::      ocn_ice_bnd_type%sea_level =                    0
    CHECKSUM::           iobt%cfc12_flux_deltap_ice_ocn =                    0
    CHECKSUM::               iobt%cfc12_flux_kw_ice_ocn =                    0
    CHECKSUM::            iobt%cfc12_flux_flux0_ice_ocn =                    0
- Exiting coupler_init at 20231128 111335.641
+ Exiting coupler_init at 20231128 111256.382
+
+WARNING: MPP_OPEN: File ./ocean.stats opened WRONLY already exists!
+
+
+WARNING: MPP_OPEN: File ./ocean.stats opened WRONLY already exists!
+
 MOM Date   2004/01/01 00:00:00      0: En 1.621274E-26, MaxCFL  0.00000, Mass 4.095051722672E+15, Salt  34.65602533658, Temp   4.29761377254
     Total Energy: 3DD23FEC1B2346D6  6.6392008890971397E-11
     Total Mass:   4.0950517226724145E+15, Change:   0.0000000000000000E+00 Error:  0.00000E+00 ( 0.0E+00)
@@ -8095,13 +8101,13 @@ WARNING: diag_util_mod::opening_file: module/field_name (ocean_model/Kv_shear) N
 
 
 WARNING: diag_util_mod::opening_file: module/field_name (ocean_model/GOTM_L) NOT registered
-
 WARNING: diag_util_mod::opening_file: module/field_name (ocean_model/GOTM_L) NOT registered
 
 
 
-WARNING: diag_util_mod::opening_file: module/field_name (ocean_model/GOTM_TKE) NOT registered
 
+
+WARNING: diag_util_mod::opening_file: module/field_name (ocean_model/GOTM_TKE) NOT registered
 
 WARNING: diag_util_mod::opening_file: module/field_name (ocean_model/GOTM_TKE) NOT registered
 
@@ -8433,326 +8439,326 @@ MOM Date   2004/01/02 12:00:00    108: En 5.124250E-05, MaxCFL  0.03695, Mass 4.
       Total cfc12:   1.7344297208888613E+00 mol/kg
                                                                 Global Min:  1.6674732291797279-143 at: ( -89.97,   0.15,   75.00)
                                                                 Global Max:  1.7555239450016140E-13 at: ( -89.97,  -0.15,    1.00)
-MOM Date   2004/01/02 18:00:00    126: En 6.467957E-05, MaxCFL  0.04156, Mass 4.095051722672E+15, Salt  34.65602533658, Temp   4.29897042650
-    Total Energy: 424ED5A0C19B6973  2.6486620242282382E+11
-    Total Mass:   4.0950517226724155E+15, Change:   1.2310867011547089E-01 Error:  1.23109E-01 ( 3.0E-17)
-    Total Salt:   1.4191821625555500E+14, Change:   4.0000000000000001E-03 Error:  4.00000E-03 ( 2.8E-17)
-    Total Heat:   7.0277188953086042E+19, Change:   3.0062736315719680E+15 Error: -2.86895E+03 (-4.1E-17)
-      Total nh3:   8.9283624671364296E+06 mol/kg
-                                                                Global Min:  1.3899547346267199E-09 at: ( -89.93,   0.15,   67.00)
-                                                                Global Max:  2.8005822702725743E-08 at: ( -90.07,  -0.15,    1.00)
-      Total mu_mem_nsm:  -1.6469129876511160E+08 sec-1
-                                                                Global Min: -1.3596919630911588E-06 at: ( -89.97,  -0.15,    1.00)
-                                                                Global Max: -1.0796575585401328E-10 at: ( -90.03,   0.05,   63.00)
-      Total mu_mem_nlg:  -2.1085176524783486E+08 sec-1
-                                                                Global Min: -2.2800402992686072E-06 at: ( -89.97,  -0.15,    1.00)
-                                                                Global Max: -1.5541942177882654E-10 at: ( -90.07,   0.05,   64.00)
-      Total mu_mem_ndi:  -1.3349773304678202E+08 sec-1
-                                                                Global Min: -2.1726092154696220E-06 at: ( -89.97,  -0.15,    1.00)
+MOM Date   2004/01/02 18:00:00    126: En 6.468018E-05, MaxCFL  0.04156, Mass 4.095051722672E+15, Salt  34.65602533658, Temp   4.29897042645
+    Total Energy: 424ED5B388379128  2.6486866340713403E+11
+    Total Mass:   4.0950517226724155E+15, Change:   3.2902196049690247E-02 Error:  3.29022E-02 ( 8.0E-18)
+    Total Salt:   1.4191821625555497E+14, Change:  -8.0000000000000002E-03 Error: -8.00000E-03 (-5.6E-17)
+    Total Heat:   7.0277188952151810E+19, Change:   3.0062726973347840E+15 Error:  9.36117E+02 ( 1.3E-17)
+      Total nh3:   8.9283624907657653E+06 mol/kg
+                                                                Global Min:  1.3899547265484271E-09 at: ( -89.93,   0.15,   67.00)
+                                                                Global Max:  2.8005826984195795E-08 at: ( -90.07,  -0.15,    1.00)
+      Total mu_mem_nsm:  -1.6469129883635348E+08 sec-1
+                                                                Global Min: -1.3596919707137722E-06 at: ( -89.97,  -0.15,    1.00)
+                                                                Global Max: -1.0796575585446036E-10 at: ( -90.03,   0.05,   63.00)
+      Total mu_mem_nlg:  -2.1085176537608445E+08 sec-1
+                                                                Global Min: -2.2800403123240340E-06 at: ( -89.97,  -0.15,    1.00)
+                                                                Global Max: -1.5541942177873746E-10 at: ( -90.07,   0.05,   64.00)
+      Total mu_mem_ndi:  -1.3349773310167676E+08 sec-1
+                                                                Global Min: -2.1726092295868669E-06 at: ( -89.97,  -0.15,    1.00)
                                                                 Global Max: -8.7698145674431709E-11 at: ( -90.03,  -0.15,   69.00)
       Total irr_mem:   0.0000000000000000E+00 Watts/m^2
                                                                 Global Min:  0.0000000000000000E+00 at: ( -90.07,  -0.15,    1.00)
                                                                 Global Max:  0.0000000000000000E+00 at: ( -90.07,  -0.15,    1.00)
-      Total htotal:   7.6966649207550883E+07 mol/kg
-                                                                Global Min:  7.5383810630064632E-09 at: ( -90.03,  -0.05,    1.00)
-                                                                Global Max:  2.4904066599389902E-08 at: ( -89.93,  -0.15,   50.00)
+      Total htotal:   7.6966649205978140E+07 mol/kg
+                                                                Global Min:  7.5383810462830086E-09 at: ( -90.03,  -0.05,    1.00)
+                                                                Global Max:  2.4904066597935249E-08 at: ( -89.93,  -0.15,   50.00)
       Total fedet_btf:   0.0000000000000000E+00 mol m-2 s-1
                                                                 Global Min:  0.0000000000000000E+00 at: ( -90.07,  -0.15,    1.00)
                                                                 Global Max:  0.0000000000000000E+00 at: ( -90.07,  -0.15,    1.00)
-      Total sidet_btf:   1.6938700086946519E+04 mol m-2 s-1
+      Total sidet_btf:   1.6938700086516932E+04 mol m-2 s-1
                                                                 Global Min:  0.0000000000000000E+00 at: ( -90.07,  -0.15,    2.00)
-                                                                Global Max:  8.2727649162108790E-09 at: ( -90.07,   0.05,    1.00)
-      Total pdet_btf:   1.5661415763974568E+02 mol m-2 s-1
+                                                                Global Max:  8.2727649161472606E-09 at: ( -90.07,   0.05,    1.00)
+      Total pdet_btf:   1.5661415760781733E+02 mol m-2 s-1
                                                                 Global Min:  0.0000000000000000E+00 at: ( -90.07,  -0.15,    2.00)
-                                                                Global Max:  7.6489466728116701E-11 at: ( -89.97,   0.05,    1.00)
-      Total ndet_btf:   2.3972920735797265E+03 mol m-2 s-1
+                                                                Global Max:  7.6489466715408816E-11 at: ( -89.97,   0.05,    1.00)
+      Total ndet_btf:   2.3972920730934211E+03 mol m-2 s-1
                                                                 Global Min:  0.0000000000000000E+00 at: ( -90.07,  -0.15,    2.00)
-                                                                Global Max:  1.1708238581592189E-09 at: ( -89.97,   0.05,    1.00)
-      Total lithdet_btf:   3.7246565398962019E+04 g m-2 s-1
+                                                                Global Max:  1.1708238579650583E-09 at: ( -89.97,   0.05,    1.00)
+      Total lithdet_btf:   3.7246565400411913E+04 g m-2 s-1
                                                                 Global Min:  0.0000000000000000E+00 at: ( -90.07,  -0.15,    2.00)
-                                                                Global Max:  1.8191010989900079E-08 at: ( -90.03,   0.15,    1.00)
-      Total cadet_calc_btf:   1.1522582858500522E+04 mol m-2 s-1
+                                                                Global Max:  1.8191010989735659E-08 at: ( -90.03,   0.15,    1.00)
+      Total cadet_calc_btf:   1.1522582844027866E+04 mol m-2 s-1
                                                                 Global Min:  0.0000000000000000E+00 at: ( -90.07,  -0.15,    2.00)
-                                                                Global Max:  5.6275647719353056E-09 at: ( -90.07,   0.05,    1.00)
-      Total cadet_arag_btf:   1.1610020379937807E+03 mol m-2 s-1
+                                                                Global Max:  5.6275647660845959E-09 at: ( -90.07,   0.05,    1.00)
+      Total cadet_arag_btf:   1.1610020363875642E+03 mol m-2 s-1
                                                                 Global Min:  0.0000000000000000E+00 at: ( -90.07,  -0.15,    2.00)
-                                                                Global Max:  5.6702688404287866E-10 at: ( -90.07,   0.05,    1.00)
-      Total co3_ion:   2.8755776993974017E+11 mol/kg
-                                                                Global Min:  5.2505337698802820E-05 at: ( -89.97,  -0.05,   52.00)
-                                                                Global Max:  2.3184136758166681E-04 at: ( -90.03,  -0.05,    1.00)
-      Total chl:   3.0350538698197402E+13 ug kg-1
-                                                                Global Min:  2.3124906420626479E-06 at: ( -90.07,   0.05,   64.00)
-                                                                Global Max:  5.1242618824140651E-01 at: ( -89.97,  -0.15,    9.00)
-      Total cased:   5.2632095699021638E+14 mol m-3
+                                                                Global Max:  5.6702688339618627E-10 at: ( -90.07,   0.05,    1.00)
+      Total co3_ion:   2.8755776993945233E+11 mol/kg
+                                                                Global Min:  5.2505337708004478E-05 at: ( -89.97,  -0.05,   52.00)
+                                                                Global Max:  2.3184136753335614E-04 at: ( -90.03,  -0.05,    1.00)
+      Total chl:   3.0350538700096016E+13 ug kg-1
+                                                                Global Min:  2.3124906416179903E-06 at: ( -90.07,   0.05,   64.00)
+                                                                Global Max:  5.1242618964601605E-01 at: ( -89.97,  -0.15,    9.00)
+      Total cased:   5.2632095699023463E+14 mol m-3
                                                                 Global Min:  0.0000000000000000E+00 at: ( -90.07,  -0.15,    2.00)
-                                                                Global Max:  2.5705216570376848E+02 at: ( -90.07,   0.05,    1.00)
-      Total nlgz:   5.1853236998395240E+06 mol/kg
-                                                                Global Min:  1.7864585270677328E-12 at: ( -90.07,   0.15,   71.00)
-                                                                Global Max:  1.7245064092599236E-07 at: ( -90.07,  -0.15,    1.00)
-      Total nmdz:   8.5917297107272204E+06 mol/kg
-                                                                Global Min:  8.5092426300043741E-13 at: ( -90.03,   0.15,   69.00)
-                                                                Global Max:  2.3995297896497231E-07 at: ( -89.97,  -0.15,    1.00)
-      Total nsmz:   7.7313922598428279E+06 mol/kg
-                                                                Global Min:  4.0194708242250938E-13 at: ( -90.07,   0.05,   62.00)
-                                                                Global Max:  1.6017057306776512E-07 at: ( -90.03,  -0.05,    1.00)
-      Total sio4:   4.7195259238975977E+11 mol/kg
-                                                                Global Min:  5.2193064671352254E-06 at: ( -89.97,  -0.15,    1.00)
-                                                                Global Max:  1.5285611380555194E-04 at: ( -90.07,  -0.15,   75.00)
-      Total silg:   4.1275609751908249E+08 mol/kg
-                                                                Global Min:  8.7384192930653474E-08 at: ( -90.03,  -0.05,   36.00)
-                                                                Global Max:  2.2746608818078058E-07 at: ( -89.93,  -0.15,   15.00)
-      Total sidet:   3.3006993016996231E+07 mol/kg
-                                                                Global Min:  3.9132309030215363E-10 at: ( -90.07,  -0.15,    1.00)
-                                                                Global Max:  1.3031164518199269E-08 at: ( -90.07,   0.15,   41.00)
-      Total sldop:   1.9086943230672448E+06 mol/kg
-                                                                Global Min:  2.2971537171324054E-17 at: ( -90.07,   0.05,   62.00)
-                                                                Global Max:  5.9906478016315357E-08 at: ( -90.07,  -0.15,    1.00)
-      Total sldon:   3.4489321075623587E+07 mol/kg
-                                                                Global Min:  3.6985086415299539E-16 at: ( -90.07,   0.05,   62.00)
-                                                                Global Max:  1.0777958871852121E-06 at: ( -90.07,  -0.15,    1.00)
-      Total srdop:   6.4292965723400014E+06 mol/kg
-                                                                Global Min:  1.2183764060850458E-15 at: ( -90.03,   0.05,   73.00)
-                                                                Global Max:  1.4736369206676765E-07 at: ( -90.07,  -0.15,    1.00)
-      Total srdon:   2.4673187119475937E+08 mol/kg
-                                                                Global Min:  1.5655989207642301E-13 at: ( -90.07,   0.05,   75.00)
-                                                                Global Max:  2.8649605967678497E-06 at: ( -90.07,  -0.15,    1.00)
-      Total po4:   1.1261928393236094E+10 mol/kg
-                                                                Global Min:  6.7828011012503094E-07 at: ( -89.97,  -0.15,    1.00)
-                                                                Global Max:  2.9740143443213111E-06 at: ( -90.03,   0.05,   61.00)
-      Total pdet:   6.4092545594439027E+05 mol/kg
-                                                                Global Min:  6.3852074355158875E-11 at: ( -90.03,   0.15,   75.00)
-                                                                Global Max:  8.1962136620424995E-10 at: ( -90.07,   0.15,   39.00)
-      Total o2:   3.9311103802231927E+11 mol/kg
-                                                                Global Min:  1.8698172044590664E-05 at: ( -89.93,   0.05,   49.00)
-                                                                Global Max:  1.6506785729796872E-04 at: ( -89.93,   0.15,    8.00)
-      Total no3:   1.4725653084764713E+11 mol/kg
-                                                                Global Min:  5.6033595277780640E-06 at: ( -89.97,  -0.15,    1.00)
-                                                                Global Max:  3.9797674789496529E-05 at: ( -89.93,   0.05,   59.00)
-      Total nh4:   6.4260197365838408E+08 mol/kg
-                                                                Global Min:  1.2169369785705675E-07 at: ( -89.93,  -0.15,   51.00)
-                                                                Global Max:  5.1109049773768947E-07 at: ( -89.93,   0.15,   75.00)
-      Total nsm:   4.2463125031115329E+06 mol/kg
-                                                                Global Min:  3.2531731858514628E-13 at: ( -90.03,   0.05,   61.00)
-                                                                Global Max:  5.4984002886327479E-08 at: ( -89.93,  -0.15,   20.00)
-      Total nlg:   4.7490579628458684E+06 mol/kg
-                                                                Global Min:  2.8367067257039932E-13 at: ( -90.03,   0.05,   64.00)
-                                                                Global Max:  9.2427419056491402E-08 at: ( -89.97,  -0.15,    8.00)
-      Total ndi:   5.3115702687023894E+05 mol/kg
-                                                                Global Min:  1.6003447114036606E-13 at: ( -90.03,  -0.15,   69.00)
-                                                                Global Max:  1.4222869215273389E-08 at: ( -89.97,  -0.15,    1.00)
-      Total ndet:   9.7750210818474721E+06 mol/kg
-                                                                Global Min:  9.7738336076907621E-10 at: ( -90.03,   0.15,   75.00)
-                                                                Global Max:  1.2457729709176851E-08 at: ( -90.03,   0.15,   38.00)
-      Total nbact:   9.4936904686537441E+06 mol/kg
-                                                                Global Min:  5.6045283294366070E-12 at: ( -89.97,  -0.15,   75.00)
-                                                                Global Max:  1.7739024916753875E-07 at: ( -89.97,  -0.15,    1.00)
-      Total lithdet:   5.7442799272951469E+07 g/kg
-                                                                Global Min:  1.2262530349987096E-09 at: ( -90.07,   0.05,    1.00)
-                                                                Global Max:  1.5185539608960067E-08 at: ( -90.03,   0.15,   75.00)
-      Total lith:   7.5945436077632463E+08 g/kg
-                                                                Global Min:  2.6362426897298047E-14 at: ( -90.03,   0.05,   60.00)
-                                                                Global Max:  2.6912001460320206E-05 at: ( -89.97,  -0.15,    1.00)
-      Total ldop:   7.4898469720094581E+04 mol/kg
-                                                                Global Min:  4.2189891378181953E-13 at: ( -90.03,   0.15,   69.00)
-                                                                Global Max:  7.1626693441379462E-10 at: ( -90.03,  -0.05,    1.00)
-      Total ldon:   2.6088441845779778E+06 mol/kg
-                                                                Global Min:  2.3317403988806951E-11 at: ( -90.03,   0.15,   69.00)
-                                                                Global Max:  1.2542798920083589E-08 at: ( -90.03,  -0.05,    1.00)
-      Total fesm:   1.4605212857641471E+04 mol/kg
-                                                                Global Min:  3.0371021826452589E-12 at: ( -90.07,   0.05,   41.00)
-                                                                Global Max:  1.1927793224058099E-11 at: ( -89.93,   0.05,   26.00)
-      Total felg:   2.1047989539995480E+04 mol/kg
-                                                                Global Min:  4.6368573177331131E-12 at: ( -90.07,   0.05,   60.00)
-                                                                Global Max:  8.7860071888040894E-12 at: ( -89.93,  -0.15,   19.00)
-      Total fedi:   1.2254992001073875E+04 mol/kg
-                                                                Global Min:  2.6300733030212063E-12 at: ( -90.03,   0.05,   27.00)
-                                                                Global Max:  3.3825602184952465E-12 at: ( -90.07,   0.05,   45.00)
-      Total fedet:   7.6926397652791324E+05 mol/kg
-                                                                Global Min:  2.3873079635845727E-14 at: ( -90.03,   0.15,    1.00)
-                                                                Global Max:  4.6311076468893104E-10 at: ( -89.93,   0.05,   61.00)
-      Total fed:   3.6181661246086764E+06 mol/kg
-                                                                Global Min:  1.0326887628812415E-10 at: ( -89.97,  -0.15,    1.00)
-                                                                Global Max:  4.6008629711236727E-09 at: ( -89.97,  -0.15,   75.00)
-      Total dic:   9.4939565960969746E+12 mol/kg
-                                                                Global Min:  1.9221365731894079E-03 at: ( -90.03,  -0.05,    1.00)
-                                                                Global Max:  2.3573784282094040E-03 at: ( -90.07,  -0.05,   66.00)
-      Total cadet_calc:   2.2570008691268582E+07 mol/kg
-                                                                Global Min:  2.4856936961275859E-10 at: ( -90.07,   0.05,    1.00)
-                                                                Global Max:  7.6129060660632758E-09 at: ( -89.93,   0.05,   42.00)
-      Total cadet_arag:   3.5009395785700209E+06 mol/kg
-                                                                Global Min:  2.1380106780820039E-10 at: ( -90.07,   0.05,    1.00)
-                                                                Global Max:  1.9277414969399457E-09 at: ( -90.03,   0.15,   37.00)
-      Total alk:   9.8023513692372754E+12 mol/kg
-                                                                Global Min:  2.2581023783824618E-03 at: ( -90.07,  -0.15,    1.00)
-                                                                Global Max:  2.4356490555648446E-03 at: ( -90.07,  -0.15,   67.00)
-      Total cfc11:   3.2366335076218569E+00 mol/kg
-                                                                Global Min:  1.3805511729698853-139 at: ( -89.93,   0.05,   75.00)
-                                                                Global Max:  2.9971768584434044E-13 at: ( -90.03,  -0.05,    1.00)
-      Total cfc12:   1.9800825107122502E+00 mol/kg
-                                                                Global Min:  8.4620958053388541-140 at: ( -89.93,   0.05,   75.00)
-                                                                Global Max:  1.8328916224247384E-13 at: ( -90.03,  -0.05,    1.00)
+                                                                Global Max:  2.5705216570376672E+02 at: ( -90.07,   0.05,    1.00)
+      Total nlgz:   5.1853236996557163E+06 mol/kg
+                                                                Global Min:  1.7864585270677326E-12 at: ( -90.03,   0.15,   69.00)
+                                                                Global Max:  1.7245069165343640E-07 at: ( -90.07,  -0.15,    1.00)
+      Total nmdz:   8.5917296776290704E+06 mol/kg
+                                                                Global Min:  8.5092426300043681E-13 at: ( -90.03,  -0.15,   69.00)
+                                                                Global Max:  2.3995302014246784E-07 at: ( -89.97,  -0.15,    1.00)
+      Total nsmz:   7.7313922329460569E+06 mol/kg
+                                                                Global Min:  4.0194708242205349E-13 at: ( -90.07,   0.05,   62.00)
+                                                                Global Max:  1.6017057312521251E-07 at: ( -90.03,  -0.05,    1.00)
+      Total sio4:   4.7195259238973895E+11 mol/kg
+                                                                Global Min:  5.2193041557237703E-06 at: ( -89.97,  -0.15,    1.00)
+                                                                Global Max:  1.5285611381350559E-04 at: ( -90.07,  -0.15,   75.00)
+      Total silg:   4.1275609754594475E+08 mol/kg
+                                                                Global Min:  8.7384192931837044E-08 at: ( -90.03,  -0.05,   36.00)
+                                                                Global Max:  2.2746608876628202E-07 at: ( -89.93,  -0.15,   15.00)
+      Total sidet:   3.3006993011310466E+07 mol/kg
+                                                                Global Min:  3.9132308580935259E-10 at: ( -90.07,  -0.15,    1.00)
+                                                                Global Max:  1.3031164541079285E-08 at: ( -90.07,   0.15,   41.00)
+      Total sldop:   1.9086943232760264E+06 mol/kg
+                                                                Global Min:  2.2971537153348021E-17 at: ( -90.07,   0.05,   62.00)
+                                                                Global Max:  5.9906494639018384E-08 at: ( -90.07,  -0.15,    1.00)
+      Total sldon:   3.4489321078986995E+07 mol/kg
+                                                                Global Min:  3.6985086386091140E-16 at: ( -90.07,   0.05,   62.00)
+                                                                Global Max:  1.0777961844320374E-06 at: ( -90.07,  -0.15,    1.00)
+      Total srdop:   6.4292965724966917E+06 mol/kg
+                                                                Global Min:  1.2183764060850454E-15 at: ( -90.03,   0.15,   71.00)
+                                                                Global Max:  1.4736372857129094E-07 at: ( -90.07,  -0.15,    1.00)
+      Total srdon:   2.4673187119644290E+08 mol/kg
+                                                                Global Min:  1.5655989207642316E-13 at: ( -90.07,   0.05,   74.00)
+                                                                Global Max:  2.8649610714166708E-06 at: ( -90.07,  -0.15,    1.00)
+      Total po4:   1.1261928393239305E+10 mol/kg
+                                                                Global Min:  6.7827993268338870E-07 at: ( -89.97,  -0.15,    1.00)
+                                                                Global Max:  2.9740143442609850E-06 at: ( -90.03,   0.05,   61.00)
+      Total pdet:   6.4092545727974002E+05 mol/kg
+                                                                Global Min:  6.3852074337279586E-11 at: ( -90.07,   0.15,   75.00)
+                                                                Global Max:  8.1962136804351706E-10 at: ( -90.07,   0.15,   39.00)
+      Total o2:   3.9311103803407019E+11 mol/kg
+                                                                Global Min:  1.8698172029806341E-05 at: ( -89.93,   0.05,   49.00)
+                                                                Global Max:  1.6506789861716147E-04 at: ( -89.93,   0.15,    8.00)
+      Total no3:   1.4725653084768048E+11 mol/kg
+                                                                Global Min:  5.6033572523839718E-06 at: ( -89.97,  -0.15,    1.00)
+                                                                Global Max:  3.9797674795979950E-05 at: ( -89.93,   0.05,   59.00)
+      Total nh4:   6.4260197367826724E+08 mol/kg
+                                                                Global Min:  1.2169369776287505E-07 at: ( -89.93,  -0.15,   51.00)
+                                                                Global Max:  5.1109049905585940E-07 at: ( -89.93,   0.15,   75.00)
+      Total nsm:   4.2463125077843992E+06 mol/kg
+                                                                Global Min:  3.2531731858667120E-13 at: ( -90.03,   0.05,   61.00)
+                                                                Global Max:  5.4984002788401365E-08 at: ( -89.93,  -0.15,   20.00)
+      Total nlg:   4.7490579616526663E+06 mol/kg
+                                                                Global Min:  2.8367067259098301E-13 at: ( -90.03,   0.05,   64.00)
+                                                                Global Max:  9.2427418806422103E-08 at: ( -89.97,  -0.15,    8.00)
+      Total ndi:   5.3115702509858995E+05 mol/kg
+                                                                Global Min:  1.6003447114036621E-13 at: ( -90.03,  -0.15,   69.00)
+                                                                Global Max:  1.4222871814295497E-08 at: ( -89.97,  -0.15,    1.00)
+      Total ndet:   9.7750211039723605E+06 mol/kg
+                                                                Global Min:  9.7738336048789084E-10 at: ( -90.07,   0.15,   75.00)
+                                                                Global Max:  1.2457729746852390E-08 at: ( -90.03,   0.15,   38.00)
+      Total nbact:   9.4936904493053891E+06 mol/kg
+                                                                Global Min:  5.6045283294366256E-12 at: ( -89.97,  -0.15,   75.00)
+                                                                Global Max:  1.7739026478510084E-07 at: ( -89.97,  -0.15,    1.00)
+      Total lithdet:   5.7442799284555152E+07 g/kg
+                                                                Global Min:  1.2262532319201936E-09 at: ( -90.07,   0.05,    1.00)
+                                                                Global Max:  1.5185539608822811E-08 at: ( -90.03,   0.15,   75.00)
+      Total lith:   7.5945436076472104E+08 g/kg
+                                                                Global Min:  2.6362426897300385E-14 at: ( -90.03,   0.05,   60.00)
+                                                                Global Max:  2.6912011043355665E-05 at: ( -89.97,  -0.15,    1.00)
+      Total ldop:   7.4898469514589975E+04 mol/kg
+                                                                Global Min:  4.2189891378181963E-13 at: ( -90.03,   0.15,   69.00)
+                                                                Global Max:  7.1626693432965794E-10 at: ( -90.03,  -0.05,    1.00)
+      Total ldon:   2.6088441819264879E+06 mol/kg
+                                                                Global Min:  2.3317403988806942E-11 at: ( -90.03,   0.15,   69.00)
+                                                                Global Max:  1.2542798919013096E-08 at: ( -90.03,  -0.05,    1.00)
+      Total fesm:   1.4605212858183411E+04 mol/kg
+                                                                Global Min:  3.0371021823450073E-12 at: ( -90.07,   0.05,   41.00)
+                                                                Global Max:  1.1927793359027877E-11 at: ( -89.93,   0.05,   26.00)
+      Total felg:   2.1047989540450366E+04 mol/kg
+                                                                Global Min:  4.6368573175828724E-12 at: ( -90.07,   0.05,   60.00)
+                                                                Global Max:  8.7860071703298134E-12 at: ( -89.93,  -0.15,   19.00)
+      Total fedi:   1.2254992000956057E+04 mol/kg
+                                                                Global Min:  2.6300732995885651E-12 at: ( -90.03,   0.05,   27.00)
+                                                                Global Max:  3.3825602185006398E-12 at: ( -90.07,   0.05,   45.00)
+      Total fedet:   7.6926397652835376E+05 mol/kg
+                                                                Global Min:  2.3873088408494624E-14 at: ( -90.03,   0.15,    1.00)
+                                                                Global Max:  4.6311076454120635E-10 at: ( -89.93,   0.05,   61.00)
+      Total fed:   3.6181661246074717E+06 mol/kg
+                                                                Global Min:  1.0326886683495725E-10 at: ( -89.97,  -0.15,    1.00)
+                                                                Global Max:  4.6008629808338831E-09 at: ( -89.97,  -0.15,   75.00)
+      Total dic:   9.4939565960973320E+12 mol/kg
+                                                                Global Min:  1.9221365731897204E-03 at: ( -90.03,  -0.05,    1.00)
+                                                                Global Max:  2.3573784282085392E-03 at: ( -90.07,  -0.05,   66.00)
+      Total cadet_calc:   2.2570008694688052E+07 mol/kg
+                                                                Global Min:  2.4856941338839215E-10 at: ( -90.07,   0.05,    1.00)
+                                                                Global Max:  7.6129060509394777E-09 at: ( -89.93,   0.05,   42.00)
+      Total cadet_arag:   3.5009395906146932E+06 mol/kg
+                                                                Global Min:  2.1380109952180745E-10 at: ( -90.07,   0.05,    1.00)
+                                                                Global Max:  1.9277414973381939E-09 at: ( -90.03,   0.15,   37.00)
+      Total alk:   9.8023513692372363E+12 mol/kg
+                                                                Global Min:  2.2581023742585769E-03 at: ( -90.07,  -0.15,    1.00)
+                                                                Global Max:  2.4356490551074106E-03 at: ( -90.07,  -0.15,   67.00)
+      Total cfc11:   3.2366334184045518E+00 mol/kg
+                                                                Global Min:  1.3765102617540756-139 at: ( -89.93,   0.05,   75.00)
+                                                                Global Max:  2.9971763996086824E-13 at: ( -90.03,  -0.05,    1.00)
+      Total cfc12:   1.9800824575318567E+00 mol/kg
+                                                                Global Min:  8.4373248022728967-140 at: ( -89.93,   0.05,   75.00)
+                                                                Global Max:  1.8328913420086187E-13 at: ( -90.03,  -0.05,    1.00)
 SIS Date   2004/01/03 00:00:00    144: Area 0.000000000000E+00 0.000000000000E+00, Mass  0.00000000000E+00 0.00000000000E+00
  Total Ice Mass:   0.0000000000000000E+00, Change:  0.00000E+00 Error:  0.00000E+00 ( 0.0E+00)
  Total Ice Salt:   0.0000000000000000E+00, Change:  0.00000E+00 Error:  0.00000E+00
- Total Ice Heat:   0.0000000000000000E+00, Change:  0.00000E+00 Error: -8.45644E-02
-MOM Date   2004/01/03 00:00:00    144: En 7.031196E-05, MaxCFL  0.04296, Mass 4.095051722672E+15, Salt  34.65602533658, Temp   4.29917139041
-    Total Energy: 4250C28215C1696E  2.8793112755764734E+11
-    Total Mass:   4.0950517226724160E+15, Change:   6.6974803805351257E-02 Error:  6.69748E-02 ( 1.6E-17)
-    Total Salt:   1.4191821625555500E+14, Change:   2.1999999999999999E-02 Error:  2.20000E-02 ( 1.6E-16)
-    Total Heat:   7.0280474199757300E+19, Change:   3.2852466712565760E+15 Error:  8.49668E+03 ( 1.2E-16)
-      Total nh3:   8.8977379525760729E+06 mol/kg
-                                                                Global Min:  1.3835615306835084E-09 at: ( -89.93,   0.15,   68.00)
-                                                                Global Max:  2.8126639688227768E-08 at: ( -90.03,  -0.05,    1.00)
-      Total mu_mem_nsm:  -1.7215817579957154E+08 sec-1
-                                                                Global Min: -1.4155020048007950E-06 at: ( -89.97,  -0.15,    1.00)
-                                                                Global Max: -1.1296741004443502E-10 at: ( -90.03,   0.05,   63.00)
-      Total mu_mem_nlg:  -2.2064573863139924E+08 sec-1
-                                                                Global Min: -2.3772605560159595E-06 at: ( -89.97,  -0.15,    1.00)
-                                                                Global Max: -1.6262259268723277E-10 at: ( -90.03,   0.05,   64.00)
-      Total mu_mem_ndi:  -1.3969158767737985E+08 sec-1
-                                                                Global Min: -2.2591595603654847E-06 at: ( -89.97,  -0.15,    1.00)
-                                                                Global Max: -9.1760392639276024E-11 at: ( -90.03,  -0.15,   69.00)
+ Total Ice Heat:   0.0000000000000000E+00, Change:  0.00000E+00 Error: -4.85795E-02
+MOM Date   2004/01/03 00:00:00    144: En 7.020956E-05, MaxCFL  0.04293, Mass 4.095051722672E+15, Salt  34.65602533658, Temp   4.29917138813
+    Total Energy: 4250BC4275488DEE  2.8751179497821765E+11
+    Total Mass:   4.0950517226724155E+15, Change:  -7.7841520309448242E-02 Error: -7.78415E-02 (-1.9E-17)
+    Total Salt:   1.4191821625555497E+14, Change:   2.0000000000000000E-03 Error:  2.00000E-03 ( 1.4E-17)
+    Total Heat:   7.0280474162533876E+19, Change:   3.2852103820718080E+15 Error: -7.37420E+03 (-1.0E-16)
+      Total nh3:   8.8980435034152828E+06 mol/kg
+                                                                Global Min:  1.3835615016125789E-09 at: ( -89.93,   0.15,   68.00)
+                                                                Global Max:  2.8126185210407609E-08 at: ( -90.03,  -0.05,    1.00)
+      Total mu_mem_nsm:  -1.7215817579826012E+08 sec-1
+                                                                Global Min: -1.4155021385849408E-06 at: ( -89.97,  -0.15,    1.00)
+                                                                Global Max: -1.1296741004325410E-10 at: ( -90.03,   0.05,   63.00)
+      Total mu_mem_nlg:  -2.2064573865293983E+08 sec-1
+                                                                Global Min: -2.3772607852191042E-06 at: ( -89.97,  -0.15,    1.00)
+                                                                Global Max: -1.6262259269514622E-10 at: ( -90.03,   0.05,   64.00)
+      Total mu_mem_ndi:  -1.3969158737918457E+08 sec-1
+                                                                Global Min: -2.2591598009620996E-06 at: ( -89.97,  -0.15,    1.00)
+                                                                Global Max: -9.1760392639276076E-11 at: ( -90.03,  -0.15,   69.00)
       Total irr_mem:   0.0000000000000000E+00 Watts/m^2
                                                                 Global Min:  0.0000000000000000E+00 at: ( -90.07,  -0.15,    1.00)
                                                                 Global Max:  0.0000000000000000E+00 at: ( -90.07,  -0.15,    1.00)
-      Total htotal:   7.6966559465111896E+07 mol/kg
-                                                                Global Min:  7.5548635522183007E-09 at: ( -90.03,  -0.05,    4.00)
-                                                                Global Max:  2.4902790212593700E-08 at: ( -89.97,  -0.15,   50.00)
+      Total htotal:   7.6966559585550472E+07 mol/kg
+                                                                Global Min:  7.5548658631110227E-09 at: ( -90.03,  -0.05,    4.00)
+                                                                Global Max:  2.4902790206575742E-08 at: ( -89.97,   0.15,   50.00)
       Total fedet_btf:   0.0000000000000000E+00 mol m-2 s-1
                                                                 Global Min:  0.0000000000000000E+00 at: ( -90.07,  -0.15,    1.00)
                                                                 Global Max:  0.0000000000000000E+00 at: ( -90.07,  -0.15,    1.00)
-      Total sidet_btf:   1.6890452882089816E+04 mol m-2 s-1
+      Total sidet_btf:   1.6890452880893805E+04 mol m-2 s-1
                                                                 Global Min:  0.0000000000000000E+00 at: ( -90.07,  -0.15,    2.00)
-                                                                Global Max:  8.2492012649899441E-09 at: ( -90.07,   0.05,    1.00)
-      Total pdet_btf:   1.5223842391387518E+02 mol m-2 s-1
+                                                                Global Max:  8.2492012623379038E-09 at: ( -90.07,   0.05,    1.00)
+      Total pdet_btf:   1.5223842391791860E+02 mol m-2 s-1
                                                                 Global Min:  0.0000000000000000E+00 at: ( -90.07,  -0.15,    2.00)
-                                                                Global Max:  7.4352383945204571E-11 at: ( -89.97,   0.05,    1.00)
-      Total ndet_btf:   2.3303118704439635E+03 mol m-2 s-1
+                                                                Global Max:  7.4352383754368640E-11 at: ( -89.97,   0.05,    1.00)
+      Total ndet_btf:   2.3303118705125166E+03 mol m-2 s-1
                                                                 Global Min:  0.0000000000000000E+00 at: ( -90.07,  -0.15,    2.00)
-                                                                Global Max:  1.1381111182822696E-09 at: ( -89.97,   0.05,    1.00)
-      Total lithdet_btf:   3.7246030590156639E+04 g m-2 s-1
+                                                                Global Max:  1.1381111153757890E-09 at: ( -89.97,   0.05,    1.00)
+      Total lithdet_btf:   3.7246030594154538E+04 g m-2 s-1
                                                                 Global Min:  0.0000000000000000E+00 at: ( -90.07,  -0.15,    2.00)
-                                                                Global Max:  1.8190749815020515E-08 at: ( -90.03,   0.15,    1.00)
-      Total cadet_calc_btf:   1.1486582910384161E+04 mol m-2 s-1
+                                                                Global Max:  1.8190749811240908E-08 at: ( -90.07,   0.15,    1.00)
+      Total cadet_calc_btf:   1.1486582921606878E+04 mol m-2 s-1
                                                                 Global Min:  0.0000000000000000E+00 at: ( -90.07,  -0.15,    2.00)
-                                                                Global Max:  5.6099827993451308E-09 at: ( -90.07,   0.05,    1.00)
-      Total cadet_arag_btf:   1.1438995515610834E+03 mol m-2 s-1
+                                                                Global Max:  5.6099827164253351E-09 at: ( -90.07,   0.05,    1.00)
+      Total cadet_arag_btf:   1.1438995527595857E+03 mol m-2 s-1
                                                                 Global Min:  0.0000000000000000E+00 at: ( -90.07,  -0.15,    2.00)
-                                                                Global Max:  5.5867414756536445E-10 at: ( -90.07,   0.05,    1.00)
-      Total co3_ion:   2.8754691737068829E+11 mol/kg
-                                                                Global Min:  5.2506545150714794E-05 at: ( -89.97,  -0.15,   52.00)
-                                                                Global Max:  2.3118065456731994E-04 at: ( -90.03,  -0.05,    1.00)
-      Total chl:   2.7715423146419230E+13 ug kg-1
-                                                                Global Min:  2.3125229289069546E-06 at: ( -90.03,   0.05,   64.00)
-                                                                Global Max:  4.5248317695595452E-01 at: ( -89.97,  -0.15,   10.00)
-      Total cased:   5.2632253815011306E+14 mol m-3
+                                                                Global Max:  5.5867413845729930E-10 at: ( -90.07,   0.05,    1.00)
+      Total co3_ion:   2.8754691431970795E+11 mol/kg
+                                                                Global Min:  5.2506545387951247E-05 at: ( -89.97,  -0.15,   52.00)
+                                                                Global Max:  2.3117989508200469E-04 at: ( -90.03,  -0.05,    1.00)
+      Total chl:   2.7715423173410270E+13 ug kg-1
+                                                                Global Min:  2.3125229288293643E-06 at: ( -90.03,   0.05,   64.00)
+                                                                Global Max:  4.5248316377747089E-01 at: ( -89.97,  -0.15,   10.00)
+      Total cased:   5.2632253815015694E+14 mol m-3
                                                                 Global Min:  0.0000000000000000E+00 at: ( -90.07,  -0.15,    2.00)
-                                                                Global Max:  2.5705293793349352E+02 at: ( -90.07,   0.05,    1.00)
-      Total nlgz:   5.1965211179237450E+06 mol/kg
-                                                                Global Min:  1.7864556094179870E-12 at: ( -90.07,  -0.15,   70.00)
-                                                                Global Max:  1.6947177753059542E-07 at: ( -89.93,  -0.05,    1.00)
-      Total nmdz:   8.5015560785764251E+06 mol/kg
-                                                                Global Min:  8.5092260656416795E-13 at: ( -90.07,  -0.15,   70.00)
-                                                                Global Max:  2.3245258453073390E-07 at: ( -90.03,  -0.05,    1.00)
-      Total nsmz:   7.3602745707731517E+06 mol/kg
-                                                                Global Min:  4.0194674858585095E-13 at: ( -90.03,   0.05,   62.00)
-                                                                Global Max:  1.4660972371997389E-07 at: ( -90.03,  -0.05,    1.00)
-      Total sio4:   4.7195318687157306E+11 mol/kg
-                                                                Global Min:  5.3808745270064460E-06 at: ( -90.03,  -0.05,    1.00)
-                                                                Global Max:  1.5284903399164019E-04 at: ( -90.07,  -0.15,   75.00)
-      Total silg:   4.1228759137465066E+08 mol/kg
-                                                                Global Min:  8.7525359974573759E-08 at: ( -90.03,   0.15,   36.00)
-                                                                Global Max:  2.1512466573780711E-07 at: ( -89.93,  -0.15,   16.00)
-      Total sidet:   3.2881031332449730E+07 mol/kg
-                                                                Global Min:  3.3231801708077794E-10 at: ( -90.07,  -0.15,    1.00)
-                                                                Global Max:  1.2675995026808598E-08 at: ( -90.07,   0.15,   42.00)
-      Total sldop:   1.9079832259788546E+06 mol/kg
-                                                                Global Min:  2.2955417396039393E-17 at: ( -90.03,   0.05,   62.00)
-                                                                Global Max:  5.8767420956817537E-08 at: ( -89.93,  -0.05,    1.00)
-      Total sldon:   3.4470154751040086E+07 mol/kg
-                                                                Global Min:  3.6958722479198336E-16 at: ( -90.03,   0.05,   62.00)
-                                                                Global Max:  1.0572115884770317E-06 at: ( -89.93,  -0.05,    1.00)
-      Total srdop:   6.4316387115143072E+06 mol/kg
-                                                                Global Min:  1.2181848478017873E-15 at: ( -90.07,  -0.15,   75.00)
-                                                                Global Max:  1.4499495970178280E-07 at: ( -89.93,  -0.05,    1.00)
-      Total srdon:   2.4675328933735126E+08 mol/kg
-                                                                Global Min:  1.5654935699164927E-13 at: ( -90.07,   0.05,   75.00)
-                                                                Global Max:  2.8341401893323530E-06 at: ( -89.93,  -0.05,    1.00)
-      Total po4:   1.1262050288115107E+10 mol/kg
-                                                                Global Min:  6.9214217747533870E-07 at: ( -90.03,  -0.05,    1.00)
-                                                                Global Max:  2.9739918695897554E-06 at: ( -90.07,   0.05,   61.00)
-      Total pdet:   6.1585336480351363E+05 mol/kg
-                                                                Global Min:  5.7295773236630376E-11 at: ( -90.07,  -0.15,    1.00)
-                                                                Global Max:  7.2630134430268970E-10 at: ( -90.03,   0.15,   40.00)
-      Total o2:   3.9307295584090900E+11 mol/kg
-                                                                Global Min:  1.8721330716535157E-05 at: ( -89.93,   0.05,   49.00)
-                                                                Global Max:  1.6211286531938544E-04 at: ( -89.93,   0.15,    8.00)
-      Total no3:   1.4725914277229114E+11 mol/kg
-                                                                Global Min:  5.7820501203489365E-06 at: ( -90.03,  -0.05,    1.00)
-                                                                Global Max:  3.9796600159028428E-05 at: ( -89.97,   0.05,   59.00)
-      Total nh4:   6.4194535398066831E+08 mol/kg
-                                                                Global Min:  1.2173023381518595E-07 at: ( -89.93,  -0.15,   51.00)
-                                                                Global Max:  5.0062753423415861E-07 at: ( -89.93,   0.15,   75.00)
-      Total nsm:   3.8606856161397966E+06 mol/kg
-                                                                Global Min:  3.2531777541270719E-13 at: ( -90.03,   0.05,   61.00)
-                                                                Global Max:  4.8902504608127965E-08 at: ( -89.93,  -0.15,   21.00)
-      Total nlg:   4.3356978463840010E+06 mol/kg
-                                                                Global Min:  2.8367877848775753E-13 at: ( -90.03,   0.05,   64.00)
-                                                                Global Max:  8.1905501910287762E-08 at: ( -89.97,  -0.15,    9.00)
-      Total ndi:   5.0547613440555305E+05 mol/kg
-                                                                Global Min:  1.6003410470298959E-13 at: ( -90.03,  -0.15,   69.00)
-                                                                Global Max:  1.3187794505459135E-08 at: ( -90.03,  -0.05,    1.00)
-      Total ndet:   9.3992810818846095E+06 mol/kg
-                                                                Global Min:  9.0146565012894603E-10 at: ( -90.07,  -0.15,    1.00)
-                                                                Global Max:  1.1048424719171711E-08 at: ( -90.03,   0.15,   40.00)
-      Total nbact:   9.2296529488444217E+06 mol/kg
-                                                                Global Min:  5.6045301542533028E-12 at: ( -89.97,  -0.15,   75.00)
-                                                                Global Max:  1.6732326151023837E-07 at: ( -90.03,  -0.05,    1.00)
-      Total lithdet:   5.7376061668765396E+07 g/kg
-                                                                Global Min:  1.1475791505344691E-09 at: ( -90.07,   0.05,    1.00)
-                                                                Global Max:  1.5185321584712779E-08 at: ( -90.03,   0.15,   75.00)
-      Total lith:   7.5913244121413875E+08 g/kg
-                                                                Global Min:  2.6355924091560847E-14 at: ( -90.03,  -0.05,   60.00)
-                                                                Global Max:  2.6252733270833280E-05 at: ( -90.03,  -0.05,    1.00)
-      Total ldop:   7.2844724560242466E+04 mol/kg
-                                                                Global Min:  4.2189607322419691E-13 at: ( -90.07,   0.15,   69.00)
-                                                                Global Max:  6.8356869441809170E-10 at: ( -90.03,  -0.05,    1.00)
-      Total ldon:   2.5653933112619454E+06 mol/kg
-                                                                Global Min:  2.3317240482698038E-11 at: ( -90.03,   0.15,   69.00)
-                                                                Global Max:  1.1916231694324631E-08 at: ( -90.03,  -0.05,    1.00)
-      Total fesm:   1.4587863366291063E+04 mol/kg
-                                                                Global Min:  3.0384737827700187E-12 at: ( -90.03,  -0.15,   41.00)
-                                                                Global Max:  1.1703311292691894E-11 at: ( -89.93,   0.05,   27.00)
-      Total felg:   2.1045402546632606E+04 mol/kg
-                                                                Global Min:  4.6368718744995938E-12 at: ( -90.03,   0.05,   60.00)
-                                                                Global Max:  8.7034080489362951E-12 at: ( -89.93,  -0.15,   19.00)
-      Total fedi:   1.2255052563589852E+04 mol/kg
-                                                                Global Min:  2.6367650971179031E-12 at: ( -90.03,   0.05,   28.00)
-                                                                Global Max:  3.3824093281013234E-12 at: ( -90.03,   0.05,   45.00)
-      Total fedet:   7.9341281260211079E+05 mol/kg
-                                                                Global Min:  2.0487957846831433E-14 at: ( -90.07,  -0.15,    1.00)
-                                                                Global Max:  4.7256275317030579E-10 at: ( -89.97,   0.05,   61.00)
-      Total fed:   3.5909963142901021E+06 mol/kg
-                                                                Global Min:  1.0406385001327745E-10 at: ( -90.03,  -0.05,    1.00)
-                                                                Global Max:  4.4908064563708390E-09 at: ( -89.97,  -0.15,   75.00)
-      Total dic:   9.4939684612624668E+12 mol/kg
-                                                                Global Min:  1.9233380618689298E-03 at: ( -90.03,  -0.05,    1.00)
-                                                                Global Max:  2.3573775464264409E-03 at: ( -90.03,  -0.05,   66.00)
-      Total cadet_calc:   2.2502344522293855E+07 mol/kg
-                                                                Global Min:  2.0518524577850719E-10 at: ( -90.07,  -0.15,    1.00)
-                                                                Global Max:  7.4736029663916025E-09 at: ( -89.93,  -0.15,   43.00)
-      Total cadet_arag:   3.5013413263065172E+06 mol/kg
-                                                                Global Min:  1.9924504380011645E-10 at: ( -90.07,   0.05,    1.00)
-                                                                Global Max:  1.9217634925143596E-09 at: ( -90.03,   0.15,   39.00)
-      Total alk:   9.8023480748598320E+12 mol/kg
-                                                                Global Min:  2.2583289825628991E-03 at: ( -89.93,  -0.05,    1.00)
-                                                                Global Max:  2.4356484484383089E-03 at: ( -90.07,  -0.05,   67.00)
-      Total cfc11:   3.3696969157418430E+00 mol/kg
-                                                                Global Min:  1.9659377516041503-136 at: ( -89.93,   0.15,   75.00)
-                                                                Global Max:  2.7192348584393257E-13 at: ( -90.03,  -0.05,    1.00)
-      Total cfc12:   2.0613471015687264E+00 mol/kg
-                                                                Global Min:  1.2052379995692755-136 at: ( -89.93,   0.15,   75.00)
-                                                                Global Max:  1.6628894915421435E-13 at: ( -90.03,  -0.05,    1.00)
+                                                                Global Max:  2.5705293793349819E+02 at: ( -90.07,   0.05,    1.00)
+      Total nlgz:   5.1965211172979549E+06 mol/kg
+                                                                Global Min:  1.7864556094179876E-12 at: ( -90.07,  -0.15,   71.00)
+                                                                Global Max:  1.6947036198547882E-07 at: ( -89.97,  -0.15,    1.00)
+      Total nmdz:   8.5015559782128688E+06 mol/kg
+                                                                Global Min:  8.5092260656416825E-13 at: ( -90.03,  -0.15,   69.00)
+                                                                Global Max:  2.3245006035981361E-07 at: ( -90.03,  -0.05,    1.00)
+      Total nsmz:   7.3602745046846941E+06 mol/kg
+                                                                Global Min:  4.0194674858549738E-13 at: ( -90.03,   0.05,   62.00)
+                                                                Global Max:  1.4660963697356121E-07 at: ( -90.03,  -0.05,    1.00)
+      Total sio4:   4.7195318687150684E+11 mol/kg
+                                                                Global Min:  5.3809805941742909E-06 at: ( -90.07,  -0.15,    1.00)
+                                                                Global Max:  1.5284903385536419E-04 at: ( -90.03,  -0.15,   75.00)
+      Total silg:   4.1228759145937610E+08 mol/kg
+                                                                Global Min:  8.7525359583108429E-08 at: ( -90.03,   0.15,   36.00)
+                                                                Global Max:  2.1512466121547423E-07 at: ( -89.93,  -0.15,   16.00)
+      Total sidet:   3.2881031314000610E+07 mol/kg
+                                                                Global Min:  3.3244143441301788E-10 at: ( -90.03,   0.15,    1.00)
+                                                                Global Max:  1.2675994961400592E-08 at: ( -90.07,   0.15,   42.00)
+      Total sldop:   1.9079832264871395E+06 mol/kg
+                                                                Global Min:  2.2955417382088070E-17 at: ( -90.03,   0.05,   62.00)
+                                                                Global Max:  5.8766781012083123E-08 at: ( -89.97,  -0.15,    1.00)
+      Total sldon:   3.4470154759232640E+07 mol/kg
+                                                                Global Min:  3.6958722456469079E-16 at: ( -90.03,   0.05,   62.00)
+                                                                Global Max:  1.0572000987614038E-06 at: ( -89.97,  -0.15,    1.00)
+      Total srdop:   6.4316387118964065E+06 mol/kg
+                                                                Global Min:  1.2181848478017828E-15 at: ( -90.03,   0.15,   71.00)
+                                                                Global Max:  1.4499355495628091E-07 at: ( -89.97,  -0.15,    1.00)
+      Total srdon:   2.4675328934145758E+08 mol/kg
+                                                                Global Min:  1.5654935699164937E-13 at: ( -90.07,  -0.15,   74.00)
+                                                                Global Max:  2.8341213078437630E-06 at: ( -89.97,  -0.15,    1.00)
+      Total po4:   1.1262050288122173E+10 mol/kg
+                                                                Global Min:  6.9215132574232448E-07 at: ( -90.07,  -0.15,    1.00)
+                                                                Global Max:  2.9739918702353009E-06 at: ( -90.07,   0.05,   61.00)
+      Total pdet:   6.1585336960054503E+05 mol/kg
+                                                                Global Min:  5.7313845368474225E-11 at: ( -90.03,   0.15,    1.00)
+                                                                Global Max:  7.2630134263325600E-10 at: ( -90.03,   0.15,   40.00)
+      Total o2:   3.9307295613009973E+11 mol/kg
+                                                                Global Min:  1.8721330592112607E-05 at: ( -89.93,   0.05,   49.00)
+                                                                Global Max:  1.6211290718704698E-04 at: ( -89.93,   0.15,    8.00)
+      Total no3:   1.4725914277458087E+11 mol/kg
+                                                                Global Min:  5.7821707276982394E-06 at: ( -90.07,  -0.15,    1.00)
+                                                                Global Max:  3.9796600296593883E-05 at: ( -89.97,   0.05,   59.00)
+      Total nh4:   6.4194535181029236E+08 mol/kg
+                                                                Global Min:  1.2173023330997159E-07 at: ( -89.93,  -0.15,   51.00)
+                                                                Global Max:  5.0062750233801193E-07 at: ( -89.93,   0.15,   75.00)
+      Total nsm:   3.8606856299474314E+06 mol/kg
+                                                                Global Min:  3.2531777540665555E-13 at: ( -90.03,   0.05,   61.00)
+                                                                Global Max:  4.8902504665067578E-08 at: ( -89.93,  -0.15,   21.00)
+      Total nlg:   4.3356978471779646E+06 mol/kg
+                                                                Global Min:  2.8367877846811916E-13 at: ( -90.03,   0.05,   64.00)
+                                                                Global Max:  8.1905501481164605E-08 at: ( -89.97,  -0.15,    9.00)
+      Total ndi:   5.0547612999754486E+05 mol/kg
+                                                                Global Min:  1.6003410470299002E-13 at: ( -90.03,  -0.15,   69.00)
+                                                                Global Max:  1.3187641648826111E-08 at: ( -90.03,  -0.05,    1.00)
+      Total ndet:   9.3992811603600811E+06 mol/kg
+                                                                Global Min:  9.0175353395320629E-10 at: ( -90.03,   0.15,    1.00)
+                                                                Global Max:  1.1048424678454164E-08 at: ( -90.03,   0.15,   40.00)
+      Total nbact:   9.2296529002276082E+06 mol/kg
+                                                                Global Min:  5.6045301542533302E-12 at: ( -89.97,  -0.15,   75.00)
+                                                                Global Max:  1.6732238704476545E-07 at: ( -90.03,  -0.05,    1.00)
+      Total lithdet:   5.7376061702215843E+07 g/kg
+                                                                Global Min:  1.1476625365280977E-09 at: ( -90.03,   0.15,    1.00)
+                                                                Global Max:  1.5185321581557628E-08 at: ( -90.07,   0.15,   75.00)
+      Total lith:   7.5913244118065298E+08 g/kg
+                                                                Global Min:  2.6355924091576508E-14 at: ( -90.03,  -0.05,   60.00)
+                                                                Global Max:  2.6252408519232147E-05 at: ( -90.07,  -0.15,    1.00)
+      Total ldop:   7.2844724176161282E+04 mol/kg
+                                                                Global Min:  4.2189607322419666E-13 at: ( -90.03,   0.15,   69.00)
+                                                                Global Max:  6.8356551929010289E-10 at: ( -90.03,  -0.05,    1.00)
+      Total ldon:   2.5653933066178230E+06 mol/kg
+                                                                Global Min:  2.3317240482698054E-11 at: ( -90.03,   0.15,   69.00)
+                                                                Global Max:  1.1916182556789277E-08 at: ( -90.03,  -0.05,    1.00)
+      Total fesm:   1.4587863367816104E+04 mol/kg
+                                                                Global Min:  3.0384737821080832E-12 at: ( -90.03,  -0.15,   41.00)
+                                                                Global Max:  1.1703311438442895E-11 at: ( -89.93,   0.05,   27.00)
+      Total felg:   2.1045402548344311E+04 mol/kg
+                                                                Global Min:  4.6368718743474636E-12 at: ( -90.03,   0.05,   60.00)
+                                                                Global Max:  8.7034080538864460E-12 at: ( -89.93,  -0.15,   19.00)
+      Total fedi:   1.2255052563208723E+04 mol/kg
+                                                                Global Min:  2.6367650932816127E-12 at: ( -90.03,   0.05,   28.00)
+                                                                Global Max:  3.3824093281385502E-12 at: ( -90.03,   0.05,   45.00)
+      Total fedet:   7.9341281270787178E+05 mol/kg
+                                                                Global Min:  2.0494524526098509E-14 at: ( -90.03,   0.15,    1.00)
+                                                                Global Max:  4.7256275502384249E-10 at: ( -89.97,   0.05,   61.00)
+      Total fed:   3.5909963141839583E+06 mol/kg
+                                                                Global Min:  1.0406450361772736E-10 at: ( -90.03,  -0.05,    1.00)
+                                                                Global Max:  4.4908062623610254E-09 at: ( -89.93,  -0.15,   75.00)
+      Total dic:   9.4939684612626543E+12 mol/kg
+                                                                Global Min:  1.9233393895091205E-03 at: ( -90.03,  -0.05,    1.00)
+                                                                Global Max:  2.3573775462897048E-03 at: ( -90.03,  -0.05,   66.00)
+      Total cadet_calc:   2.2502344531142820E+07 mol/kg
+                                                                Global Min:  2.0520749778672621E-10 at: ( -90.03,   0.15,    1.00)
+                                                                Global Max:  7.4736029004844884E-09 at: ( -89.93,  -0.15,   43.00)
+      Total cadet_arag:   3.5013413613556242E+06 mol/kg
+                                                                Global Min:  1.9926490982787095E-10 at: ( -90.03,   0.15,    1.00)
+                                                                Global Max:  1.9217634917234162E-09 at: ( -90.03,   0.15,   39.00)
+      Total alk:   9.8023480748552734E+12 mol/kg
+                                                                Global Min:  2.2583292627702347E-03 at: ( -89.93,  -0.05,    1.00)
+                                                                Global Max:  2.4356484484333585E-03 at: ( -90.07,  -0.05,   67.00)
+      Total cfc11:   3.3696949451841616E+00 mol/kg
+                                                                Global Min:  1.9517624423424004-136 at: ( -89.97,   0.15,   75.00)
+                                                                Global Max:  2.7186001303637667E-13 at: ( -90.03,  -0.05,    1.00)
+      Total cfc12:   2.0613459278473254E+00 mol/kg
+                                                                Global Min:  1.1963412959083637-136 at: ( -89.97,   0.15,   75.00)
+                                                                Global Max:  1.6625017189088758E-13 at: ( -90.03,  -0.05,    1.00)
  BEGIN CHECKSUM(Atmos_data_type):: coupler_end            0
 CHECKSUM::     atm%lon_bnd                 =     BF54518B3AA86758
 CHECKSUM::     atm%lat_bnd                 =     F3DBE8D44A53A72E
@@ -8780,7 +8786,7 @@ CHECKSUM::     atm%flux_lw                 =                    0
 CHECKSUM::     atm%lprec                   =                    0
 CHECKSUM::     atm%fprec                   =                    0
  BEGIN CHECKSUM(lnd_ice_Atm_bnd_type):: coupler_end            0
-CHECKSUM::lnd_ice_atm_bnd_type%t           =      729DFBD4E001E0E
+CHECKSUM::lnd_ice_atm_bnd_type%t           =      729DF9FCAFA9A9C
 CHECKSUM::lnd_ice_atm_bnd_type%albedo      =                    0
 CHECKSUM::lnd_ice_atm_bnd_type%albedo_vis_ =     FAEB851EB851EB80
 CHECKSUM::lnd_ice_atm_bnd_type%albedo_nir_ =     FAEB851EB851EB80
@@ -8792,50 +8798,50 @@ CHECKSUM::lnd_ice_atm_bnd_type%dt_tr(:,:,n =                    0
 CHECKSUM::lnd_ice_atm_bnd_type%dt_tr(:,:,n =                    0
 CHECKSUM::lnd_ice_atm_bnd_type%dt_tr(:,:,n =                    0
 CHECKSUM::lnd_ice_atm_bnd_type%dt_tr(:,:,n =                    0
-CHECKSUM::lnd_ice_atm_bnd_type%u_flux      =     F6F137AF9E720414
-CHECKSUM::lnd_ice_atm_bnd_type%v_flux      =     F79948840DB8755F
-CHECKSUM::lnd_ice_atm_bnd_type%dtaudu      =     F74F8955DEF69DD7
-CHECKSUM::lnd_ice_atm_bnd_type%dtaudv      =     F7C66A0C788F3599
-CHECKSUM::lnd_ice_atm_bnd_type%u_star      =     FB46875D5BD6553B
-CHECKSUM::lnd_ice_atm_bnd_type%b_star      =     F37E74B7CBE0405C
-CHECKSUM::lnd_ice_atm_bnd_type%q_star      =     F1F5A5789CEB7766
-CHECKSUM::lnd_ice_atm_bnd_type%rough_mom   =     F00FB94B55A313C9
+CHECKSUM::lnd_ice_atm_bnd_type%u_flux      =     F6F0E2CA3EF1885E
+CHECKSUM::lnd_ice_atm_bnd_type%v_flux      =     F799149326492476
+CHECKSUM::lnd_ice_atm_bnd_type%dtaudu      =     F74F6B2A0E1F2BFE
+CHECKSUM::lnd_ice_atm_bnd_type%dtaudv      =     F7C666129EDA6212
+CHECKSUM::lnd_ice_atm_bnd_type%u_star      =     FB466D8899E0E6D4
+CHECKSUM::lnd_ice_atm_bnd_type%b_star      =     F37DC6AFC2866410
+CHECKSUM::lnd_ice_atm_bnd_type%q_star      =     F1F58624E77037F7
+CHECKSUM::lnd_ice_atm_bnd_type%rough_mom   =     F00FB946E213CED5
  BEGIN CHECKSUM(ice_data_type):: coupler_end            0
    CHECKSUM::   ice_data_type%part_size       =     FF00000000000000
-   CHECKSUM::   ice_data_type%t_surf          =     2A7667B3E2E09E2A
-   CHECKSUM::   ice_data_type%s_surf          =      41128706B224FC0
+   CHECKSUM::   ice_data_type%t_surf          =     2A76679803A19B6E
+   CHECKSUM::   ice_data_type%s_surf          =      4112881F35E3E56
    CHECKSUM::   ice_data_type%albedo          =                    0
    CHECKSUM::   ice_data_type%albedo_vis_dir  =     FAEB851EB851EB80
    CHECKSUM::   ice_data_type%albedo_nir_dir  =     FAEB851EB851EB80
    CHECKSUM::   ice_data_type%albedo_vis_dif  =     FAEB851EB851EB80
    CHECKSUM::   ice_data_type%albedo_nir_dif  =     FAEB851EB851EB80
-   CHECKSUM::       ice_data_type%rough_mom   =     A840F1B7E229206D
-   CHECKSUM::       ice_data_type%rough_heat  =     A96D1F86317B7A41
-   CHECKSUM::       ice_data_type%rough_moist =     AA1AE842CA3D71B7
-   CHECKSUM::           ice_data_type%u_surf  =     EE524E1D4EE4A234
-   CHECKSUM::           ice_data_type%v_surf  =     E650FE32E0358F02
-   CHECKSUM:: ice%o2_flux_alpha_ice                    =     FA1A99F6C7226D70
-   CHECKSUM:: ice%o2_flux_csurf_ice                    =     E9358D570D53E958
-   CHECKSUM:: ice%o2_flux_sc_no_ice                    =     2E928F765052C240
-   CHECKSUM:: ice%co2_flux_alpha_ice                   =     1719C3B621E5C2E8
-   CHECKSUM:: ice%co2_flux_csurf_ice                   =     D14576EF44710ADE
-   CHECKSUM:: ice%co2_flux_sc_no_ice                   =     3035EE7A1A847130
-   CHECKSUM:: ice%cfc11_flux_alpha_ice                 =      B104C4F2A5B747C
-   CHECKSUM:: ice%cfc11_flux_csurf_ice                 =     3B1CF5FEE099538C
-   CHECKSUM:: ice%cfc11_flux_sc_no_ice                 =     350D7E43B1D12AC0
-   CHECKSUM:: ice%cfc12_flux_alpha_ice                 =       4A60176A56C164
-   CHECKSUM:: ice%cfc12_flux_csurf_ice                 =     36B323B7095897EE
-   CHECKSUM:: ice%cfc12_flux_sc_no_ice                 =     34FEA321E1D38B60
-   CHECKSUM::  ice_data_type%flux_u           =     F6F1535457DB95F1
-   CHECKSUM::  ice_data_type%flux_v           =     F9B16C7CD2ED1DBF
-   CHECKSUM::  ice_data_type%flux_t           =     FEFE81B821CBEC46
-   CHECKSUM::  ice_data_type%flux_q           =     EE760AD773B1EE06
-   CHECKSUM::  ice_data_type%flux_lw          =      436416B54CA55B0
+   CHECKSUM::       ice_data_type%rough_mom   =     A840EF905A46CC25
+   CHECKSUM::       ice_data_type%rough_heat  =     A96D380CF1D6D923
+   CHECKSUM::       ice_data_type%rough_moist =     AA1B0E46DACB119C
+   CHECKSUM::           ice_data_type%u_surf  =     EE53DF35AFCEA538
+   CHECKSUM::           ice_data_type%v_surf  =     E65279C489DC9D66
+   CHECKSUM:: ice%o2_flux_alpha_ice                    =     FA1A9CF8B324E424
+   CHECKSUM:: ice%o2_flux_csurf_ice                    =     E935CB2502913984
+   CHECKSUM:: ice%o2_flux_sc_no_ice                    =     2E929E8A2BD6E840
+   CHECKSUM:: ice%co2_flux_alpha_ice                   =     1719CBE6BEA3A656
+   CHECKSUM:: ice%co2_flux_csurf_ice                   =     D145798506E14B9C
+   CHECKSUM:: ice%co2_flux_sc_no_ice                   =     3035F75FC3A1B768
+   CHECKSUM:: ice%cfc11_flux_alpha_ice                 =      B105A1C886DF0B4
+   CHECKSUM:: ice%cfc11_flux_csurf_ice                 =     3B1BF09487641B78
+   CHECKSUM:: ice%cfc11_flux_sc_no_ice                 =     350D8D78C898D490
+   CHECKSUM:: ice%cfc12_flux_alpha_ice                 =       4A6708B819DCD0
+   CHECKSUM:: ice%cfc12_flux_csurf_ice                 =     36B1E45ABFFEC30C
+   CHECKSUM:: ice%cfc12_flux_sc_no_ice                 =     34FEB324544AC680
+   CHECKSUM::  ice_data_type%flux_u           =     F6F0FBC25277E4FA
+   CHECKSUM::  ice_data_type%flux_v           =     F9B13D9300DF15B7
+   CHECKSUM::  ice_data_type%flux_t           =     FEFEDC90453C90B9
+   CHECKSUM::  ice_data_type%flux_q           =     EE75D67E22DB25C2
+   CHECKSUM::  ice_data_type%flux_lw          =      4363BE3834D9990
    CHECKSUM::  ice_data_type%flux_sw_vis_dir  =      4F6BC0CAEA0FD27
    CHECKSUM::  ice_data_type%flux_sw_vis_dif  =      4F6BC0CAEA0FD27
    CHECKSUM::  ice_data_type%flux_sw_nir_dir  =      47B4182D494652E
    CHECKSUM::  ice_data_type%flux_sw_nir_dif  =      47B4182D494652E
-   CHECKSUM::  ice_data_type%flux_lh          =      3BDE4AA98B652DC
+   CHECKSUM::  ice_data_type%flux_lh          =      3BDA642FBB33884
    CHECKSUM::  ice_data_type%lprec            =     EF68CF87B1664C42
    CHECKSUM::  ice_data_type%fprec            =                    0
    CHECKSUM::  ice_data_type%p_surf           =                    0
@@ -8843,12 +8849,12 @@ CHECKSUM::lnd_ice_atm_bnd_type%rough_mom   =     F00FB94B55A313C9
    CHECKSUM::  ice_data_type%calving          =                    0
    CHECKSUM::  ice_data_type%flux_salt        =                    0
  BEGIN CHECKSUM(atmos_ice_boundary_type):: coupler_end            0
-CHECKSUM::       atm_ice_bnd_type%u_flux   =     F6F137AF9E720414
-CHECKSUM::       atm_ice_bnd_type%v_flux   =     F79948840DB8755F
-CHECKSUM::       atm_ice_bnd_type%u_star   =     FB46875D5BD6553B
-CHECKSUM::       atm_ice_bnd_type%t_flux   =     FEFE81B821CBEC46
-CHECKSUM::       atm_ice_bnd_type%q_flux   =     EE760AD773B1EE06
-CHECKSUM::       atm_ice_bnd_type%lw_flux  =     20100D0EB23E04A8
+CHECKSUM::       atm_ice_bnd_type%u_flux   =     F6F0E2CA3EF1885E
+CHECKSUM::       atm_ice_bnd_type%v_flux   =     F799149326492476
+CHECKSUM::       atm_ice_bnd_type%u_star   =     FB466D8899E0E6D4
+CHECKSUM::       atm_ice_bnd_type%t_flux   =     FEFEDC90453C90B9
+CHECKSUM::       atm_ice_bnd_type%q_flux   =     EE75D67E22DB25C2
+CHECKSUM::       atm_ice_bnd_type%lw_flux  =     20100769273298A8
 CHECKSUM::atm_ice_bnd_type%sw_flux_vis_dir =     1E2FCB6A537E2C20
 CHECKSUM::atm_ice_bnd_type%sw_flux_vis_dif =     1E2FCB6A537E2C20
 CHECKSUM::atm_ice_bnd_type%sw_flux_nir_dir =     1B5C93149BEB1804
@@ -8908,40 +8914,40 @@ CHECKSUM::     albt%tr_flux                =                    0
 CHECKSUM::     albt%dfdtr                  =                    0
  BEGIN CHECKSUM(ice_data_type):: coupler_end            0
    CHECKSUM::   ice_data_type%part_size       =     FF00000000000000
-   CHECKSUM::   ice_data_type%t_surf          =     2A7667B3E2E09E2A
-   CHECKSUM::   ice_data_type%s_surf          =      41128706B224FC0
+   CHECKSUM::   ice_data_type%t_surf          =     2A76679803A19B6E
+   CHECKSUM::   ice_data_type%s_surf          =      4112881F35E3E56
    CHECKSUM::   ice_data_type%albedo          =                    0
    CHECKSUM::   ice_data_type%albedo_vis_dir  =     FAEB851EB851EB80
    CHECKSUM::   ice_data_type%albedo_nir_dir  =     FAEB851EB851EB80
    CHECKSUM::   ice_data_type%albedo_vis_dif  =     FAEB851EB851EB80
    CHECKSUM::   ice_data_type%albedo_nir_dif  =     FAEB851EB851EB80
-   CHECKSUM::       ice_data_type%rough_mom   =     A840F1B7E229206D
-   CHECKSUM::       ice_data_type%rough_heat  =     A96D1F86317B7A41
-   CHECKSUM::       ice_data_type%rough_moist =     AA1AE842CA3D71B7
-   CHECKSUM::           ice_data_type%u_surf  =     EE524E1D4EE4A234
-   CHECKSUM::           ice_data_type%v_surf  =     E650FE32E0358F02
-   CHECKSUM:: ice%o2_flux_alpha_ice                    =     FA1A99F6C7226D70
-   CHECKSUM:: ice%o2_flux_csurf_ice                    =     E9358D570D53E958
-   CHECKSUM:: ice%o2_flux_sc_no_ice                    =     2E928F765052C240
-   CHECKSUM:: ice%co2_flux_alpha_ice                   =     1719C3B621E5C2E8
-   CHECKSUM:: ice%co2_flux_csurf_ice                   =     D14576EF44710ADE
-   CHECKSUM:: ice%co2_flux_sc_no_ice                   =     3035EE7A1A847130
-   CHECKSUM:: ice%cfc11_flux_alpha_ice                 =      B104C4F2A5B747C
-   CHECKSUM:: ice%cfc11_flux_csurf_ice                 =     3B1CF5FEE099538C
-   CHECKSUM:: ice%cfc11_flux_sc_no_ice                 =     350D7E43B1D12AC0
-   CHECKSUM:: ice%cfc12_flux_alpha_ice                 =       4A60176A56C164
-   CHECKSUM:: ice%cfc12_flux_csurf_ice                 =     36B323B7095897EE
-   CHECKSUM:: ice%cfc12_flux_sc_no_ice                 =     34FEA321E1D38B60
-   CHECKSUM::  ice_data_type%flux_u           =     F6F1535457DB95F1
-   CHECKSUM::  ice_data_type%flux_v           =     F9B16C7CD2ED1DBF
-   CHECKSUM::  ice_data_type%flux_t           =     FEFE81B821CBEC46
-   CHECKSUM::  ice_data_type%flux_q           =     EE760AD773B1EE06
-   CHECKSUM::  ice_data_type%flux_lw          =      436416B54CA55B0
+   CHECKSUM::       ice_data_type%rough_mom   =     A840EF905A46CC25
+   CHECKSUM::       ice_data_type%rough_heat  =     A96D380CF1D6D923
+   CHECKSUM::       ice_data_type%rough_moist =     AA1B0E46DACB119C
+   CHECKSUM::           ice_data_type%u_surf  =     EE53DF35AFCEA538
+   CHECKSUM::           ice_data_type%v_surf  =     E65279C489DC9D66
+   CHECKSUM:: ice%o2_flux_alpha_ice                    =     FA1A9CF8B324E424
+   CHECKSUM:: ice%o2_flux_csurf_ice                    =     E935CB2502913984
+   CHECKSUM:: ice%o2_flux_sc_no_ice                    =     2E929E8A2BD6E840
+   CHECKSUM:: ice%co2_flux_alpha_ice                   =     1719CBE6BEA3A656
+   CHECKSUM:: ice%co2_flux_csurf_ice                   =     D145798506E14B9C
+   CHECKSUM:: ice%co2_flux_sc_no_ice                   =     3035F75FC3A1B768
+   CHECKSUM:: ice%cfc11_flux_alpha_ice                 =      B105A1C886DF0B4
+   CHECKSUM:: ice%cfc11_flux_csurf_ice                 =     3B1BF09487641B78
+   CHECKSUM:: ice%cfc11_flux_sc_no_ice                 =     350D8D78C898D490
+   CHECKSUM:: ice%cfc12_flux_alpha_ice                 =       4A6708B819DCD0
+   CHECKSUM:: ice%cfc12_flux_csurf_ice                 =     36B1E45ABFFEC30C
+   CHECKSUM:: ice%cfc12_flux_sc_no_ice                 =     34FEB324544AC680
+   CHECKSUM::  ice_data_type%flux_u           =     F6F0FBC25277E4FA
+   CHECKSUM::  ice_data_type%flux_v           =     F9B13D9300DF15B7
+   CHECKSUM::  ice_data_type%flux_t           =     FEFEDC90453C90B9
+   CHECKSUM::  ice_data_type%flux_q           =     EE75D67E22DB25C2
+   CHECKSUM::  ice_data_type%flux_lw          =      4363BE3834D9990
    CHECKSUM::  ice_data_type%flux_sw_vis_dir  =      4F6BC0CAEA0FD27
    CHECKSUM::  ice_data_type%flux_sw_vis_dif  =      4F6BC0CAEA0FD27
    CHECKSUM::  ice_data_type%flux_sw_nir_dir  =      47B4182D494652E
    CHECKSUM::  ice_data_type%flux_sw_nir_dif  =      47B4182D494652E
-   CHECKSUM::  ice_data_type%flux_lh          =      3BDE4AA98B652DC
+   CHECKSUM::  ice_data_type%flux_lh          =      3BDA642FBB33884
    CHECKSUM::  ice_data_type%lprec            =     EF68CF87B1664C42
    CHECKSUM::  ice_data_type%fprec            =                    0
    CHECKSUM::  ice_data_type%p_surf           =                    0
@@ -8949,51 +8955,51 @@ CHECKSUM::     albt%dfdtr                  =                    0
    CHECKSUM::  ice_data_type%calving          =                    0
    CHECKSUM::  ice_data_type%flux_salt        =                    0
  BEGIN CHECKSUM(ocean_ice_boundary_type):: coupler_end            0
-CHECKSUM::      ocn_ice_bnd_type%u         =     FD0E1A614DF80AC0
-CHECKSUM::      ocn_ice_bnd_type%v         =     FC2FE21601C2883C
-CHECKSUM::      ocn_ice_bnd_type%t         =      729DFBD4E001E0E
-CHECKSUM::      ocn_ice_bnd_type%s         =      41128706B224FC0
+CHECKSUM::      ocn_ice_bnd_type%u         =     FD0F01FD3546E770
+CHECKSUM::      ocn_ice_bnd_type%v         =     FC3104EE304F94FE
+CHECKSUM::      ocn_ice_bnd_type%t         =      729DF9FCAFA9A9E
+CHECKSUM::      ocn_ice_bnd_type%s         =      4112881F35E3E56
 CHECKSUM::      ocn_ice_bnd_type%frazil    =                    0
-CHECKSUM::      ocn_ice_bnd_type%sea_level =     ED6447D7EA7A0184
-   CHECKSUM::               oibt%o2_flux_alpha_ocn_ice =     FF046EFE7685BCE8
-   CHECKSUM::               oibt%o2_flux_csurf_ocn_ice =     FC33978E8238A6E4
-   CHECKSUM::               oibt%o2_flux_sc_no_ocn_ice =      7C317E90D632060
-   CHECKSUM::              oibt%co2_flux_alpha_ocn_ice =      3D9A09E5AFBA07C
-   CHECKSUM::              oibt%co2_flux_csurf_ocn_ice =     F8363E7D3612D725
-   CHECKSUM::              oibt%co2_flux_sc_no_ocn_ice =      808FD1459C0BD88
-   CHECKSUM::            oibt%cfc11_flux_alpha_ocn_ice =      1D80CB7DC64936A
-   CHECKSUM::            oibt%cfc11_flux_csurf_ocn_ice =     DF2F7E55256EE342
-   CHECKSUM::            oibt%cfc11_flux_sc_no_ocn_ice =      8D7950B484D8720
-   CHECKSUM::            oibt%cfc12_flux_alpha_ocn_ice =        C65593C63CAE6
-   CHECKSUM::            oibt%cfc12_flux_csurf_ocn_ice =     DE73309E818EC3FD
-   CHECKSUM::            oibt%cfc12_flux_sc_no_ocn_ice =      8D51B30504DEC90
+CHECKSUM::      ocn_ice_bnd_type%sea_level =     ED64FD45308E5DBE
+   CHECKSUM::               oibt%o2_flux_alpha_ocn_ice =     FF046F7EC8862606
+   CHECKSUM::               oibt%o2_flux_csurf_ocn_ice =     FC33A1DB806D8996
+   CHECKSUM::               oibt%o2_flux_sc_no_ocn_ice =      7C31A6C5CA3D160
+   CHECKSUM::              oibt%co2_flux_alpha_ocn_ice =      3D9A1FBCA709BB9
+   CHECKSUM::              oibt%co2_flux_csurf_ocn_ice =     F8363EEB81258C9A
+   CHECKSUM::              oibt%co2_flux_sc_no_ocn_ice =      808FE8FF5F0493C
+   CHECKSUM::            oibt%cfc11_flux_alpha_ocn_ice =      1D80F04C167A81E
+   CHECKSUM::            oibt%cfc11_flux_csurf_ocn_ice =     DF2F52C36BE60494
+   CHECKSUM::            oibt%cfc11_flux_sc_no_ocn_ice =      8D79794216ECE18
+   CHECKSUM::            oibt%cfc12_flux_alpha_ocn_ice =        C668174044F78
+   CHECKSUM::            oibt%cfc12_flux_csurf_ocn_ice =     DE72FB6475552082
+   CHECKSUM::            oibt%cfc12_flux_sc_no_ocn_ice =      8D51DDB6361CBC0
  BEGIN CHECKSUM(ocean_type):: coupler_end            0
-   CHECKSUM::     ocean%t_surf    =      729DFCEB32F359E
-   CHECKSUM::     ocean%s_surf    =      41129E2D453D174
-   CHECKSUM::     ocean%u_surf    =     FD0F4B7E4A5A5980
-   CHECKSUM::     ocean%v_surf    =     FC33F95D651CDAF4
-   CHECKSUM::     ocean%sea_lev   =     ED576903794277C4
+   CHECKSUM::     ocean%t_surf    =      729DF3EC2D66A7C
+   CHECKSUM::     ocean%s_surf    =      4112A415DA17A82
+   CHECKSUM::     ocean%u_surf    =     FD0DED9C1BC37152
+   CHECKSUM::     ocean%v_surf    =     FC322D71F99E6B7C
+   CHECKSUM::     ocean%sea_lev   =     ED5939F7C3A469D8
    CHECKSUM::     ocean%frazil    =                    0
    CHECKSUM::ocean%melt_potential =                    0
-   CHECKSUM::                  ocean%o2_flux_alpha_ocn =     FF046E6BE9FFF9CC
-   CHECKSUM::                  ocean%o2_flux_csurf_ocn =     FC338C7B2EF587BB
-   CHECKSUM::                  ocean%o2_flux_sc_no_ocn =      7C3166D7EE2E578
-   CHECKSUM::                 ocean%co2_flux_alpha_ocn =      3D99F5AAEE0734B
-   CHECKSUM::                 ocean%co2_flux_csurf_ocn =     F8364EEDF8D135DD
-   CHECKSUM::                 ocean%co2_flux_sc_no_ocn =      808FC345EAAF0EC
-   CHECKSUM::               ocean%cfc11_flux_alpha_ocn =      1D80A86FEC8AB1A
-   CHECKSUM::               ocean%cfc11_flux_csurf_ocn =     DF2F39120E4471EE
-   CHECKSUM::               ocean%cfc11_flux_sc_no_ocn =      8D7938C738B9080
-   CHECKSUM::               ocean%cfc12_flux_alpha_ocn =        C6437188B4D5C
-   CHECKSUM::               ocean%cfc12_flux_csurf_ocn =     DE72DB9491A7190C
-   CHECKSUM::               ocean%cfc12_flux_sc_no_ocn =      8D5199D46E686A0
+   CHECKSUM::                  ocean%o2_flux_alpha_ocn =     FF0470DBE83CD8D4
+   CHECKSUM::                  ocean%o2_flux_csurf_ocn =     FC33BECA92D12F3B
+   CHECKSUM::                  ocean%o2_flux_sc_no_ocn =      7C322ADA22569A8
+   CHECKSUM::                 ocean%co2_flux_alpha_ocn =      3D9A5FF7B8024FD
+   CHECKSUM::                 ocean%co2_flux_csurf_ocn =     F83651513DEE7302
+   CHECKSUM::                 ocean%co2_flux_sc_no_ocn =      809036EEFD0B530
+   CHECKSUM::               ocean%cfc11_flux_alpha_ocn =      1D815B88842C6FE
+   CHECKSUM::               ocean%cfc11_flux_csurf_ocn =     DF2E6275B4C134BF
+   CHECKSUM::               ocean%cfc11_flux_sc_no_ocn =      8D79FE790213328
+   CHECKSUM::               ocean%cfc12_flux_alpha_ocn =        C69D85C07B4FA
+   CHECKSUM::               ocean%cfc12_flux_csurf_ocn =     DE71D5589BDA1D5D
+   CHECKSUM::               ocean%cfc12_flux_sc_no_ocn =      8D5269F31A6E0F8
  BEGIN CHECKSUM(ice_ocean_boundary_type):: coupler_end            0
-   CHECKSUM::iobt%u_flux          =     F6F797633BA2F4A0
-   CHECKSUM::iobt%v_flux          =     F7316C7CD2ED1DD0
-   CHECKSUM::iobt%t_flux          =     FF0245AF1C2AC3A0
-   CHECKSUM::iobt%q_flux          =     EE760AD773B1EE10
+   CHECKSUM::iobt%u_flux          =     F6F7096C6FC40630
+   CHECKSUM::iobt%v_flux          =     F7313D9300DF15B0
+   CHECKSUM::iobt%t_flux          =     FF028B2351C85DF0
+   CHECKSUM::iobt%q_flux          =     EE75D67E22DB25C0
    CHECKSUM::iobt%salt_flux       =                    0
-   CHECKSUM::iobt%lw_flux         =      436416B54CA55A0
+   CHECKSUM::iobt%lw_flux         =      4363BE3834D9980
    CHECKSUM::iobt%sw_flux_vis_dir =      4F6BC0CAEA0FD30
    CHECKSUM::iobt%sw_flux_vis_dif =      4F6BC0CAEA0FD30
    CHECKSUM::iobt%sw_flux_nir_dir =      47B4182D4946530
@@ -9010,10 +9016,10 @@ CHECKSUM::      ocn_ice_bnd_type%sea_level =     ED6447D7EA7A0184
    CHECKSUM::             iobt%runoff_po4_flux_ice_ocn =                    0
    CHECKSUM::            iobt%wet_dep_po4_flux_ice_ocn =                    0
    CHECKSUM::            iobt%dry_dep_po4_flux_ice_ocn =                    0
-   CHECKSUM::                iobt%o2_flux_flux_ice_ocn =     EA8AFA6F2716F866
-   CHECKSUM::              iobt%o2_flux_deltap_ice_ocn =     102059464C405DF5
+   CHECKSUM::                iobt%o2_flux_flux_ice_ocn =     EA8B068FC3FEAAD4
+   CHECKSUM::              iobt%o2_flux_deltap_ice_ocn =     1020625F82EC7E33
    CHECKSUM::                  iobt%o2_flux_kw_ice_ocn =     ED0D78E88A4B3431
-   CHECKSUM::               iobt%o2_flux_flux0_ice_ocn =     EA8AFA6F2716F866
+   CHECKSUM::               iobt%o2_flux_flux0_ice_ocn =     EA8B068FC3FEAAD4
    CHECKSUM::             iobt%runoff_no3_flux_ice_ocn =                    0
    CHECKSUM::            iobt%wet_dep_no3_flux_ice_ocn =                    0
    CHECKSUM::            iobt%dry_dep_no3_flux_ice_ocn =                    0
@@ -9028,20 +9034,20 @@ CHECKSUM::      ocn_ice_bnd_type%sea_level =     ED6447D7EA7A0184
    CHECKSUM::             iobt%runoff_fed_flux_ice_ocn =                    0
    CHECKSUM::            iobt%wet_dep_fed_flux_ice_ocn =                    0
    CHECKSUM::            iobt%dry_dep_fed_flux_ice_ocn =                    0
-   CHECKSUM::               iobt%co2_flux_flux_ice_ocn =     E66F9D75C3E5B1AB
-   CHECKSUM::             iobt%co2_flux_deltap_ice_ocn =      73FD7C9C1EA878A
+   CHECKSUM::               iobt%co2_flux_flux_ice_ocn =     E66F9CEFF51CD33D
+   CHECKSUM::             iobt%co2_flux_deltap_ice_ocn =      73FD74F9E1DA126
    CHECKSUM::                 iobt%co2_flux_kw_ice_ocn =     ED0D78E88A4B3431
-   CHECKSUM::              iobt%co2_flux_flux0_ice_ocn =     E66F9D75C3E5B1AB
+   CHECKSUM::              iobt%co2_flux_flux0_ice_ocn =     E66F9CEFF51CD33D
    CHECKSUM::             iobt%runoff_dic_flux_ice_ocn =                    0
    CHECKSUM::             iobt%runoff_alk_flux_ice_ocn =                    0
-   CHECKSUM::             iobt%cfc11_flux_flux_ice_ocn =     CF7EEE5F5077D9A0
-   CHECKSUM::           iobt%cfc11_flux_deltap_ice_ocn =     F2BE0142FFDA44FB
+   CHECKSUM::             iobt%cfc11_flux_flux_ice_ocn =     CF7EF935A40FBB54
+   CHECKSUM::           iobt%cfc11_flux_deltap_ice_ocn =     F2BE0CE6642A077D
    CHECKSUM::               iobt%cfc11_flux_kw_ice_ocn =     ED0D78E88A4B3431
-   CHECKSUM::            iobt%cfc11_flux_flux0_ice_ocn =     CD098C0B10552597
-   CHECKSUM::             iobt%cfc12_flux_flux_ice_ocn =     CED39955D7841160
-   CHECKSUM::           iobt%cfc12_flux_deltap_ice_ocn =     F3DDCF3EE51CD89F
+   CHECKSUM::            iobt%cfc11_flux_flux0_ice_ocn =     CD09679CC9A040FE
+   CHECKSUM::             iobt%cfc12_flux_flux_ice_ocn =     CED3A8B8253B63F9
+   CHECKSUM::           iobt%cfc12_flux_deltap_ice_ocn =     F3DDDBB40BFA8C05
    CHECKSUM::               iobt%cfc12_flux_kw_ice_ocn =     ED0D78E88A4B3431
-   CHECKSUM::            iobt%cfc12_flux_flux0_ice_ocn =     CC4AD80FEF2F985C
+   CHECKSUM::            iobt%cfc12_flux_flux0_ice_ocn =     CC4AA7BF60B59D12
  ice model domain decomposition
 whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
   X-AXIS =    4
@@ -9231,138 +9237,138 @@ NOTE: Potential error in diag_manager_end: fsidet_100 NOT available, check if ou
 NOTE: Potential error in diag_manager_end: fcadet_calc_100 NOT available, check if output interval > runlength. Netcdf fill_values are written
 NOTE: Potential error in diag_manager_end: fcadet_arag_100 NOT available, check if output interval > runlength. Netcdf fill_values are written
 NOTE: Potential error in diag_manager_end: flithdet_100 NOT available, check if output interval > runlength. Netcdf fill_values are written
-                               Memuse(MB) at Memory HiWaterMark=  2.266E+02  2.266E+02  0.000E+00  2.266E+02
+                               Memuse(MB) at Memory HiWaterMark=  2.297E+02  2.297E+02  0.000E+00  2.297E+02
  MPP_DOMAINS_STACK high water mark=       505800
 
 Tabulating mpp_clock statistics across      1 PEs...
 
                                       hits          tmin          tmax          tavg          tstd  tfrac grain pemin pemax
-Total runtime                            1     12.083093     12.083093     12.083093      0.000000  1.000     0     0     0
-Initialization                           1      3.364965      3.364965      3.364965      0.000000  0.278     0     0     0
-  Init: atmos_model_init                 1      0.008121      0.008121      0.008121      0.000000  0.001     0     0     0
-  Init: land_model_init                  1      0.008303      0.008303      0.008303      0.000000  0.001     0     0     0
-  Init: ice_model_init                   1      0.055481      0.055481      0.055481      0.000000  0.005     0     0     0
-  Init: ocean_model_init                 1      3.102471      3.102471      3.102471      0.000000  0.257     0     0     0
-  Init: flux_exchange_init               1      0.054910      0.054910      0.054910      0.000000  0.005     0     0     0
-Main loop                                1      8.587159      8.587159      8.587159      0.000000  0.711     0     0     0
-Termination                              1      0.129205      0.129205      0.129205      0.000000  0.011     0     0     0
-(Ocean continuity update)             3460      0.063802      0.063802      0.063802      0.000000  0.005    41     0     0
-(Ocean continuity correction)         1730      0.256075      0.256075      0.256075      0.000000  0.021    41     0     0
-(Ocean advect tracer)                  576      1.179247      1.179247      1.179247      0.000000  0.098    31     0     0
-(Ocean tracer halo updates)            576      0.297825      0.297825      0.297825      0.000000  0.025    41     0     0
-(Ocean tracer global synch)            288      0.000368      0.000368      0.000368      0.000000  0.000    41     0     0
-  Ice: slow: dynamics                  288      0.247913      0.247913      0.247913      0.000000  0.021    41     0     0
-  Ice: slow: transport                 144      0.007802      0.007802      0.007802      0.000000  0.001    41     0     0
-  Ice: slow: thermodyn diags           144      0.002214      0.002214      0.002214      0.000000  0.000    41     0     0
-Ice                                    864      0.300781      0.300781      0.300781      0.000000  0.025     1     0     0
-Ice Fast                               288      0.021724      0.021724      0.021724      0.000000  0.002    11     0     0
-Ice Slow                               432      0.278834      0.278834      0.278834      0.000000  0.023    11     0     0
-Ice Fast/Slow Exchange                 144      0.000118      0.000118      0.000118      0.000000  0.000    11     0     0
-Ocean Initialization                     2      3.048886      3.048886      3.048886      0.000000  0.252    11     0     0
-Ocean                                  144      7.822730      7.822730      7.822730      0.000000  0.647     1     0     0
-Ocean dynamics                         576      1.103687      1.103687      1.103687      0.000000  0.091    11     0     0
-Ocean thermodynamics and tracers       864      6.578210      6.578210      6.578210      0.000000  0.544    11     0     0
-Ocean Other                           1152      0.128347      0.128347      0.128347      0.000000  0.011    11     0     0
-(Ocean tracer advection)               576      1.197280      1.197280      1.197280      0.000000  0.099    21     0     0
-(Ocean diabatic driver)                288      5.380790      5.380790      5.380790      0.000000  0.445    21     0     0
+Total runtime                            1     10.811508     10.811508     10.811508      0.000000  1.000     0     0     0
+Initialization                           1      2.438655      2.438655      2.438655      0.000000  0.226     0     0     0
+  Init: atmos_model_init                 1      0.008037      0.008037      0.008037      0.000000  0.001     0     0     0
+  Init: land_model_init                  1      0.008322      0.008322      0.008322      0.000000  0.001     0     0     0
+  Init: ice_model_init                   1      0.043683      0.043683      0.043683      0.000000  0.004     0     0     0
+  Init: ocean_model_init                 1      2.221383      2.221383      2.221383      0.000000  0.205     0     0     0
+  Init: flux_exchange_init               1      0.047859      0.047859      0.047859      0.000000  0.004     0     0     0
+Main loop                                1      8.280065      8.280065      8.280065      0.000000  0.766     0     0     0
+Termination                              1      0.090708      0.090708      0.090708      0.000000  0.008     0     0     0
+(Ocean continuity update)             3460      0.056427      0.056427      0.056427      0.000000  0.005    41     0     0
+(Ocean continuity correction)         1730      0.254571      0.254571      0.254571      0.000000  0.024    41     0     0
+(Ocean advect tracer)                  576      1.052693      1.052693      1.052693      0.000000  0.097    31     0     0
+(Ocean tracer halo updates)            576      0.295388      0.295388      0.295388      0.000000  0.027    41     0     0
+(Ocean tracer global synch)            288      0.000371      0.000371      0.000371      0.000000  0.000    41     0     0
+  Ice: slow: dynamics                  288      0.243679      0.243679      0.243679      0.000000  0.023    41     0     0
+  Ice: slow: transport                 144      0.007000      0.007000      0.007000      0.000000  0.001    41     0     0
+  Ice: slow: thermodyn diags           144      0.001806      0.001806      0.001806      0.000000  0.000    41     0     0
+Ice                                    864      0.294046      0.294046      0.294046      0.000000  0.027     1     0     0
+Ice Fast                               288      0.021239      0.021239      0.021239      0.000000  0.002    11     0     0
+Ice Slow                               432      0.272649      0.272649      0.272649      0.000000  0.025    11     0     0
+Ice Fast/Slow Exchange                 144      0.000058      0.000058      0.000058      0.000000  0.000    11     0     0
+Ocean Initialization                     2      2.183780      2.183780      2.183780      0.000000  0.202    11     0     0
+Ocean                                  144      7.513060      7.513060      7.513060      0.000000  0.695     1     0     0
+Ocean dynamics                         576      1.070442      1.070442      1.070442      0.000000  0.099    11     0     0
+Ocean thermodynamics and tracers       864      6.309204      6.309204      6.309204      0.000000  0.584    11     0     0
+Ocean Other                           1152      0.120856      0.120856      0.120856      0.000000  0.011    11     0     0
+(Ocean tracer advection)               576      1.071057      1.071057      1.071057      0.000000  0.099    21     0     0
+(Ocean diabatic driver)                288      5.237990      5.237990      5.237990      0.000000  0.484    21     0     0
 (Ocean continuity equation *)            0      0.000000      0.000000      0.000000      0.000000  0.000    31     0     0
-(Ocean set BBL viscosity)              288      0.015966      0.015966      0.015966      0.000000  0.001    31     0     0
-(Ocean message passing *)              720      0.044281      0.044281      0.044281      0.000000  0.004    31     0     0
-(Ocean MOM_initialize_state)             2      0.033036      0.033036      0.033036      0.000000  0.003    31     0     0
-(Ocean init message passing *)           2      0.000456      0.000456      0.000456      0.000000  0.000    41     0     0
+(Ocean set BBL viscosity)              288      0.013862      0.013862      0.013862      0.000000  0.001    31     0     0
+(Ocean message passing *)              720      0.042977      0.042977      0.042977      0.000000  0.004    31     0     0
+(Ocean MOM_initialize_state)             2      0.030611      0.030611      0.030611      0.000000  0.003    31     0     0
+(Ocean init message passing *)           2      0.000439      0.000439      0.000439      0.000000  0.000    41     0     0
 (Ocean mixed layer restrat)              0      0.000000      0.000000      0.000000      0.000000  0.000    31     0     0
-(Ocean collective diagnostics)        1008      0.074759      0.074759      0.074759      0.000000  0.006    31     0     0
+(Ocean collective diagnostics)        1008      0.070481      0.070481      0.070481      0.000000  0.007    31     0     0
 (Ocean Z-space diagnostics)              0      0.000000      0.000000      0.000000      0.000000  0.000    31     0     0
-(Ocean ALE)                            288      1.118668      1.118668      1.118668      0.000000  0.093    31     0     0
-(Cobalt: carbon calcs)                 288      0.858764      0.858764      0.858764      0.000000  0.071    31     0     0
-(Cobalt: phytoplankton growth ca       288      0.456771      0.456771      0.456771      0.000000  0.038    31     0     0
-(Cobalt: bacteria growth calcs)        288      0.020889      0.020889      0.020889      0.000000  0.002    31     0     0
-(Cobalt: zooplankton calculation       288      0.299140      0.299140      0.299140      0.000000  0.025    31     0     0
-(Cobalt: other losses)                 288      0.102918      0.102918      0.102918      0.000000  0.009    31     0     0
-(Cobalt: production loop)              288      0.250495      0.250495      0.250495      0.000000  0.021    31     0     0
-(Cobalt: ballasting loops)             288      0.110095      0.110095      0.110095      0.000000  0.009    31     0     0
-(Cobalt: source/sink loop 1)           288      0.040244      0.040244      0.040244      0.000000  0.003    31     0     0
-(Cobalt: source/sink loop 2)           288      0.019009      0.019009      0.019009      0.000000  0.002    31     0     0
-(Cobalt: source/sink loop 3)           288      0.031155      0.031155      0.031155      0.000000  0.003    31     0     0
-(Cobalt: source/sink loop 4)           288      0.007521      0.007521      0.007521      0.000000  0.001    31     0     0
-(Cobalt: source/sink loop 5)           288      0.014873      0.014873      0.014873      0.000000  0.001    31     0     0
-(Cobalt: source/sink loop 6)           288      0.164200      0.164200      0.164200      0.000000  0.014    31     0     0
-(Cobalt: send diagnostics)             288      0.113493      0.113493      0.113493      0.000000  0.009    31     0     0
-(Cobalt: calculate diagnostics)        288      0.678005      0.678005      0.678005      0.000000  0.056    31     0     0
-(Initialize from Z)                      1      0.023587      0.023587      0.023587      0.000000  0.002    41     0     0
-(Ocean diagnostics framework)        63074      0.220075      0.220075      0.220075      0.000000  0.018    31     0     0
+(Ocean ALE)                            288      1.019764      1.019764      1.019764      0.000000  0.094    31     0     0
+(Cobalt: carbon calcs)                 288      0.841188      0.841188      0.841188      0.000000  0.078    31     0     0
+(Cobalt: phytoplankton growth ca       288      0.458630      0.458630      0.458630      0.000000  0.042    31     0     0
+(Cobalt: bacteria growth calcs)        288      0.021251      0.021251      0.021251      0.000000  0.002    31     0     0
+(Cobalt: zooplankton calculation       288      0.301377      0.301377      0.301377      0.000000  0.028    31     0     0
+(Cobalt: other losses)                 288      0.101189      0.101189      0.101189      0.000000  0.009    31     0     0
+(Cobalt: production loop)              288      0.245371      0.245371      0.245371      0.000000  0.023    31     0     0
+(Cobalt: ballasting loops)             288      0.108529      0.108529      0.108529      0.000000  0.010    31     0     0
+(Cobalt: source/sink loop 1)           288      0.042375      0.042375      0.042375      0.000000  0.004    31     0     0
+(Cobalt: source/sink loop 2)           288      0.019536      0.019536      0.019536      0.000000  0.002    31     0     0
+(Cobalt: source/sink loop 3)           288      0.031257      0.031257      0.031257      0.000000  0.003    31     0     0
+(Cobalt: source/sink loop 4)           288      0.007891      0.007891      0.007891      0.000000  0.001    31     0     0
+(Cobalt: source/sink loop 5)           288      0.016097      0.016097      0.016097      0.000000  0.001    31     0     0
+(Cobalt: source/sink loop 6)           288      0.165151      0.165151      0.165151      0.000000  0.015    31     0     0
+(Cobalt: send diagnostics)             288      0.109932      0.109932      0.109932      0.000000  0.010    31     0     0
+(Cobalt: calculate diagnostics)        288      0.667650      0.667650      0.667650      0.000000  0.062    31     0     0
+(Initialize from Z)                      1      0.023561      0.023561      0.023561      0.000000  0.002    41     0     0
+(Ocean diagnostics framework)        63074      0.209984      0.209984      0.209984      0.000000  0.019    31     0     0
 (Ocean diagnostics remapping)            0      0.000000      0.000000      0.000000      0.000000  0.000    41     0     0
-(Ocean diagnostics grid updates)      2593      0.008788      0.008788      0.008788      0.000000  0.001    41     0     0
-(Ocean init message passing)             2      0.000119      0.000119      0.000119      0.000000  0.000    41     0     0
-(Ocean BT pre-calcs only)             2304      0.043293      0.043293      0.043293      0.000000  0.004    41     0     0
-(Ocean BT pre-step halo updates)      2304      0.012050      0.012050      0.012050      0.000000  0.001    41     0     0
-(Ocean BT stepping calcs only)        7488      0.052677      0.052677      0.052677      0.000000  0.004    41     0     0
-(Ocean BT stepping halo updates)      6912      0.010405      0.010405      0.010405      0.000000  0.001    41     0     0
-(Ocean BT post-calcs only)            1728      0.009831      0.009831      0.009831      0.000000  0.001    41     0     0
-(Ocean BT post-step halo updates      1152      0.002693      0.002693      0.002693      0.000000  0.000    41     0     0
-(Ocean BT global synch)                193      0.000262      0.000262      0.000262      0.000000  0.000    41     0     0
-(Ocean Coriolis & mom advection)       576      0.052730      0.052730      0.052730      0.000000  0.004    31     0     0
-(Ocean continuity equation)            864      0.340690      0.340690      0.340690      0.000000  0.028    31     0     0
-(Ocean pressure force)                 288      0.148563      0.148563      0.148563      0.000000  0.012    31     0     0
-(Ocean vertical viscosity)             864      0.161266      0.161266      0.161266      0.000000  0.013    31     0     0
-(Ocean horizontal viscosity)           288      0.087459      0.087459      0.087459      0.000000  0.007    31     0     0
-(Ocean momentum increments)            576      0.005620      0.005620      0.005620      0.000000  0.000    31     0     0
-(Ocean message passing)               2592      0.094158      0.094158      0.094158      0.000000  0.008    31     0     0
-(Ocean barotropic mode calc)           576      0.001454      0.001454      0.001454      0.000000  0.000    31     0     0
-(Ocean barotropic mode stepping)       576      0.141431      0.141431      0.141431      0.000000  0.012    31     0     0
-(Ocean barotropic forcing calc)        576      0.011887      0.011887      0.011887      0.000000  0.001    31     0     0
-(Ocean kappa_shear)                    288      0.067620      0.067620      0.067620      0.000000  0.006    31     0     0
+(Ocean diagnostics grid updates)      2593      0.008769      0.008769      0.008769      0.000000  0.001    41     0     0
+(Ocean init message passing)             2      0.000120      0.000120      0.000120      0.000000  0.000    41     0     0
+(Ocean BT pre-calcs only)             2304      0.042498      0.042498      0.042498      0.000000  0.004    41     0     0
+(Ocean BT pre-step halo updates)      2304      0.011690      0.011690      0.011690      0.000000  0.001    41     0     0
+(Ocean BT stepping calcs only)        7488      0.044146      0.044146      0.044146      0.000000  0.004    41     0     0
+(Ocean BT stepping halo updates)      6912      0.011036      0.011036      0.011036      0.000000  0.001    41     0     0
+(Ocean BT post-calcs only)            1728      0.008297      0.008297      0.008297      0.000000  0.001    41     0     0
+(Ocean BT post-step halo updates      1152      0.002530      0.002530      0.002530      0.000000  0.000    41     0     0
+(Ocean BT global synch)                193      0.000248      0.000248      0.000248      0.000000  0.000    41     0     0
+(Ocean Coriolis & mom advection)       576      0.051081      0.051081      0.051081      0.000000  0.005    31     0     0
+(Ocean continuity equation)            864      0.331132      0.331132      0.331132      0.000000  0.031    31     0     0
+(Ocean pressure force)                 288      0.147638      0.147638      0.147638      0.000000  0.014    31     0     0
+(Ocean vertical viscosity)             864      0.160807      0.160807      0.160807      0.000000  0.015    31     0     0
+(Ocean horizontal viscosity)           288      0.082853      0.082853      0.082853      0.000000  0.008    31     0     0
+(Ocean momentum increments)            576      0.005643      0.005643      0.005643      0.000000  0.001    31     0     0
+(Ocean message passing)               2592      0.093358      0.093358      0.093358      0.000000  0.009    31     0     0
+(Ocean barotropic mode calc)           576      0.001467      0.001467      0.001467      0.000000  0.000    31     0     0
+(Ocean barotropic mode stepping)       576      0.130015      0.130015      0.130015      0.000000  0.012    31     0     0
+(Ocean barotropic forcing calc)        576      0.012142      0.012142      0.012142      0.000000  0.001    31     0     0
+(Ocean kappa_shear)                    288      0.067908      0.067908      0.067908      0.000000  0.006    31     0     0
 (Ocean diabatic entrain)                 0      0.000000      0.000000      0.000000      0.000000  0.000    31     0     0
-(Ocean vert remap)                     288      0.344110      0.344110      0.344110      0.000000  0.028    31     0     0
-(Ocean geothermal)                     288      0.000323      0.000323      0.000323      0.000000  0.000    41     0     0
-(Ocean set_diffusivity)                576      0.098737      0.098737      0.098737      0.000000  0.008    31     0     0
+(Ocean vert remap)                     288      0.343117      0.343117      0.343117      0.000000  0.032    31     0     0
+(Ocean geothermal)                     288      0.000321      0.000321      0.000321      0.000000  0.000    41     0     0
+(Ocean set_diffusivity)                576      0.097980      0.097980      0.097980      0.000000  0.009    31     0     0
 (Ocean KPP)                              0      0.000000      0.000000      0.000000      0.000000  0.000    31     0     0
-(Ocean tracer_columns)                 288      3.731871      3.731871      3.731871      0.000000  0.309    26     0     0
-(Ocean diabatic tridiag)               288      0.004366      0.004366      0.004366      0.000000  0.000    41     0     0
-(Ocean diabatic message passing)       288      0.011030      0.011030      0.011030      0.000000  0.001    41     0     0
-(Ocean find_uv_at_h)                   576      0.003285      0.003285      0.003285      0.000000  0.000    41     0     0
+(Ocean tracer_columns)                 288      3.692397      3.692397      3.692397      0.000000  0.342    26     0     0
+(Ocean diabatic tridiag)               288      0.004388      0.004388      0.004388      0.000000  0.000    41     0     0
+(Ocean diabatic message passing)       288      0.009724      0.009724      0.009724      0.000000  0.001    41     0     0
+(Ocean find_uv_at_h)                   576      0.003408      0.003408      0.003408      0.000000  0.000    41     0     0
 (Ocean frazil)                           0      0.000000      0.000000      0.000000      0.000000  0.000    41     0     0
 (Ocean diffuse tracer)                   0      0.000000      0.000000      0.000000      0.000000  0.000    31     0     0
 (Ocean epipycnal diffuse tracer)         0      0.000000      0.000000      0.000000      0.000000  0.000    31     0     0
-(Initialize tracer from Z)              49      0.569929      0.569929      0.569929      0.000000  0.047    41     0     0
-Ocean surface forcing                  289      0.056079      0.056079      0.056079      0.000000  0.005    11     0     0
-(Ocean forcing diagnostics)            288      0.009670      0.009670      0.009670      0.000000  0.001    41     0     0
-Land-ice-atm coupler                   721      0.384058      0.384058      0.384058      0.000000  0.032     1     0     0
-SFC boundary layer                     144      0.288706      0.288706      0.288706      0.000000  0.024    11     0     0
-Flux DN from atm                       144      0.089166      0.089166      0.089166      0.000000  0.007    41     0     0
-XGrid generation                       144      0.001330      0.001330      0.001330      0.000000  0.000    41     0     0
-Flux UP to atm                         144      0.002513      0.002513      0.002513      0.000000  0.000    41     0     0
-Flux land to ice                       144      0.002250      0.002250      0.002250      0.000000  0.000    41     0     0
-Ice-ocean coupler                      288      0.002624      0.002624      0.002624      0.000000  0.000     1     0     0
-Flux ice to ocean                      144      0.001815      0.001815      0.001815      0.000000  0.000    41     0     0
-Flux ocean to ice                      144      0.000767      0.000767      0.000767      0.000000  0.000    41     0     0
-generate_sfc_xgrid                     144      0.001470      0.001470      0.001470      0.000000  0.000     0     0     0
-flux_ocean_to_ice                      144      0.000917      0.000917      0.000917      0.000000  0.000     0     0     0
-flux_ice_to_ocean                      144      0.001878      0.001878      0.001878      0.000000  0.000     0     0     0
-ATM                                    288      0.701897      0.701897      0.701897      0.000000  0.058     0     0     0
- ATM: atmos loop                       144      0.410507      0.410507      0.410507      0.000000  0.034     0     0     0
+(Initialize tracer from Z)              49      0.571334      0.571334      0.571334      0.000000  0.053    41     0     0
+Ocean surface forcing                  289      0.041797      0.041797      0.041797      0.000000  0.004    11     0     0
+(Ocean forcing diagnostics)            288      0.008059      0.008059      0.008059      0.000000  0.001    41     0     0
+Land-ice-atm coupler                   721      0.402340      0.402340      0.402340      0.000000  0.037     1     0     0
+SFC boundary layer                     144      0.311877      0.311877      0.311877      0.000000  0.029    11     0     0
+Flux DN from atm                       144      0.085091      0.085091      0.085091      0.000000  0.008    41     0     0
+XGrid generation                       144      0.001147      0.001147      0.001147      0.000000  0.000    41     0     0
+Flux UP to atm                         144      0.002180      0.002180      0.002180      0.000000  0.000    41     0     0
+Flux land to ice                       144      0.001928      0.001928      0.001928      0.000000  0.000    41     0     0
+Ice-ocean coupler                      288      0.002728      0.002728      0.002728      0.000000  0.000     1     0     0
+Flux ice to ocean                      144      0.001845      0.001845      0.001845      0.000000  0.000    41     0     0
+Flux ocean to ice                      144      0.000833      0.000833      0.000833      0.000000  0.000    41     0     0
+generate_sfc_xgrid                     144      0.001249      0.001249      0.001249      0.000000  0.000     0     0     0
+flux_ocean_to_ice                      144      0.000936      0.000936      0.000936      0.000000  0.000     0     0     0
+flux_ice_to_ocean                      144      0.001898      0.001898      0.001898      0.000000  0.000     0     0     0
+ATM                                    288      0.711024      0.711024      0.711024      0.000000  0.066     0     0     0
+ ATM: atmos loop                       144      0.426751      0.426751      0.426751      0.000000  0.039     0     0     0
   A-L: atmos_tracer_driver_gathe         0      0.000000      0.000000      0.000000      0.000000  0.000     0     0     0
-  A-L: sfc_boundary_layer              144      0.289624      0.289624      0.289624      0.000000  0.024     0     0     0
+  A-L: sfc_boundary_layer              144      0.312735      0.312735      0.312735      0.000000  0.029     0     0     0
   A-L: update_atmos_model_dynami         0      0.000000      0.000000      0.000000      0.000000  0.000     0     0     0
   A-L: serial radiation                144      0.000041      0.000041      0.000041      0.000000  0.000     0     0     0
   A-L: update_atmos_model_down           0      0.000000      0.000000      0.000000      0.000000  0.000     0     0     0
-  A-L: flux_down_from_atmos            144      0.089544      0.089544      0.089544      0.000000  0.007     0     0     0
+  A-L: flux_down_from_atmos            144      0.085475      0.085475      0.085475      0.000000  0.008     0     0     0
   A-L: update_land_model_fast          144      0.000008      0.000008      0.000008      0.000000  0.000     0     0     0
-  A-L: update_ice_model_fast           144      0.016558      0.016558      0.016558      0.000000  0.001     0     0     0
-  A-L: flux_up_to_atmos                144      0.002876      0.002876      0.002876      0.000000  0.000     0     0     0
-  A-L: update_atmos_model_up           144      0.000006      0.000006      0.000006      0.000000  0.000     0     0     0
-  A-L: update_atmos_model_state        144      0.000012      0.000012      0.000012      0.000000  0.000     0     0     0
- ATM: update_land_model_slow           144      0.000026      0.000026      0.000026      0.000000  0.000     0     0     0
- ATM: flux_land_to_ice                 144      0.002442      0.002442      0.002442      0.000000  0.000     0     0     0
- Ice: set_ice_surface fast             144      0.005270      0.005270      0.005270      0.000000  0.000     0     0     0
- Ice: update_ice_model_slow fast       144      0.009760      0.009760      0.009760      0.000000  0.001     0     0     0
- Ice: set_ice_surface slow             144      0.009597      0.009597      0.009597      0.000000  0.001     0     0     0
- Ice: update_ice_model_slow slow       144      0.277172      0.277172      0.277172      0.000000  0.023     0     0     0
- Ice: flux_ice_to_ocean_stocks         144      0.000176      0.000176      0.000176      0.000000  0.000     0     0     0
- Ice: set_ice_surface exchange         144      0.000153      0.000153      0.000153      0.000000  0.000     0     0     0
- Ice: update_ice_model_slow exch       144      0.000087      0.000087      0.000087      0.000000  0.000     0     0     0
-OCN                                    144      7.858797      7.858797      7.858797      0.000000  0.650     0     0     0
+  A-L: update_ice_model_fast           144      0.016060      0.016060      0.016060      0.000000  0.001     0     0     0
+  A-L: flux_up_to_atmos                144      0.002462      0.002462      0.002462      0.000000  0.000     0     0     0
+  A-L: update_atmos_model_up           144      0.000007      0.000007      0.000007      0.000000  0.000     0     0     0
+  A-L: update_atmos_model_state        144      0.000014      0.000014      0.000014      0.000000  0.000     0     0     0
+ ATM: update_land_model_slow           144      0.000008      0.000008      0.000008      0.000000  0.000     0     0     0
+ ATM: flux_land_to_ice                 144      0.002105      0.002105      0.002105      0.000000  0.000     0     0     0
+ Ice: set_ice_surface fast             144      0.005354      0.005354      0.005354      0.000000  0.000     0     0     0
+ Ice: update_ice_model_slow fast       144      0.009703      0.009703      0.009703      0.000000  0.001     0     0     0
+ Ice: set_ice_surface slow             144      0.007498      0.007498      0.007498      0.000000  0.001     0     0     0
+ Ice: update_ice_model_slow slow       144      0.270771      0.270771      0.270771      0.000000  0.025     0     0     0
+ Ice: flux_ice_to_ocean_stocks         144      0.000112      0.000112      0.000112      0.000000  0.000     0     0     0
+ Ice: set_ice_surface exchange         144      0.000100      0.000100      0.000100      0.000000  0.000     0     0     0
+ Ice: update_ice_model_slow exch       144      0.000070      0.000070      0.000070      0.000000  0.000     0     0     0
+OCN                                    144      7.545277      7.545277      7.545277      0.000000  0.698     0     0     0
 flux_check_stocks                        0      0.000000      0.000000      0.000000      0.000000  0.000     0     0     0
 intermediate restart                     0      0.000000      0.000000      0.000000      0.000000  0.000     0     0     0
-final flux_check_stocks                  1      0.005137      0.005137      0.005137      0.000000  0.000     0     0     0
+final flux_check_stocks                  1      0.004070      0.004070      0.004070      0.000000  0.000     0     0     0
  MPP_STACK high water mark=            0

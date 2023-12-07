@@ -5,10 +5,10 @@
 ############
 # commands #
 ############
-FC = gfortran
-CC = gcc
+FC = mpif90
+CC = mpicc
 CXX = g++
-LD = gfortran $(MAIN_PROGRAM)
+LD = mpif90 $(MAIN_PROGRAM)
 
 #########
 # flags #
@@ -23,7 +23,7 @@ MAKEFLAGS += --jobs=$(shell grep '^processor' /proc/cpuinfo | wc -l)
 # Macro for Fortran preprocessor
 FPPFLAGS = $(INCLUDES)
 # Fortran Compiler flags for the NetCDF library
-FPPFLAGS += -I/opt/pgi/18.10/linux86-64/18.10/mpi/openmpi/include
+#FPPFLAGS += -I/opt/pgi/18.10/linux86-64/18.10/mpi/openmpi/include
 #FPPFLAGS += -I/opt/netcdf/4.6.1/PGI/include
 
 FFLAGS := -fcray-pointer -fdefault-double-8 -fdefault-real-8 -Waliasing -ffree-line-length-none -fno-range-check
@@ -38,8 +38,8 @@ FFLAGS_VERBOSE =
 
 CFLAGS := -D__IFC 
 CFLAGS += $(FPPFLAGS)
-#CFLAGS += $(shell pkg-config --cflags-only-I netcdf)
-#CFLAGS += $(shell pkg-config --cflags-only-I mpich)
+CFLAGS += $(shell pkg-config --cflags-only-I netcdf)
+CFLAGS += $(shell pkg-config --cflags-only-I mpich)
 CFLAGS_OPT = -O2
 CFLAGS_OPENMP = -fopenmp
 CFLAGS_DEBUG = -O0 -g 
@@ -87,7 +87,7 @@ ifeq ($(NETCDF),3)
 endif
 
 LIBS := $(shell pkg-config --libs-only-L netcdf) $(shell pkg-config --libs-only-L mpich)
-LIBS += -L/opt/pgi/18.10/linux86-64/2018/mpi/openmpi/lib/ 
+#LIBS += -L/opt/pgi/18.10/linux86-64/2018/mpi/openmpi/lib/ 
 LIBS += -lnetcdff -lnetcdf -lz -lmpi -lmpi_mpifh
 #LIBS += -lnetcdff -lnetcdf -lhdf5_hl -lhdf5 -lz -lmpich -lfmpich
 LDFLAGS += $(LIBS)
